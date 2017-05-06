@@ -5,9 +5,11 @@ body{
   background: #1e2026;
   padding-left: 5%;
   padding-top: 80px;
-  
+
 }
+button:focus {outline:0;}
 .buttonTopBar{
+
   background: none;
   border: none;
   color: grey;

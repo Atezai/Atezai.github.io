@@ -42,7 +42,7 @@ circl{
 
     font-size: 16px;
 }
-
+button:focus {outline:0;}
 .button:hover {
     color: lightgrey;
 }
