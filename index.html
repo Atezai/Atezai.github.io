@@ -7,8 +7,9 @@
     <title>TwojamaGamesCopanyIncOfEvilAndAwesomnesAndEND</title>
   </head>
 
-  <body onclick="myFunction()">
-    <!--<backplate id="backgPlate"></backplate>-->
+  <body>
+  <bodynew id="newgreybody"></bodynew>
+
     <circl id="circlM"></circl>
 
 
@@ -32,12 +33,12 @@
 
     </div>
 
+
   </body>
+
   <script type="text/javascript">
     var ScreenOn = 0;//0 guestlogin; 1 login; 2 register ; 3 website;
-    function start(){
-
-    }
+      newgreybody.style.display = 'none';
 
     function setScreen(scrn){
         switch(scrn){
@@ -54,9 +55,13 @@
             logIn.style.display = 'none';
             break;
           case 3:
+
             circlM.style.animation= 'animCirclClose 0.5s ease 1';
-            logGuest.style.display = 'none';
+            newgreybody.style.animation = 'greybackOn 0.5s ease 1';
+            newgreybody.style.display = 'block';
             logIn.style.display = 'none';
+            logGuest.style.display = 'none';
+            window.setTimeout(function(){ circlM.style.display = 'none'; window.location.href = "main.html";}, 500);
             break;
         }
     }
