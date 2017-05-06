@@ -10,6 +10,10 @@
   <body onclick="myFunction()">
     <!--<backplate id="backgPlate"></backplate>-->
     <circl id="circlM"></circl>
+
+
+
+
     <div id="logGuest" class='login'>
       <button onclick="setScreen(3)" id="guest"  class="button" style="font-size:35px"><b>GUEST</b></button><br>
       <button onclick="setScreen(1)" id="loginS" class="button">login</button>
@@ -51,12 +55,12 @@
             break;
           case 3:
             circlM.style.animation= 'animCirclClose 0.5s ease 1';
-            logGuest.style.animation= 'animCirclClose 0.5s ease 1';
+            logGuest.style.display = 'none';
             logIn.style.display = 'none';
             break;
         }
     }
-circlM.style.animation= 'animCirclClose 0.5s ease 2';
+
     setScreen(0);// Show
   </script>
 </html>
