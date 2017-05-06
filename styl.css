@@ -112,6 +112,7 @@ topbar{
 }
 @keyframes animCirclClose {
   0% { background-size:512px 512px;opacity: 1;}
+  70% { background-size:300px 300px;opacity: 0;}
   100% { background-size:300px 300px;opacity: 0;}
 }
 @keyframes opacityFade{

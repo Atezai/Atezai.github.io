@@ -47,3 +47,10 @@ downbar{
   font: 12px Arial, sans-serif; color: darkgrey;
 
 }
+
+.buttonTopBar:hover {
+    color: lightgrey;
+}
+.buttonTopbar:active {
+    color:grey;
+}
