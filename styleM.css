@@ -39,12 +39,13 @@ logo{
 downbar{
   background: #191a1e;
   position: absolute;
+
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 5px;
   text-align: center;
-  font: 12px Arial, sans-serif; color: darkgrey;
+  font: 12px Arial, sans-serif; color: #0f0f0f;
 
 }
 
