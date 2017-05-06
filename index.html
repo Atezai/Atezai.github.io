@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC>
+<html xmlns="twojama" xml:lang="pl" lang="pl">
+  <head>
+    <link rel="stylesheet" href="styl.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>TwojamaGamesCopanyIncOfEvilAndAwesomnesAndEND</title>
+  </head>
+
+  <body onclick="myFunction()">
+
+  <div id="logGuest" class='login'>
+    <button onclick="setScreen(3)" id="guest"  class="button" style="font-size:35px"><b>GUEST</b></button><br>
+    <button onclick="setScreen(1)" id="loginS" class="button">login</button>
+  </div>
+
+  <div id="logIn" style="display:none" class='login'>
+
+
+    <label for="userPassword2">LOGIN</label><br>
+    <input id="login" type="login"><br>
+    <label for="userPassword">PASSWORD</label><br>
+    <input id="userPassword" type="password"><br>
+    <button class="button">Login</button>
+    <button class="button">Register</button><br>
+    <button style="opacity:0.3" onclick="setScreen(0)" class="button">back</button>
+
+  </div>
+
+  </body>
+  <script type="text/javascript">
+    var ScreenOn = 0;//0 guestlogin; 1 login; 2 register ; 3 website;
+    function start(){
+
+    }
+
+    function setScreen(scrn){
+        switch(scrn){
+          case 0:
+            logGuest.style.display = 'block';
+            logIn.style.display = 'none';
+            break;
+          case 1:
+            logGuest.style.display = 'none';
+            logIn.style.display = 'block';
+            break;
+          case 2:
+            logGuest.style.display = 'none';
+            logIn.style.display = 'none';
+            break;
+          case 3:
+            logGuest.style.display = 'none';
+            logIn.style.display = 'none';
+            break;
+        }
+    }
+    function logAsGuest(){
+alert
+    }
+    function loginScreen(){
+      logGuest.style.display = 'none';
+      logIn.style.display = 'block';
+    }
+    setScreen(0);// Show
+  </script>
+</html>
