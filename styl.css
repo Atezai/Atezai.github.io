@@ -4,14 +4,23 @@ aside { background: orange; width:30%; height: 100px; float: right; }
 footer { background: blue; width:100%; height: 100px; clear: both; }
 p { font: 14px Arial, sans-serif; color: black; text-align: center; }
 body {
-    width: 512px, 512px;
-    height: 512px, 512px;
-    background-image: url("icon1.png"), url("mywebimage.jpg");
-    background-attachment: fixed,fixed;
-    background-position: center, center ;
-    background-repeat: no-repeat, no-repeat;
-opacity:  1;
-    animation: animatedicon 5s ease infinite;
+    width: 512px;
+    height: 512px;
+    background-image: url("mywebimage.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+circl{
+  width: 512px;
+  height: 512px;
+  background-image: url("icon1.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position:absolute;
+
+  animation: animCircl 5s ease infinite;
 }
 .button {
 background: none;
@@ -43,10 +52,32 @@ background: none;
     background-repeat: no-repeat;
     margin: auto;
 }
-
+backplate{
+  width: 70%;
+  height:100%;
+  background: #130d06;
+  position:absolute;
+  top:0;
+  left: 15%;
+  opacity: 0.8;
+}
 @keyframes animatedicon {
 
 	0% { background-size:512px 512px, 100% 100% ;}
   50% { background-size:384px 384px, 100% 100% ;}
 	100% { background-size:512px 512px, 100% 100% ;}
 }
+@keyframes animCircl {
+	0% { background-size:512px 512px;}
+  50% { background-size:384px 384px;}
+	100% { background-size:512px 512px;}
+}
+@keyframes animCirclClose {
+  0% { background-size:512px 512px;opacity: 1;}
+  100% { background-size:1000px 1000px;opacity: 0;}
+}
+@keyframes opacityFade{
+  0% { opacity: 1}
+  100% { opacity: 0}
+}
+@keyframes animCirclClose:end

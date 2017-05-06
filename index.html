@@ -8,24 +8,29 @@
   </head>
 
   <body onclick="myFunction()">
+    <!--<backplate id="backgPlate"></backplate>-->
+    <circl id="circlM"></circl>
 
-  <div id="logGuest" class='login'>
-    <button onclick="setScreen(3)" id="guest"  class="button" style="font-size:35px"><b>GUEST</b></button><br>
-    <button onclick="setScreen(1)" id="loginS" class="button">login</button>
-  </div>
-
-  <div id="logIn" style="display:none" class='login'>
+    <div id="backplat" class='backplate'></div>
 
 
-    <label for="userPassword2">LOGIN</label><br>
-    <input id="login" type="login"><br>
-    <label for="userPassword">PASSWORD</label><br>
-    <input id="userPassword" type="password"><br>
-    <button class="button">Login</button>
-    <button class="button">Register</button><br>
-    <button style="opacity:0.3" onclick="setScreen(0)" class="button">back</button>
+    <div id="logGuest" class='login'>
+      <button onclick="setScreen(3)" id="guest"  class="button" style="font-size:35px"><b>GUEST</b></button><br>
+      <button onclick="setScreen(1)" id="loginS" class="button">login</button>
+    </div>
 
-  </div>
+    <div id="logIn" style="display:none" class='login'>
+
+
+      <label for="userPassword2">LOGIN</label><br>
+      <input id="login" type="login"><br>
+      <label for="userPassword">PASSWORD</label><br>
+      <input id="userPassword" type="password"><br>
+      <button class="button">Login</button>
+      <button class="button">Register</button><br>
+      <button style="opacity:0.3" onclick="setScreen(0)" class="button">back</button>
+
+    </div>
 
   </body>
   <script type="text/javascript">
@@ -49,18 +54,14 @@
             logIn.style.display = 'none';
             break;
           case 3:
+            circlM.style.animation= 'animCirclClose 0.5s ease 1';
+            logGuest.style.animation= 'animCirclClose 0.5s ease 1';
             logGuest.style.display = 'none';
             logIn.style.display = 'none';
             break;
         }
     }
-    function logAsGuest(){
-alert
-    }
-    function loginScreen(){
-      logGuest.style.display = 'none';
-      logIn.style.display = 'block';
-    }
+
     setScreen(0);// Show
   </script>
 </html>
