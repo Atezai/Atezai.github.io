@@ -5,11 +5,12 @@ body{
   background: #1e2026;
   padding-left: 5%;
   padding-top: 80px;
+  
 }
 .buttonTopBar{
   background: none;
   border: none;
-  color: White;
+  color: grey;
   text-shadow: 1px 2px #000000;
   font-weight: 700;
   font-size: 20px;
@@ -30,20 +31,28 @@ topbar{
   left: 0;
 }
 logo{
-  font: 20px Arial, sans-serif; color: White;
-  font-weight: 600;
+  font: 20px Arial, sans-serif; color: #d4d4d6;
+  font-weight: 500;
   padding-left: 40px;
   padding-right: 40px;
 
 }
+bl{
+    font: 25px Arial, sans-serif; color:#161616;
+    display:inline;
+    opacity: 0.5;
+}
 downbar{
   background: #191a1e;
-  position: absolute;
+  position:absolute;
+  display:block;
 
   right: 0;
-  bottom: 0;
   left: 0;
-  padding: 5px;
+
+
+
+  padding: 8px;
   text-align: center;
   font: 12px Arial, sans-serif; color: #0f0f0f;
 
