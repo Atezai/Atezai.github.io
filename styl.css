@@ -15,7 +15,7 @@ circl{
   width: 512px;
   height: 512px;
   background-image: url("icon1.png");
-  opacity: 0.8;
+  
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
