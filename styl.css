@@ -9,7 +9,7 @@ body {
     background-image: url("mywebimage.jpg");
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 circl{
   width: 512px;
@@ -52,15 +52,7 @@ background: none;
     background-repeat: no-repeat;
     margin: auto;
 }
-.backplate{
-  width: 70%;
-  height:100%;
-  background: #130d06;
-  position:absolute;
-  top:0;
-  left: 15%;
-  opacity: 0.8;
-}
+
 @keyframes animatedicon {
 
 	0% { background-size:512px 512px, 100% 100% ;}
