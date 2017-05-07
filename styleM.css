@@ -1,10 +1,13 @@
 body{
-
+  background-image:  url("hashback.jpg");
+  background-size: 16px 16px;
   left: 0;
   right: 0;
-  background: #1e2026;
-  padding-left: 5%;
+  /* XXX:  background: #1e2026;*/
+
   padding-top: 80px;
+  text-align: center;
+
 
 }
 button:focus {outline:0;}
@@ -13,7 +16,7 @@ button:focus {outline:0;}
   background: none;
   border: none;
   color: grey;
-  text-shadow: 1px 2px #000000;
+  text-shadow: 0px 2px #111111;
   font-weight: 700;
   font-size: 20px;
   padding: 15px;
@@ -29,15 +32,18 @@ topbar{
   height: 50px;
   background: rgba(46, 48, 56, 0.9);
   position: fixed;
+  text-align: center;
   top: 0;
   left: 0;
 }
 logo{
-  font: 20px Arial, sans-serif; color: #d4d4d6;
-  font-weight: 500;
-  padding-left: 40px;
+  font: 24px Arial, sans-serif; color: #d4d4d6;
+  font-weight: 800;
   padding-right: 40px;
-
+  position: fixed;
+  text-shadow: 0px 2px #6b6b6b;
+  top: 8px;
+  left: 25px;
 }
 bl{
     font: 25px Arial, sans-serif; color:#161616;
@@ -48,18 +54,36 @@ downbar{
   background: #191a1e;
   position:absolute;
   display:block;
-
   right: 0;
   left: 0;
-
-
-
   padding: 8px;
   text-align: center;
   font: 12px Arial, sans-serif; color: #0f0f0f;
 
 }
+.blockwindow {
+    border-radius: 5px;
+    background: #3d4144;
+    border: 2px solid #35383a;
+    width: 75%;
+    min-height: 200px;
+    /*padding: 10px;*/
 
+    margin:0 auto;
+    margin-bottom: 2em;
+}
+.titlebar{
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  background: #5c5f60;
+  border: 2px solid  #5c5f60;
+  width: auto;
+  height: auto;
+  font: 20px Arial, sans-serif; color:  #3d4144;
+  font-weight: 600;
+}
 .buttonTopBar:hover {
     color: lightgrey;
 }
