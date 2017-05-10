@@ -7,12 +7,10 @@ body{
 
   padding-top: 80px;
   text-align: center;
-
-
 }
+
 button:focus {outline:0;}
 .buttonTopBar{
-
   background: none;
   border: none;
   color: grey;
@@ -21,6 +19,16 @@ button:focus {outline:0;}
   font-size: 20px;
   padding: 15px;
 }
+.buttonTopBarActive{
+  background: none;
+  border: none;
+  color:#bdbfb3;
+  text-shadow: 0px 2px #111111;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 15px;
+}
+
 .buttonSimple{
   background: none;
   border: none;
@@ -56,9 +64,21 @@ downbar{
   display:block;
   right: 0;
   left: 0;
+
   padding: 8px;
   text-align: center;
   font: 12px Arial, sans-serif; color: #0f0f0f;
+}
+bodynew{
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background: #1e2026;
+  position:absolute;
+
+  animation: animgreyout 0.5s ease 1;
+  animation-fill-mode: forwards;
 
 }
 .blockwindow {
@@ -66,9 +86,9 @@ downbar{
     background: #3d4144;
     border: 2px solid #35383a;
     width: 75%;
-    min-height: 200px;
+    min-height: 100px;
     /*padding: 10px;*/
-
+    color:grey;
     margin:0 auto;
     margin-bottom: 2em;
 }
@@ -81,12 +101,26 @@ downbar{
   border: 2px solid  #5c5f60;
   width: auto;
   height: auto;
+
   font: 20px Arial, sans-serif; color:  #3d4144;
   font-weight: 600;
 }
-.buttonTopBar:hover {
-    color: lightgrey;
+.buttonTopBar:hover {color: lightgrey;}
+.buttonTopbar:active {color:grey;}
+.buttonTopBarActive:hover {color: lightgrey;}
+.buttonTopbarActive:active {color:grey;}
+
+.sketchfab-embed-wrapper{
+  animation: viwopacity 3s ease 1;
+  opacity: 1;
 }
-.buttonTopbar:active {
-    color:grey;
+
+@keyframes viwopacity{
+  0%{opacity: 0;}
+  20%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes animgreyout {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
 }
