@@ -1,10 +1,10 @@
 :root {
-  --shadowsColor: rgb(156, 164, 169);
+  --shadowsColor: rgb(156, 156, 153);
 }
 body{
 
   top: 50px;
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(196, 196, 193);
   box-shadow: inset 0 0 40px 0 rgb(150,150,150);
   padding-top: 20px;
   padding-bottom: 50px;
