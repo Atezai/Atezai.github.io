@@ -56,6 +56,7 @@ topbarright {
 }
 topbar{
   background-color: rgb(55, 56, 58);
+  background: url("images/topbar.jpg");
   width: 100%;
   height: 70px;
   position: absolute;
@@ -151,6 +152,7 @@ OBwindow:hover{
 
 filtrTab{
   background-color: rgb(85, 86, 88);
+  background: url("images/filtrbar.jpg");
   margin-top: 70px;
   width: 100%;
   height: 30px;
