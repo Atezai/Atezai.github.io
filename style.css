@@ -117,12 +117,12 @@ OBwindow:hover{
 
 }
 .tytulWindow{
-  font: 45px Arial, sans-serif; color: rgb(240,240,240);
+  font: 45px Arial, sans-serif; color: rgb(200,200,200);
   font-weight: 800;
   /*text-shadow: 0px 2px rgb(168, 168, 168);*/
-  text-shadow: -1px -3px darkgrey, 1px -3px darkgrey, 0px 1px darkgrey, 0 -3px darkgrey;
-  margin-left: 3px;
-  margin-top: 95px;
+  text-shadow: -1px -3px rgb(70,70,70), 1px -3px rgb(70,70,70), 0 -3px rgb(70,70,70);
+  margin-left: 10px;
+  margin-top: 85px;
   position: absolute;
   display: block;
   top: 0;
@@ -132,9 +132,9 @@ OBwindow:hover{
   font: 24px Arial, sans-serif; color: darkgrey;
   font-weight: 600;
   /*text-shadow: 0px 2px rgb(168, 168, 168);*/
-  text-shadow:  0 1px black,1px 0px black, 0 -1px black,-1px 0px black;
+  text-shadow:  0 1px black;
   margin-left: 8px;
-  margin-top: -23px;
+  margin-top: -24px;
   position: absolute;
 
   display: block;
