@@ -70,6 +70,7 @@ topbar{
   top: 0;
   left: 0;
   box-shadow: 0 0px 10px 2px #000;
+
 }
 
 
@@ -81,7 +82,7 @@ OBwindow {
   margin-top: 80px;
   margin-bottom: 80px;
   position: relative;
-
+  border-top: 5px solid darkgrey;
   transition: width 0.2s;
   /*box-shadow: 0 0px 10px 5px #777;*/
 }
@@ -93,7 +94,7 @@ OBwindow:hover{
   display: flex;
   overflow: hidden;
   width: 100%;
-  border-bottom: 2px solid rgb(55, 56, 58);
+
   background-color: black;
   box-shadow: 7px 6px 10px -2px var(--shadowsColor), -7px 6px 10px -2px var(--shadowsColor);
   height: 150px;
