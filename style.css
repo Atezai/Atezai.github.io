@@ -71,12 +71,18 @@ topbar{
 OBwindow {
   margin: 0 auto;
   width: 60%;
-  min-height: 300px;
+
   display: block;
   margin-top: 80px;
-  margin-bottom: 0px;
+  margin-bottom: 80px;
   position: relative;
+
+  transition: width 0.2s;
   /*box-shadow: 0 0px 10px 5px #777;*/
+}
+OBwindow:hover{
+  width: 62%;
+
 }
 .imageWindow{
   display: flex;
@@ -99,8 +105,6 @@ OBwindow {
   display: block;
   top: 0;
   left:0;
-
-
 }
 .typWindow{
   font: 22px Arial, sans-serif; color:rgb(221, 221, 221);
@@ -113,24 +117,26 @@ OBwindow {
   display: block;
   top: 0;
   left:0;
-
-
 }
 .contentWindow{
   display: block;
   overflow: hidden;
   width: 100%;
   border-bottom: 1px solid rgb(55, 56, 58);
-  height: 35px;
+  height: 0px;
   box-shadow: 7px 0px 10px -4px var(--shadowsColor), -7px 0px 10px -4px var(--shadowsColor), 0px 3px 6px 2px var(--shadowsColor);
   background-color: lightgrey;
+  z-index: 3;
+  transition: height 1s;
+
 }
+/*
 .contentWindow:hover{
-background-color: rgb(220,220,220);
+  background-color: rgb(220,220,220);
 }
 .contentWindowActive{
-  height: auto;
-}
+
+}*/
 .buttonCentr {
     cursor: pointer;
     min-width: 100px;
@@ -145,7 +151,7 @@ background-color: rgb(220,220,220);
 
 filtrTab{
   background-color: rgb(85, 86, 88);
-  margin-top: 60px;
+  margin-top: 70px;
   width: 100%;
   height: 30px;
   position: absolute;
@@ -157,19 +163,46 @@ filtrTab{
   z-index: 2;
 }
 
-pad{
-  width: 70%;
-  height: 1px;
-  background-color: var(--shadowsColor);
-    background-color: white;
 
-    border-top: 1px solid grey;
-  display: block;
-  opacity: 0.3;
-  margin: 0 auto;
-}
 img {
    position: relative;
    left: 50%;
    transform: translate(-50%,0);
+}
+.arrowimageDown{
+  height: 30px;
+  width: 30px;
+  margin-left: 50%;
+  margin-top: 177px;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 0;
+  left:0;
+  transition: margin-top 0.5s;
+  animation: arrowdownanim 1s ease infinite;
+}
+.arrowimageDown:hover{
+  transition: margin-top 2s;
+  border-bottom: 1px solid darkgrey;
+  animation: none;
+  margin-top: 184px;
+}
+pad{
+  width: 70%;
+  height: 1px;
+  background-color: white;
+  border-top: 1px solid grey;
+  display: block;
+  opacity: 0.3;
+  margin: 0 auto;
+
+}
+
+@keyframes arrowdownanim {
+  0%{margin-top: 140px;}
+
+  50%{margin-top: 144px;}
+
+  100%{margin-top: 140px;}
 }
