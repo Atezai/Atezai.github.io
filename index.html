@@ -7,7 +7,7 @@
   </head>
   <topbar>
     <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
-    <topbarcenter><topButtons>/home /projects /about me</topButtons></topbarcenter>
+    <topbarcenter><topButtons>home projects about me</topButtons></topbarcenter>
     <topbarright></topbarright>
   </topbar>
 
@@ -16,16 +16,15 @@
     <filtrTab>
       <p2>
         <checkbox>
-        <button id="b_all" class="buttonCentr">All</button>
-        <button id="b_games"class="buttonCentr">Games</button>
-        <button id="b_prototypes" class="buttonCentr">Prototypes</button>
-        <button id="b_applications" class="buttonCentr">Applications</button>
-        <button id="b_other" class="buttonCentr">Other</button>
+        <button class="buttonCentr">Games</button>
+        <button class="buttonCentr">Prototypes</button>
+        <button class="buttonCentr">Applications</button>
+        <button class="buttonCentr">Other</button>
       </p2>
     </filtrTab>
 
 
-    <OBwindow value="OB_png">
+    <OBwindow>
       <div class="imageWindow" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
         <div class="tytulWindow">
           Perlin Noise Generator
@@ -40,7 +39,7 @@
 
     <pad></pad>
 
-    <OBwindow value="OB_cubye">
+    <OBwindow>
       <div class="imageWindow" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
         <div class="tytulWindow">
           Cubye
@@ -55,7 +54,7 @@
 
     <pad></pad>
 
-    <OBwindow value="OB_gw">
+    <OBwindow>
       <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
         <div class="tytulWindow">
           Galaxy War
@@ -69,37 +68,20 @@
 
     <pad></pad>
 
-      <script type="text/javascript" src="mainscripts.js"></script>
-      <script>
-      var filtr=0;//0all 1 games 2 proto 3 app 4 other
-        function act(){
-          if(event.target.style.height = '35px')
-          {
-            event.target.style.height = event.target.scrollHeight.toString() + "px";
-          }  //event.target.style.height = 'auto';
-          else{
-            event.target.style.height = '35px';
-          }
-        }
-
-        function fAct(){
-          console.log("1");
-          alert(1);
-          console.log("1");
-          var xaxa=document.getElementsByTagName(OBwindow);
-          alert(xaxa.lenght);
-          for(int x=0; x<xaxa.lenght; x++)
-          {
-              xaxa.display = 'none';
-          }
-
-          switch(ba){
-
-          }
-        }
-        fAct();
-      </script>
   </body>
 
+  <script type="text/javascript" src="mainscripts.js"></script>
+  <script>
+    function act(){
+      if(event.target.style.height = '35px')
+      {
+        event.target.style.height = event.target.scrollHeight.toString() + "px";
+      }  //event.target.style.height = 'auto';
+      else{
+        event.target.style.height = '35px';
+      }
+    }
+
+  </script>
 
 </html>
