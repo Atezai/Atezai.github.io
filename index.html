@@ -1,70 +1,105 @@
 <!DOCTYPE html PUBLIC>
 <html xmlns="twojama" xml:lang="pl" lang="pl">
   <head>
-    <link rel="stylesheet" href="styl.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>TwojamaGamesCopanyIncOfEvilAndAwesomnesAndEND</title>
+    <title>Mikołaj Hanslik</title>
   </head>
+  <topbar>
+    <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
+    <topbarcenter><topButtons>/home /projects /about me</topButtons></topbarcenter>
+    <topbarright></topbarright>
+  </topbar>
 
   <body>
-  <bodynew id="newgreybody"></bodynew>
 
-    <circl id="circlM"></circl>
-
-
-
-
-    <div id="logGuest" class='login'>
-      <button onclick="setScreen(3)" id="guest"  class="button" style="font-size:35px"><b>GUEST</b></button><br>
-      <button onclick="setScreen(1)" id="loginS" class="button">login</button>
-    </div>
-
-    <div id="logIn" style="display:none" class='login'>
+    <filtrTab>
+      <p2>
+        <checkbox>
+        <button id="b_all" class="buttonCentr">All</button>
+        <button id="b_games"class="buttonCentr">Games</button>
+        <button id="b_prototypes" class="buttonCentr">Prototypes</button>
+        <button id="b_applications" class="buttonCentr">Applications</button>
+        <button id="b_other" class="buttonCentr">Other</button>
+      </p2>
+    </filtrTab>
 
 
-      <label for="userPassword2">LOGIN</label><br>
-      <input id="login" type="login"><br>
-      <label for="userPassword">PASSWORD</label><br>
-      <input id="userPassword" type="password"><br>
-      <button class="button">Login</button>
-      <button class="button">Register</button><br>
-      <button style="opacity:0.3" onclick="setScreen(0)" class="button">back</button>
+    <OBwindow value="OB_png">
+      <div class="imageWindow" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
+        <div class="tytulWindow">
+          Perlin Noise Generator
+        </div>
+        <div class="typWindow">
+          Application
+        </div>
+      </div>
+      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd</div>
+      <img src="images/arrowDown.png" alt="" class="arrowimageDown">
+    </OBwindow>
 
-    </div>
+    <pad></pad>
 
+    <OBwindow value="OB_cubye">
+      <div class="imageWindow" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
+        <div class="tytulWindow">
+          Cubye
+        </div>
+        <div class="typWindow">
+          Game
+        </div>
+      </div>
+      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad
+      </div>
+    </OBwindow>
 
+    <pad></pad>
+
+    <OBwindow value="OB_gw">
+      <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
+        <div class="tytulWindow">
+          Galaxy War
+        </div>
+        <div class="typWindow">
+          Game
+        </div>
+      </div>
+      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
+    </OBwindow>
+
+    <pad></pad>
+
+      <script type="text/javascript" src="mainscripts.js"></script>
+      <script>
+      var filtr=0;//0all 1 games 2 proto 3 app 4 other
+        function act(){
+          if(event.target.style.height = '35px')
+          {
+            event.target.style.height = event.target.scrollHeight.toString() + "px";
+          }  //event.target.style.height = 'auto';
+          else{
+            event.target.style.height = '35px';
+          }
+        }
+
+        function fAct(){
+          console.log("1");
+          alert(1);
+          console.log("1");
+          var xaxa=document.getElementsByTagName(OBwindow);
+          alert(xaxa.lenght);
+          for(int x=0; x<xaxa.lenght; x++)
+          {
+              xaxa.display = 'none';
+          }
+
+          switch(ba){
+
+          }
+        }
+        fAct();
+      </script>
   </body>
 
-  <script type="text/javascript">
-    var ScreenOn = 0;//0 guestlogin; 1 login; 2 register ; 3 website;
-      newgreybody.style.display = 'none';
 
-    function setScreen(scrn){
-        switch(scrn){
-          case 0:
-            logGuest.style.display = 'block';
-            logIn.style.display = 'none';
-            break;
-          case 1:
-            logGuest.style.display = 'none';
-            logIn.style.display = 'block';
-            break;
-          case 2:
-            logGuest.style.display = 'none';
-            logIn.style.display = 'none';
-            break;
-          case 3:
-            circlM.style.animation= 'animCirclClose 0.5s ease 1';
-            newgreybody.style.animation = 'greybackOn 0.5s ease 1';
-            newgreybody.style.display = 'block';
-            logIn.style.display = 'none';
-            logGuest.style.display = 'none';
-            window.setTimeout(function(){ circlM.style.display = 'none';  window.location.href = "main.html";}, 500);
-            break;
-        }
-    }
-
-    setScreen(0);// Show
-  </script>
 </html>

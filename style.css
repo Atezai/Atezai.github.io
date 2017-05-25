@@ -1,0 +1,222 @@
+:root {
+  --shadowsColor: rgb(96, 96, 93);
+}
+body{
+  background-color: rgb(126, 126, 123);
+  box-shadow: inset 0 0 40px 8px var(--shadowsColor);
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+  margin-top: 108px;
+  border-top: 2px solid rgb(96, 96, 93);
+  margin: 0;
+  margin-top: 100px;
+  text-align: center;
+}
+
+p2{
+  font: 24px Arial, sans-serif; color: black;
+  font-weight: 500;
+}
+
+p3{
+      font: 16px Arial, sans-serif; color: #d4d4d6;
+      padding-left: 10px;
+}
+
+topLogo {
+    font: 30px Arial, sans-serif; color: rgb(221, 221, 221);
+    font-weight: 800;
+    text-shadow: -3px 0px rgb(90, 90, 90);
+}
+
+topButtons {
+    font: 26px Arial, sans-serif; color: #d4d4d6;
+    font-weight: 500;
+    text-shadow: 0px 2px #6b6b6b;
+}
+
+topbarleft {
+    padding: 2px;
+    padding-left: 10%;
+    float:left;
+    height: 50px;
+    width:30%;
+}
+
+topbarcenter {
+    display: inline-block;
+    padding-left: 5%;
+    margin:20 auto;
+    height: 50px;
+    width:30%;
+}
+
+topbarright {
+    float:right;
+    height: 50px;
+    width:0%;
+}
+topbar{
+  background-color: rgb(55, 56, 58);
+  background: url("images/topbar.jpg");
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+  clear: both;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0px 10px 2px #000;
+border-bottom: 3px solid black;
+}
+
+filtrTab{
+  background-color: rgb(85, 86, 88);
+  background: url("images/filtrbar.jpg");
+  margin-top: 70px;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+  border-bottom: 3px solid black;
+  clear: both;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+OBwindow {
+  margin: 0 auto;
+  width: 60%;
+
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  position: relative;
+  border-top: 5px solid darkgrey;
+  transition: width 0.2s;
+  /*box-shadow: 0 0px 10px 5px #777;*/
+}
+OBwindow:hover{
+  width: 62%;
+
+}
+.imageWindow{
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+
+  background-color: black;
+  box-shadow: 7px 6px 10px -2px var(--shadowsColor), -7px 6px 10px -2px var(--shadowsColor);
+  height: 150px;
+
+}
+.tytulWindow{
+  font: 45px Arial, sans-serif; color: rgb(200,200,200);
+  font-weight: 800;
+  /*text-shadow: 0px 2px rgb(168, 168, 168);*/
+  text-shadow: -1px -3px rgb(70,70,70), 1px -3px rgb(70,70,70), 0 -3px rgb(70,70,70);
+  margin-left: 10px;
+  margin-top: 85px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left:0;
+}
+.typWindow{
+  font: 24px Arial, sans-serif; color: darkgrey;
+  font-weight: 600;
+  /*text-shadow: 0px 2px rgb(168, 168, 168);*/
+  text-shadow:  0 1px black;
+  margin-left: 8px;
+  margin-top: -24px;
+  position: absolute;
+
+  display: block;
+  top: 0;
+
+}
+.contentWindow{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid rgb(55, 56, 58);
+  height: 0px;
+  box-shadow: 7px 0px 10px -4px var(--shadowsColor), -7px 0px 10px -4px var(--shadowsColor), 0px 3px 6px 2px var(--shadowsColor);
+  background-color: lightgrey;
+  z-index: 3;
+  transition: height 1s;
+}
+/*
+.contentWindow:hover{
+  background-color: rgb(220,220,220);
+}
+.contentWindowActive{
+
+}*/
+.buttonCentr {
+    font: 19px Arial, sans-serif; color: lightGrey;
+    font-weight: 300px;
+    cursor: pointer;
+    min-width: 100px;
+    background-color: rgba(130,130,130,0.5);
+    display: inline-block;
+    vertical-align: middle;
+    margin:3px;
+    margin-top: 0px;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s, color 0.2s;
+}
+.buttonCentr:hover{
+  background-color: rgba(130,130,130,1);
+  color:black;
+}
+
+
+
+img {
+   position: relative;
+   left: 50%;
+   transform: translate(-50%,0);
+}
+.arrowimageDown{
+  height: 30px;
+  width: 30px;
+  margin-left: 50%;
+  margin-top: 177px;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 0;
+  left:0;
+  transition: margin-top 0.5s;
+  animation: arrowdownanim 1s ease infinite;
+}
+.arrowimageDown:hover{
+  transition: margin-top 2s;
+  border-bottom: 1px solid darkgrey;
+  animation: none;
+  margin-top: 184px;
+}
+pad{
+  width: 70%;
+  height: 1px;
+  background-color: lightgrey;
+  border-top: 1px solid black;
+  display: block;
+  opacity: 0.3;
+  margin: 0 auto;
+}
+
+@keyframes arrowdownanim {
+  0%{margin-top: 140px;}
+
+  50%{margin-top: 144px;}
+
+  100%{margin-top: 140px;}
+}
