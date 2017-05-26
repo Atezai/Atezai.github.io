@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC>
+<html xmlns="twojama" xml:lang="pl" lang="pl">
+  <head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mikołaj Hanslik</title>
+  </head>
+  <topbar>
+    <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
+    <topbarcenter>
+      <div id="homeBut" onclick="location.href='index.html'" class="topButtons">/home</div>
+      <div id="projectsBut" class="topButtonsActive">/projects</div>
+      <div id="cvBut" onclick="location.href='cv.html'" class="topButtons">/CV</div>
+    </topbarcenter>
+    <topbarright></topbarright>
+  </topbar>
+
+  <body>
+
+    <filtrTab>
+      <p2>
+        <checkbox>
+        <button class="buttonCentr">ALL</button>
+        <button class="buttonCentr">Games</button>
+        <button class="buttonCentr">Prototypes</button>
+        <button class="buttonCentr">Applications</button>
+        <button class="buttonCentr">Other</button>
+      </p2>
+    </filtrTab>
+
+
+    <OBwindow>
+      <div class="imageWindow" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
+        <div class="tytulWindow">
+          Perlin Noise Generator
+        </div>
+        <div class="typWindow">
+          Application
+        </div>
+      </div>
+      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd</div>
+      <img src="images/arrowDown.png" alt="" class="arrowimageDown">
+    </OBwindow>
+
+    <pad></pad>
+
+    <OBwindow>
+      <div class="imageWindow" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
+        <div class="tytulWindow">
+          Cubye
+        </div>
+        <div class="typWindow">
+          Game
+        </div>
+      </div>
+      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad
+      </div>
+    </OBwindow>
+
+    <pad></pad>
+
+    <OBwindow>
+      <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
+        <div class="tytulWindow">
+          Galaxy War
+        </div>
+        <div class="typWindow">
+          Game
+        </div>
+      </div>
+      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
+    </OBwindow>
+
+    <pad></pad>
+
+        <OBwindow>
+          <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
+            <div class="tytulWindow">
+              Galaxy War
+            </div>
+            <div class="typWindow">
+              Game
+            </div>
+          </div>
+          <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
+        </OBwindow>
+
+        <pad></pad>
+    <script type="text/javascript" src="mainscripts.js"></script>
+    <script>
+      var oldTopButton;
+      function act(){
+        if(event.target.style.height = '35px')
+        {
+          event.target.style.height = event.target.scrollHeight.toString() + "px";
+        }  //event.target.style.height = 'auto';
+        else{
+          event.target.style.height = '35px';
+        }
+      }
+      function topBarButtons(){
+
+      }
+
+    </script>
+  </body>
+
+
+
+</html>

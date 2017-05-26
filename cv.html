@@ -8,18 +8,28 @@
   <topbar>
     <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
     <topbarcenter>
-      <div id="homeBut" class="topButtonsActive">/home</div>
+      <div id="homeBut" onclick="location.href='index.html'" class="topButtons">/home</div>
       <div id="projectsBut" onclick="location.href='projects.html'" class="topButtons">/projects</div>
-      <div id="cvBut" onclick="location.href='cv.html'" class="topButtons">/CV</div>
+      <div id="cvBut" class="topButtonsActive">/CV</div>
     </topbarcenter>
     <topbarright></topbarright>
   </topbar>
 
   <body>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <filtrTab>
+      <p2>
+        <checkbox>
+        <button class="buttonCentr">ALL</button>
+        <button class="buttonCentr">Games</button>
+        <button class="buttonCentr">Prototypes</button>
+        <button class="buttonCentr">Applications</button>
+        <button class="buttonCentr">Other</button>
+      </p2>
+    </filtrTab>
 
 
-    <pad></pad>
+
     <script type="text/javascript" src="mainscripts.js"></script>
     <script>
       var oldTopButton;
@@ -32,7 +42,9 @@
           event.target.style.height = '35px';
         }
       }
+      function topBarButtons(){
 
+      }
 
     </script>
   </body>
