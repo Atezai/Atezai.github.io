@@ -25,81 +25,104 @@
         <button class="buttonCentr">Prototypes</button>
         <button class="buttonCentr">Applications</button>
         <button class="buttonCentr">Other</button>
+      </checkbox>
       </p2>
     </filtrTab>
 
 
-    <OBwindow>
-      <div class="imageWindow" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
-        <div class="tytulWindow">
-          Perlin Noise Generator
-        </div>
-        <div class="typWindow">
-          Application
+    <div class="OBwindow" id="OBpng">
+      <div class="imageWindow" onclick="act('Cpng', 'OBpng')" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
+        <div class="tytulWindow">Perlin Noise Generator</div>
+        <div class="typWindow">Application</div>
+      </div>
+      <div class="contentWindow" id="Cpng">
+        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd
+        <div class="specialsWindow">
+          <div class="specialsWindowButtons">Download</div>
         </div>
       </div>
-      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd</div>
-      <img src="images/arrowDown.png" alt="" class="arrowimageDown">
-    </OBwindow>
+      <!--<img src="images/arrowDown.png" alt="" class="arrowimageDown">-->
+    </div>
 
     <pad></pad>
 
-    <OBwindow>
-      <div class="imageWindow" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
-        <div class="tytulWindow">
-          Cubye
-        </div>
-        <div class="typWindow">
-          Game
+    <div class="OBwindow" id="OBcubye">
+      <div class="imageWindow" onclick="act('Ccubye','OBcubye');" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
+        <div class="tytulWindow">Cubye</div>
+        <div class="typWindow">Game</div>
+      </div>
+      <div class="contentWindow" id="Ccubye">
+        Mobile puzzle game.<br>
+        <div class="specialsWindow">
+          <div class="specialsWindowButtons">google play</div>
         </div>
       </div>
-      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad
-      </div>
-    </OBwindow>
+    </div>
 
     <pad></pad>
 
-    <OBwindow>
-      <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
-        <div class="tytulWindow">
-          Galaxy War
-        </div>
-        <div class="typWindow">
-          Game
+    <div class="OBwindow" id="OBgalaxywar">
+      <div class="imageWindow"  onclick="act('Cgalaxywar','OBgalaxywar');"><img src="images/galaxbar.jpg" alt="noiseBar">
+        <div class="tytulWindow">Hover Jet</div>
+        <div class="typWindow">Prototype</div>
+      </div>
+      <div class="contentWindow" id="Cgalaxywar">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd
+        <div class="specialsWindow">
+          <div class="specialsWindowButtons">play</div>
         </div>
       </div>
-      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
-    </OBwindow>
+    </div>
 
     <pad></pad>
 
-        <OBwindow>
-          <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
-            <div class="tytulWindow">
-              Galaxy War
-            </div>
-            <div class="typWindow">
-              Game
-            </div>
-          </div>
-          <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
-        </OBwindow>
+    <div class="OBwindow" id="OBgalaxywar">
+      <div class="imageWindow"  onclick="act('Cgalaxywar','OBgalaxywar');"><img src="images/galaxbar.jpg" alt="noiseBar">
+        <div class="tytulWindow">Galaxy War</div>
+        <div class="typWindow">Game</div>
+      </div>
+      <div class="contentWindow" id="Cgalaxywar">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
+    </div>
 
-        <pad></pad>
-    <script type="text/javascript" src="mainscripts.js"></script>
-    <script>
+    <pad></pad>
+    <script type="text/javascript">
       var oldTopButton;
-      function act(){
-        if(event.target.style.height = '35px')
+      var oldProjectTabC;
+      var oldProjectTabOB;
+      var act = function(content,ob){
+        var cont = document.getElementById(content.toString());
+        var obw = document.getElementById(ob.toString());
+        if(cont!=oldProjectTabC)
         {
-          event.target.style.height = event.target.scrollHeight.toString() + "px";
-        }  //event.target.style.height = 'auto';
-        else{
-          event.target.style.height = '35px';
-        }
-      }
-      function topBarButtons(){
+          obw.style.width='62%';
+          cont.style.height = cont.scrollHeight.toString() + "px";
 
+          if(oldProjectTabC!=null){
+            oldProjectTabC.style.height = '0px';
+            //oldProjectTabOB.style.width = '60%';
+            oldProjectTabOB.removeAttribute("style");
+          }
+
+          oldProjectTabC=cont;
+          oldProjectTabOB=obw;
+        }
+        else{
+          cont.style.height = '0px';
+          //obw.style.width = '60%';
+          obw.removeAttribute("style");
+          oldProjectTabC = null;
+          oldProjectTabOB = null;
+        }
+
+
+      }
+      function openOB(x){
+        alert(1);
+        var  f= document.getElementById(x);
+        if(f.style.height=='auto')
+          f.style.height='0px';
+        else {
+          f.style.height='auto';
+        }
       }
 
     </script>
