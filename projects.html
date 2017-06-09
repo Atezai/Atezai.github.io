@@ -1,9 +1,22 @@
 <!DOCTYPE html PUBLIC>
 <html xmlns="twojama" xml:lang="pl" lang="pl">
   <head>
+
     <link rel="stylesheet" href="style.css" type="text/css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Mikołaj Hanslik</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        $(".OBwindow").click(function(){
+          $('html, body').animate({
+              scrollTop: $(this).offset().top
+          }, 'fast');
+        });
+    });
+
+    </script>
   </head>
   <topbar>
     <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
@@ -30,12 +43,13 @@
     </filtrTab>
 
 
-    <div class="OBwindow" id="OBpng">
+    <div class="OBwindow" id="OBpng"><div class="typWindow">Application</div>
       <div class="imageWindow" onclick="act('Cpng', 'OBpng')" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
         <div class="tytulWindow">Perlin Noise Generator</div>
-        <div class="typWindow">Application</div>
+
       </div>
       <div class="contentWindow" id="Cpng">
+        <div class="photoHolder"></div>
         asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd
         <div class="specialsWindow">
           <div class="specialsWindowButtons">Download</div>
@@ -46,12 +60,15 @@
 
     <pad></pad>
 
-    <div class="OBwindow" id="OBcubye">
+    <div class="OBwindow" id="OBcubye">        <div class="typWindow">Game</div>
       <div class="imageWindow" onclick="act('Ccubye','OBcubye');" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
         <div class="tytulWindow">Cubye</div>
-        <div class="typWindow">Game</div>
+
       </div>
       <div class="contentWindow" id="Ccubye">
+        <div class="photoHolder">
+
+        </div>
         Mobile puzzle game.<br>
         <div class="specialsWindow">
           <div class="specialsWindowButtons">google play</div>
@@ -61,12 +78,16 @@
 
     <pad></pad>
 
-    <div class="OBwindow" id="OBgalaxywar">
+    <div class="OBwindow" id="OBgalaxywar"><div class="typWindow">Prototype</div>
       <div class="imageWindow"  onclick="act('Cgalaxywar','OBgalaxywar');"><img src="images/galaxbar.jpg" alt="noiseBar">
         <div class="tytulWindow">Hover Jet</div>
-        <div class="typWindow">Prototype</div>
+
       </div>
-      <div class="contentWindow" id="Cgalaxywar">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd
+      <div class="contentWindow" id="Cgalaxywar">
+        <div class="photoHolder">
+
+        </div>
+        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd
         <div class="specialsWindow">
           <div class="specialsWindowButtons">play</div>
         </div>
@@ -75,26 +96,37 @@
 
     <pad></pad>
 
-    <div class="OBwindow" id="OBgalaxywar">
+    <div class="OBwindow" id="OBgalaxywar">        <div class="typWindow">Game</div>
       <div class="imageWindow"  onclick="act('Cgalaxywar','OBgalaxywar');"><img src="images/galaxbar.jpg" alt="noiseBar">
         <div class="tytulWindow">Galaxy War</div>
-        <div class="typWindow">Game</div>
+
       </div>
-      <div class="contentWindow" id="Cgalaxywar">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
+      <div class="contentWindow" id="Cgalaxywar">
+        <div class="photoHolder">
+
+        </div>
+        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
     </div>
 
     <pad></pad>
     <script type="text/javascript">
+
       var oldTopButton;
       var oldProjectTabC;
       var oldProjectTabOB;
+
       var act = function(content,ob){
+
         var cont = document.getElementById(content.toString());
+        var obwName = ob.toString();
         var obw = document.getElementById(ob.toString());
+
         if(cont!=oldProjectTabC)
         {
-          obw.style.width='62%';
+          obw.style.width='100%';
+          obw.style.index='100';
           cont.style.height = cont.scrollHeight.toString() + "px";
+          cont.style.height = "100%";
 
           if(oldProjectTabC!=null){
             oldProjectTabC.style.height = '0px';
@@ -115,6 +147,10 @@
 
 
       }
+
+
+
+
       function openOB(x){
         alert(1);
         var  f= document.getElementById(x);
