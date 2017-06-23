@@ -2,7 +2,7 @@ var gl;
 
 var InitDemo = function () {
 
-RunDemo(vsText, fsText, img, modelObj);
+
 	loadTextResource('shader.vs.glsl', function (vsErr, vsText) {
 		if (vsErr) {
 			alert('Fatal error getting vertex shader (see console)');
