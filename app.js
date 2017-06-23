@@ -1,6 +1,8 @@
 var gl;
 
 var InitDemo = function () {
+	
+
 	loadTextResource('shader.vs.glsl', function (vsErr, vsText) {
 		if (vsErr) {
 			alert('Fatal error getting vertex shader (see console)');
