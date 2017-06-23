@@ -11,14 +11,14 @@ var InitDemo = function () {
 					alert('Fatal error getting fragment shader (see console)');
 					console.error(fsErr);
 				} else {
-					loadJSONResource('/worldLoPoly.json', function (modelErr, modelObj) {
+					loadJSONResource('/worldMesh.json', function (modelErr, modelObj) {
 						if (modelErr) {
-							alert('Fatal error getting Susan model (see console)');
+							alert('Fatal error getting World model (see console)');
 							console.error(fsErr);
 						} else {
 							loadImage('/worldPaintAsmall.jpg', function (imgErr, img) {
 								if (imgErr) {
-									alert('Fatal error getting Susan texture (see console)');
+									alert('Fatal error getting World texture (see console)');
 									console.error(imgErr);
 								} else {
 									RunDemo(vsText, fsText, img, modelObj);
