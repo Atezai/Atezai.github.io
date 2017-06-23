@@ -1,44 +1,15 @@
-<!DOCTYPE html PUBLIC>
-<html xmlns="twojama" xml:lang="pl" lang="pl">
-  <head>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mikołaj Hanslik</title>
-  </head>
-  <topbar>
-    <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
-    <topbarcenter>
-      <div id="homeBut" class="topButtonsActive">/home</div>
-      <div id="projectsBut" onclick="location.href='projects.html'" class="topButtons">/projects</div>
-      <div id="cvBut" onclick="location.href='cv.html'" class="topButtons">/CV</div>
-    </topbarcenter>
-    <topbarright></topbarright>
-  </topbar>
-
-  <body>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-    <pad></pad>
-    <script type="text/javascript" src="mainscripts.js"></script>
-    <script>
-      var oldTopButton;
-      function act(){
-    
-        if(event.target.style.height = '35px')
-        {
-          event.target.style.height = event.target.scrollHeight.toString() + "px";
-
-        }  //event.target.style.height = 'auto';
-        else{
-          event.target.style.height = '35px';
-        }
-      }
-
-
-    </script>
-  </body>
-
-
-
+<html>
+	<head>
+		<title>WebGL - Rotating Susan!</title>
+	</head>
+	<body onload="InitDemo();">
+		<canvas id="game-surface" width="800" height="600">
+			Your browser does not support HTML5
+		</canvas>
+		<br />
+		<i>Demo is above this text</i>
+		<script src="util.js"></script>
+		<script src="gl-matrix.js"></script>
+		<script src="app.js"></script>
+	</body>
 </html>
