@@ -16,7 +16,7 @@ var InitDemo = function () {
 							alert('Fatal error getting Susan model (see console)');
 							console.error(fsErr);
 						} else {
-							loadImage('/worldLoPoly.jpg', function (imgErr, img) {
+							loadImage('/worldPaintAsmall.jpg', function (imgErr, img) {
 								if (imgErr) {
 									alert('Fatal error getting Susan texture (see console)');
 									console.error(imgErr);
