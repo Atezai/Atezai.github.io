@@ -19,7 +19,7 @@ body{
 .mhLogo{
   width: 100%;
   top:320px;
-  font: 130px Courier, monospace; color: rgba(200,200,200,1);
+  font: 130px Courier, monospace; color: rgba(100,100,255,1);
   letter-spacing: 3px;
   font-weight: 800;
   display: block;
