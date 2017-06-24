@@ -187,7 +187,7 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 		mat4.mul(worldMatrix, yRotationMatrix, xRotationMatrix);
 		gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);
 
-		gl.clearColor(0.75, 0.85, 0.8, 1.0);
+		gl.clearColor(0,0,0,0);
 		gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 
 		gl.bindTexture(gl.TEXTURE_2D, meshTexture);
