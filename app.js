@@ -49,7 +49,7 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 		alert('Your browser does not support WebGL');
 	}
 
-	gl.clearColor(0.75, 0.85, 0.8, 1);
+	gl.clearColor(0,0,0,0);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	gl.enable(gl.DEPTH_TEST);
 	gl.enable(gl.CULL_FACE);
@@ -178,14 +178,15 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 	var identityMatrix = new Float32Array(16);
 	mat4.identity(identityMatrix);
 	var angle = 0;
+
 	var loop = function () {
 		angle = performance.now() / 1000 / 6 * 2 * Math.PI;
 		mat4.rotate(yRotationMatrix, identityMatrix, angle, [0, 1, 0]);
-		mat4.rotate(xRotationMatrix, identityMatrix, angle / 4, [1, 0, 0]);
+		//mat4.rotate(xRotationMatrix, identityMatrix, angle / 4, [1, 0, 0]);
 		mat4.mul(worldMatrix, yRotationMatrix, xRotationMatrix);
 		gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);
 
-		gl.clearColor(0.75, 0.85, 0.8, 1.0);
+		gl.clearColor(0,0,0,0);
 		gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 
 		gl.bindTexture(gl.TEXTURE_2D, meshTexture);
