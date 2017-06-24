@@ -34,7 +34,7 @@ var InitDemo = function () {
 	});
 };
 
-var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanModel) {
+var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshModel) {
 	console.log('This is working');
 
 	var canvas = document.getElementById('game-surface');
@@ -50,7 +50,7 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanM
 	}
 
 	gl.clearColor(0.75, 0.85, 0.8, 0);
-	gl.clear(gl.COLOR_BUFFER_BIT);
+	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	gl.enable(gl.DEPTH_TEST);
 	gl.enable(gl.CULL_FACE);
 	gl.frontFace(gl.CCW);
@@ -94,23 +94,23 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanM
 	//
 	// Create buffer
 	//
-	var susanVertices = SusanModel.meshes[0].vertices;
-	var susanIndices = [].concat.apply([], SusanModel.meshes[0].faces);
-	var susanTexCoords = SusanModel.meshes[0].texturecoords[0];
+	var meshVertices = meshModel.meshes[0].vertices;
+	var meshIndices = [].concat.apply([], meshModel.meshes[0].faces);
+	var meshTexCoords = meshModel.meshes[0].texturecoords[0];
 
-	var susanPosVertexBufferObject = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, susanPosVertexBufferObject);
-	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(susanVertices), gl.STATIC_DRAW);
+	var meshPosVertexBufferObject = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, meshPosVertexBufferObject);
+	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(meshVertices), gl.STATIC_DRAW);
 
-	var susanTexCoordVertexBufferObject = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, susanTexCoordVertexBufferObject);
-	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(susanTexCoords), gl.STATIC_DRAW);
+	var meshTexCoordVertexBufferObject = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, meshTexCoordVertexBufferObject);
+	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(meshTexCoords), gl.STATIC_DRAW);
 
-	var susanIndexBufferObject = gl.createBuffer();
-	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, susanIndexBufferObject);
-	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(susanIndices), gl.STATIC_DRAW);
+	var meshIndexBufferObject = gl.createBuffer();
+	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, meshIndexBufferObject);
+	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(meshIndices), gl.STATIC_DRAW);
 
-	gl.bindBuffer(gl.ARRAY_BUFFER, susanPosVertexBufferObject);
+	gl.bindBuffer(gl.ARRAY_BUFFER, meshPosVertexBufferObject);
 	var positionAttribLocation = gl.getAttribLocation(program, 'vertPosition');
 	gl.vertexAttribPointer(
 		positionAttribLocation, // Attribute location
@@ -122,7 +122,7 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanM
 	);
 	gl.enableVertexAttribArray(positionAttribLocation);
 
-	gl.bindBuffer(gl.ARRAY_BUFFER, susanTexCoordVertexBufferObject);
+	gl.bindBuffer(gl.ARRAY_BUFFER, meshTexCoordVertexBufferObject);
 	var texCoordAttribLocation = gl.getAttribLocation(program, 'vertTexCoord');
 	gl.vertexAttribPointer(
 		texCoordAttribLocation, // Attribute location
@@ -137,8 +137,8 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanM
 	//
 	// Create texture
 	//
-	var susanTexture = gl.createTexture();
-	gl.bindTexture(gl.TEXTURE_2D, susanTexture);
+	var meshTexture = gl.createTexture();
+	gl.bindTexture(gl.TEXTURE_2D, meshTexture);
 	gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
@@ -147,7 +147,7 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanM
 	gl.texImage2D(
 		gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,
 		gl.UNSIGNED_BYTE,
-		SusanImage
+		meshImage
 	);
 	gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -188,10 +188,10 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, SusanImage, SusanM
 		gl.clearColor(0.75, 0.85, 0.8, 1.0);
 		gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 
-		gl.bindTexture(gl.TEXTURE_2D, susanTexture);
+		gl.bindTexture(gl.TEXTURE_2D, meshTexture);
 		gl.activeTexture(gl.TEXTURE0);
 
-		gl.drawElements(gl.TRIANGLES, susanIndices.length, gl.UNSIGNED_SHORT, 0);
+		gl.drawElements(gl.TRIANGLES, meshIndices.length, gl.UNSIGNED_SHORT, 0);
 
 		requestAnimationFrame(loop);
 	};
