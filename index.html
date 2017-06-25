@@ -16,7 +16,7 @@
 			</div>
 
 			<div id="worlddiv" class="halfBox" style="left:50%;">
-				<canvas id="game-surface" style="background:url('atmosphere.png');">
+				<canvas id="game-surface" width="10px" height="10px" style="background:url('atmosphere.png');">
 					Your browser does not support HTML5
 				</div>										<!--<img src="atmosphere.png" style="position:absolute; left:0; width:100%;">-->
 			</div>
@@ -35,6 +35,7 @@
 						world.width = document.getElementById('worlddiv').clientWidth;
 						world.height = document.getElementById('worlddiv').clientWidth;
 						world.style.backgroundSize = ""+document.getElementById('worlddiv').clientWidth+"px";
+						
 				 }
 
 

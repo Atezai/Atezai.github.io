@@ -180,6 +180,7 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 	var angle = 0;
 
 	var loop = function () {
+		gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 		angle = performance.now() / 1000 / 16 * 2 * Math.PI;
 		mat4.rotate(yRotationMatrix, identityMatrix, Math.sin(angle)/2.5, [1, 0, 0]);
 		mat4.rotate(xRotationMatrix, identityMatrix, angle*3, [0, 1, 0]);
