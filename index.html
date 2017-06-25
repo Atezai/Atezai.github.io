@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<title>WebGL - Rotating Susan!</title>
 	</head>
-	<body onload="InitDemo();" style="background-color:rgb(0,0,20)">
+	<body onresize="resizeCanvas();" onload="resizeCanvas();InitDemo();" style="background-color:rgb(0,0,20)">
 
 
 		<div class="screenBox"><!--<///////////////////////////-->
@@ -26,36 +26,20 @@
 
 
 		<script>
-			(function() {
-				 var world = document.getElementById('game-surface'),
-				 var world_div = document.getElementById('worlddiv'),
 
-				initialize();
+				 var world = document.getElementById('game-surface');
+				 var world_div = document.getElementById('worlddiv');
 
-				function initialize() {
-						window.addEventListener('resize', resizeCanvas, false);
-						resizeCanvas();
-				 }
-				 /*function redraw() {
-						context.strokeStyle = 'blue';
-						context.lineWidth = '5';
-						context.strokeRect(0, 0, window.innerWidth, window.innerHeight);
-				 }*/
 
 				 function resizeCanvas() {
-						world.width = world_div.width;
-						world.height = world_div.width;
-						 /*redraw();*/
+						world.width = document.getElementById('worlddiv').clientWidth;
+						world.height = document.getElementById('worlddiv').clientWidth;
+						world.style.backgroundSize = ""+document.getElementById('worlddiv').clientWidth+"px";
 				 }
-		 })();/*
-			var world= document.getElementById('game-surface');
-			var worlddivbox = document.getElementById('worlddiv');
-			function resizeit(){
-				world.height = worlddivbox.width;
-		    world.width = worlddivbox.width;
-				redraw();
-			}*/
+
+
 		</script>
+
 		<script src="util.js"></script>
 		<script src="gl-matrix.js"></script>
 		<script src="app.js"></script>
