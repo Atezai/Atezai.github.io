@@ -7,7 +7,7 @@
 	<body onresize="resizeCanvas();" onload="resizeCanvas();InitDemo();" style="background-color:rgb(0,0,20)">
 
 
-		<div class="screenBox"><!--<///////////////////////////-->
+		<div class="screenBox"><!--</////////////home//////////////-->
 
 			<div class="halfBox">
 				<div class="mhLogo">
@@ -16,9 +16,9 @@
 			</div>
 
 			<div id="worlddiv" class="halfBox" style="left:50%;">
-				<canvas id="game-surface" width="10px" height="10px" style="background:url('atmosphere.png');">
+				<canvas id="game-surface" style="background:url('atmosphere.png');">
 					Your browser does not support HTML5
-				</div>										<!--<img src="atmosphere.png" style="position:absolute; left:0; width:100%;">-->
+				</div>
 			</div>
 
 		</div>									<!--////////////////////////////-->
@@ -26,19 +26,15 @@
 
 
 		<script>
-
 				 var world = document.getElementById('game-surface');
 				 var world_div = document.getElementById('worlddiv');
 
-
 				 function resizeCanvas() {
-						world.width = document.getElementById('worlddiv').clientWidth;
-						world.height = document.getElementById('worlddiv').clientWidth;
-						world.style.backgroundSize = ""+document.getElementById('worlddiv').clientWidth+"px";
-						
+						world.width = world_div.clientWidth;
+						world.height = world_div.clientWidth;
+						world.style.backgroundSize = ""+world_div.clientWidth+"px";
+						world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
 				 }
-
-
 		</script>
 
 		<script src="util.js"></script>
