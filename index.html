@@ -10,8 +10,8 @@
 		<div class="screenBox"><!--</////////////home//////////////-->
 
 			<div class="halfBox">
-				<div class="mhLogo">
-					<h1>Mikołaj_Hanslik()</h1><h2>{return portfolio;}</h2>
+				<div class="mhLogo" id="logos">
+					<h1>Mikołaj_Hanslik()</h1><h2>{goto portfolio;}</h2>
 				</div>
 			</div>
 
@@ -28,12 +28,14 @@
 		<script>
 				 var world = document.getElementById('game-surface');
 				 var world_div = document.getElementById('worlddiv');
-
+				 var logoso = document.getElementById('logos');
 				 function resizeCanvas() {
 						world.width = world_div.clientWidth;
 						world.height = world_div.clientWidth;
 						world.style.backgroundSize = ""+world_div.clientWidth+"px";
 						world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
+						logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
+
 				 }
 		</script>
 
