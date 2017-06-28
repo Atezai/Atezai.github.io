@@ -18,7 +18,7 @@ var InitDemo = function () {
 							alert('Fatal error getting World model (see console)');
 							console.error(fsErr);
 						} else {
-							loadImage('/worldPaintAsmall.jpg', function (imgErr, img) {
+							loadImage('img/worldPaintAsmall.jpg', function (imgErr, img) {
 								if (imgErr) {
 									alert('Fatal error getting World texture (see console)');
 									console.error(imgErr);
