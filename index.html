@@ -9,12 +9,6 @@
 
 		<div class="screenBox"><!--</////////////home//////////////-->
 
-			<div class="halfBox">
-				<div class="mhLogo" id="logos">
-					<h1 id="logomh" style="top:200;" onclick="scrollItBack()">Mikołaj_Hanslik()</h1>
-					<h2 id="logomhB" onclick="scrollIt()">{goto portfolio;}</h2>
-				</div>
-			</div>
 
 			<div id="worlddiv" class="halfBox" style="left:50%;">
 				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
@@ -31,7 +25,7 @@
 
 
 			<div class="OBwindow" id="OBpng"><div class="typWindow">Application</div>
-	      <div class="imageWindow" onclick="act('Cpng', 'OBpng')" style="background-color:rgb(49,49,49)"><img src="img/noisebar.jpg" alt="noiseBar">
+	      <div class="imageWindow" onclick="act('Cpng', 'OBpng')" style="background-color:rgb(44,44,44)"><img src="img/noisebar.jpg" alt="noiseBar">
 	        <div class="tytulWindow">Perlin Noise Generator</div>
 
 	      </div>
@@ -100,13 +94,21 @@
 
 		</div>									<!--////////////////////////////-->
 
+
+			<div class="mhLogo" id="logos" >
+				<h1 id="logomh"  onclick="scrollItBack()">Mikołaj_Hanslik()</h1>
+				<h2 id="logomhB" onclick="scrollIt()">{goto portfolio;}</h2>
+		</div>
+		<div class="shad" id="shadowP"></div>
 		<script>
 				 var world = document.getElementById('game-surface');
 				 var world_div = document.getElementById('worlddiv');
 				 var logoso = document.getElementById('logos');
 				 var portScreen = document.getElementById('screenP');
+				 var portScreenBlur = document.getElementById('screenPBlur');
 				 var logo1 = document.getElementById('logomh');
 				 var logo1B = document.getElementById('logomhB');
+				 var shadP = document.getElementById('shadowP');
 				 var downS = false;
 				 function startw(){
 					 		logoso.style.opacity = 1;
@@ -129,10 +131,13 @@
 				 function scrollIt(){
 					 if(!downS){
 						 portScreen.style.top = world_div.clientHeight/10;
+						 shadP.style.top = world_div.clientHeight/10;
 						 world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
-						 //logoso.style.opacity=0;
-						 logos.style.top = -logos.clientHeight/5;
+						 logos.style.top = 0
 						 logo1B.style.opacity = 0;
+						 logo1.style.cursor='pointer';
+						 logo1B.style.cursor='default';
+						 logo1B.style.pointerEvents='none';
 						 downS=true;
 					 }
 				 }
@@ -140,9 +145,14 @@
 				 function scrollItBack(){
 					 logo1B.style.opacity = 1;
 					 portScreen.style.top = world_div.clientHeight;
+					 shadP.style.top = world_div.clientHeight;
+					 //portScreenBlur.style.top = world_div.clientHeight;
 					 world_div.style.top = 0;
 					 logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
 					 downS=false;
+					 logo1.style.cursor='default';
+					 logo1B.style.cursor='pointer';
+					  logo1B.style.pointerEvents='painted';
 				 }
 
 
