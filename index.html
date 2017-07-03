@@ -30,7 +30,7 @@
 
 	      </div>
 	      <div class="contentWindow" id="Cpng">
-	        <div class="photoHolder"></div>
+	        <div class="photoHolder"><iframe width="560" height="315" src="https://www.youtube.com/embed/eY52Zsg-KVI" frameborder="0" allowfullscreen></iframe></div>
 	        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd
 	        <div class="specialsWindow">
 	          <div class="specialsWindowButtons">Download</div>
@@ -129,7 +129,7 @@
 						if(downS){
 							scrollIt();
 						}else{
-							logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
+							logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/3;
 						}
 
 				 }
@@ -138,12 +138,13 @@
 						 portScreen.style.top = world_div.clientHeight/10;
 						 shadP.style.top = world_div.clientHeight/10;
 						 world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
-						 logos.style.top = 0
+						 logos.style.top = 0;
+
 						 logo1B.style.opacity = 0;
 						 logo1.style.cursor='pointer';
 						 logo1B.style.cursor='default';
 						 logo1B.style.pointerEvents='none';
-						 starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
+						 //starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
 						 downS=true;
 
 					 }
@@ -160,8 +161,46 @@
 					 logo1.style.cursor='default';
 					 logo1B.style.cursor='pointer';
 					  logo1B.style.pointerEvents='painted';
-						 starsB.style.boxShadow='0px 0px 1px 0 rgba(220,220,220,1) inset';
+						 //starsB.style.boxShadow='0px 0px 1px 0 rgba(220,220,220,1) inset';
 				 }
+
+
+				 var oldTopButton;
+			 	var oldProjectTabC;
+			 	var oldProjectTabOB;
+
+			 	var act = function(content,ob){
+
+			 		var cont = document.getElementById(content.toString());
+			 		var obwName = ob.toString();
+			 		var obw = document.getElementById(ob.toString());
+
+			 		if(cont!=oldProjectTabC)
+			 		{
+			 			obw.style.width='65%';
+			 			obw.style.index='100';
+			 			cont.style.height = cont.scrollHeight.toString() + "px";
+			 			//cont.style.height = "100%";
+
+			 			if(oldProjectTabC!=null){
+			 				oldProjectTabC.style.height = '0px';
+			 				//oldProjectTabOB.style.width = '60%';
+			 				oldProjectTabOB.removeAttribute("style");
+			 			}
+
+			 			oldProjectTabC=cont;
+			 			oldProjectTabOB=obw;
+			 		}
+			 		else{
+			 			cont.style.height = '0px';
+			 			//obw.style.width = '60%';
+			 			obw.removeAttribute("style");
+			 			oldProjectTabC = null;
+			 			oldProjectTabOB = null;
+			 		}
+
+
+			 	}
 
 
 
