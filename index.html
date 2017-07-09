@@ -78,9 +78,10 @@
 					//targetDivs.style.opacity = 0.5;
 		 }
 		 function worldResize(){
-			 world.style.width = world_div.clientWidth;
-			 world.style.height = world_div.clientWidth;
-			 world.style.backgroundSize = ""+world_div.clientWidth+"px";
+			 world.width = world_div.clientWidth;
+			 world.height = world_div.clientWidth;
+			 //world.style.backgroundSize = ''+world_div.clientWidth+"px ";
+			 world.style.backgroundSize = '100% 100%';
 			 world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
 		 }
 
@@ -131,7 +132,7 @@
 
 			 world_div.style.width='50%';
 			 worldupinterval=setInterval(worldUp, 10);
-			setTimeout(stopworldUp, 1000);
+			 setTimeout(stopworldUp, 1000);
 
 		 }
 
