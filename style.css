@@ -82,7 +82,7 @@ canvas{
   text-align: center;
   display: block;
   z-index: 1;
-  transition: top 1s;
+  transition: top 1s, width 1s, left 1s;
 }
 .mhLogo{
   width: auto;
@@ -155,19 +155,19 @@ pad{
 }
 .OBwindow {
   margin: 0 auto;
-  width: 60%;
+  width: 40%;
 
   display: block;
   margin-top: 80px;
   margin-bottom: 80px;
   position: relative;
   height: auto;
-    filter: saturate(10%);
+  filter: saturate(10%);
   transition: width 0.2s, filter 0.5s;
   box-shadow: 0 0px 1px 2px white;
 }
 .OBwindow:hover{
-  width: 64%;
+
 
 }
 .imageWindow{
@@ -183,17 +183,19 @@ pad{
   z-index: 8;
 }
 .imageWindow:hover{
-  filter: saturate(1.7);
+
 
 }
 .tytulWindow{
-  font: 5.5vw Arial, sans-serif; color: white;
+  font: 4vw Arial, sans-serif; color: white;
   font-weight: 800;
-  /*text-shadow: 0px 2px rgb(168, 168, 168);*/
-  text-shadow: -5px 0px 2px black, 5px 0px 2px black,0 5px 2px black,0px -5px 2px black,
 
-  margin-left: 10px;
-  margin-top: 80px;
+  border-bottom: 3px solid white;
+  /*text-shadow: 0px 2px rgb(168, 168, 168);*/
+  text-shadow: -5px 0px 2px black, 5px 0px 2px black,0 5px 2px black,0px -5px 2px black;
+  width: 130%;
+  transform: translate(-10%,-3vh);
+  margin-top: -10%;
   position: absolute;
   display: block;
 
@@ -280,9 +282,34 @@ pad{
 
 }
 
+
+
+
+.ObjectWindow{
+  margin: 0 4%;
+  display: block;
+  width: 30%;
+  height: 8vh;
+  background-color: white;
+  transition: width 0.2s, height 0.5s;
+}
+.ObjectWindow:hover{
+  width: 35%;
+}
+.TitlePhotoWindow{
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  max-height: 150px;
+
+}
+.TitleWindow{
+
+}
 img {
    position: relative;
    left: 50%;
    transform: translate(-50%,0);
-
+   object-fit: contain;
 }

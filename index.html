@@ -23,74 +23,23 @@
 
 		<div class="screenWindow" id="screenP"><!--</////////////screen1//////////////-->
 			<br><br><br>
+			<br><br><br>
 
-			<div class="OBwindow" id="OBpng"><div class="typWindow">Application</div>
-	      <div class="imageWindow" onclick="act('Cpng', 'OBpng')" style="background-color:rgb(44,44,44)"><img src="img/noisebar.jpg" alt="noiseBar">
-	        <div class="tytulWindow">Perlin Noise Generator</div>
 
-	      </div>
-	      <div class="contentWindow" id="Cpng">
-	        <div class="photoHolder"><iframe width="560" height="315" src="https://www.youtube.com/embed/eY52Zsg-KVI" frameborder="0" allowfullscreen></iframe></div>
-	        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd
-	        <div class="specialsWindow">
-	          <div class="specialsWindowButtons">Download</div>
-	        </div>
-	      </div>
-	      <!--<img src="img/arrowDown.png" alt="" class="arrowimageDown">-->
-	    </div>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+
+
+			<br><br><br>
+			<br><br><br>
+
 
 	    <pad></pad>
 
-	    <div class="OBwindow" id="OBcubye">        <div class="typWindow">Game</div>
-	      <div class="imageWindow" onclick="act('Ccubye','OBcubye');" style="background-color:rgb(254,244,103)"><img src="img/cubyebar.jpg" alt="noiseBar">
-	        <div class="tytulWindow">Cubye</div>
 
-	      </div>
-	      <div class="contentWindow" id="Ccubye">
-	        <div class="photoHolder">
-
-	        </div>
-	        Mobile puzzle game.<br>
-	        <div class="specialsWindow">
-	          <div class="specialsWindowButtons">google play</div>
-	        </div>
-	      </div>
-	    </div>
-
-	    <pad></pad>
-
-	    <div class="OBwindow" id="OBgalaxywar"><div class="typWindow">Prototype</div>
-	      <div class="imageWindow"  onclick="act('Cgalaxywar','OBgalaxywar');"><img src="img/galaxbar.jpg" alt="noiseBar">
-	        <div class="tytulWindow">Hover Jet</div>
-
-	      </div>
-	      <div class="contentWindow" id="Cgalaxywar">
-	        <div class="photoHolder">
-
-	        </div>
-	        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd
-	        <div class="specialsWindow">
-	          <div class="specialsWindowButtons">play</div>
-	        </div>
-	      </div>
-	    </div>
-
-	    <pad></pad>
-
-	    <div class="OBwindow" id="OBgalaxywar"><div class="typWindow">Game</div>
-	      <div class="imageWindow"  onclick="act('Cgalaxywar','OBgalaxywar');"><img src="img/galaxbar.jpg" alt="noiseBar">
-	        <div class="tytulWindow">Galaxy War</div>
-
-	      </div>
-	      <div class="contentWindow" id="Cgalaxywar">
-	        <div class="photoHolder">
-
-	        </div>
-	        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
-	    </div>
-
-			<pad></pad>
-			<br><br><br><br><br><br><br><pad></pad>
+			<br><br><br><br><br><br><br>
 
 		</div>									<!--////////////////////////////-->
 
@@ -100,116 +49,183 @@
 				<h2 id="logomhB" onclick="scrollIt()">{goto portfolio;}</h2>
 		</div>
 		<div class="shad" id="shadowP"></div>
-		<script>
-				 var world = document.getElementById('game-surface');
-				 var world_div = document.getElementById('worlddiv');
-				 var logoso = document.getElementById('logos');
-				 var portScreen = document.getElementById('screenP');
-				 var portScreenBlur = document.getElementById('screenPBlur');
-				 var logo1 = document.getElementById('logomh');
-				 var logo1B = document.getElementById('logomhB');
-				 var shadP = document.getElementById('shadowP');
-				 var downS = false;
-				 var starsB = document.getElementById('starsBack');
-
-				 var targetDivs = document.getElementById("screenP").getElementsByClassName("OBwindow")[0];
-
-				 function startw(){
-					 		logoso.style.opacity = 1;
-							resizeCanvas();
-							//targetDivs.style.opacity = 0.5;
-				 }
-
-				 function resizeCanvas() {
-						world.width = world_div.clientWidth;
-						world.height = world_div.clientWidth;
-						world.style.backgroundSize = ""+world_div.clientWidth+"px";
-						world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
-
-						if(downS){
-							scrollIt();
-						}else{
-							logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/3;
-						}
-
-				 }
-				 function scrollIt(){
-					 if(!downS){
-						 portScreen.style.top = world_div.clientHeight/10;
-						 shadP.style.top = world_div.clientHeight/10;
-						 world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
-						 logos.style.top = 0;
-						 screenP.style.filter = 'saturate(10%)';
-
-						 logo1B.style.opacity = 0;
-						 logo1.style.cursor='pointer';
-						 logo1B.style.cursor='default';
-						 logo1B.style.pointerEvents='none';
-						 //starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
-						 downS=true;
-
-					 }
-				 }
-
-				 function scrollItBack(){
-					 logo1B.style.opacity = 1;
-					 portScreen.style.top = world_div.clientHeight;
-					 shadP.style.top = world_div.clientHeight;
-					 //portScreenBlur.style.top = world_div.clientHeight;
-					 world_div.style.top = 0;
-					 logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
-					 screenP.style.filter = 'saturate(100%)';
-					 downS=false;
-					 logo1.style.cursor='default';
-					 logo1B.style.cursor='pointer';
-					  logo1B.style.pointerEvents='painted';
-						 //starsB.style.boxShadow='0px 0px 1px 0 rgba(220,220,220,1) inset';
-				 }
 
 
-				 var oldTopButton;
-			 	var oldProjectTabC;
-			 	var oldProjectTabOB;
-
-			 	var act = function(content,ob){
-
-			 		var cont = document.getElementById(content.toString());
-			 		var obwName = ob.toString();
-			 		var obw = document.getElementById(ob.toString());
-
-			 		if(cont!=oldProjectTabC)
-			 		{
-			 			obw.style.width='65%';
-			 			obw.style.index='100';
-			 			cont.style.height = cont.scrollHeight.toString() + "px";
-			 			//cont.style.height = "100%";
-
-			 			if(oldProjectTabC!=null){
-			 				oldProjectTabC.style.height = '0px';
-			 				//oldProjectTabOB.style.width = '60%';
-			 				oldProjectTabOB.removeAttribute("style");
-			 			}
-
-			 			oldProjectTabC=cont;
-			 			oldProjectTabOB=obw;
-			 		}
-			 		else{
-			 			cont.style.height = '0px';
-			 			//obw.style.width = '60%';
-			 			obw.removeAttribute("style");
-			 			oldProjectTabC = null;
-			 			oldProjectTabOB = null;
-			 		}
-
-
-			 	}
+<script>
 
 
 
-		</script>
+		 var world = document.getElementById('game-surface');
+		 var world_div = document.getElementById('worlddiv');
+		 var logoso = document.getElementById('logos');
+		 var portScreen = document.getElementById('screenP');
+		 var portScreenBlur = document.getElementById('screenPBlur');
+		 var logo1 = document.getElementById('logomh');
+		 var logo1B = document.getElementById('logomhB');
+		 var shadP = document.getElementById('shadowP');
+		 var downS = false;
+		 var starsB = document.getElementById('starsBack');
 
-		<script src="util.js"></script>
-		<script src="gl-matrix.js"></script>
-		<script src="app.js"></script>
+		 var targetDivs = document.getElementById("screenP").getElementsByClassName("OBwindow")[0];
+		 var planetscalar=1;
+		 var planetscalarB=1;
+
+		 var worldupinterval;
+
+		 function startw(){
+			 		logoso.style.opacity = 1;
+					resizeCanvas();
+					//targetDivs.style.opacity = 0.5;
+		 }
+		 function worldResize(){
+			 world.style.width = world_div.clientWidth;
+			 world.style.height = world_div.clientWidth;
+			 world.style.backgroundSize = ""+world_div.clientWidth+"px";
+			 world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
+		 }
+
+		 function resizeCanvas() {
+				if(downS)
+					scrollIt();
+				else
+					logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/3;
+
+	 			worldResize();
+		 }
+
+		 function scrollIt(){
+			 if(!downS){
+				 portScreen.style.top = world_div.clientHeight/10;
+				 shadP.style.top = world_div.clientHeight/10;
+				 //world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
+				 logos.style.top = 0;
+
+				 world_div.style.width='100%';
+
+				 worldupinterval=setInterval(worldUp, 10);
+
+				 logo1B.style.opacity = 0;
+				 logo1.style.cursor='pointer';
+				 logo1B.style.cursor='default';
+				 logo1B.style.pointerEvents='none';
+				 //starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
+				 downS=true;
+
+			 }
+			 setTimeout(stopworldUp, 1000);
+
+		 }
+		 function scrollItBack(){
+			 logo1B.style.opacity = 1;
+			 portScreen.style.top = world_div.clientHeight;
+			 shadP.style.top = world_div.clientHeight;
+			 //portScreenBlur.style.top = world_div.clientHeight;
+			 world_div.style.top = 0;
+			 logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
+
+			 downS=false;
+
+			 logo1.style.cursor='default';
+			 logo1B.style.cursor='pointer';
+			 logo1B.style.pointerEvents='painted';
+
+			 world_div.style.width='50%';
+			 worldupinterval=setInterval(worldUp, 10);
+			setTimeout(stopworldUp, 1000);
+
+		 }
+
+		 function stopworldUp(){
+				clearInterval(worldupinterval);
+		 }
+		function worldUp(){
+				worldResize();
+		 }
+
+/*
+	 	var act = function(content,ob){
+
+	 		var cont = document.getElementById(content.toString());
+	 		var obwName = ob.toString();
+	 		var obw = document.getElementById(ob.toString());
+
+	 		if(cont!=oldProjectTabC)
+	 		{
+	 			obw.style.width='65%';
+	 			obw.style.index='100';
+	 			cont.style.height = cont.scrollHeight.toString() + "px";
+	 			//cont.style.height = "100%";
+
+	 			if(oldProjectTabC!=null){
+	 				oldProjectTabC.style.height = '0px';
+	 				//oldProjectTabOB.style.width = '60%';
+	 				oldProjectTabOB.removeAttribute("style");
+	 			}
+
+	 			oldProjectTabC=cont;
+	 			oldProjectTabOB=obw;
+	 		}
+	 		else{
+	 			cont.style.height = '0px';
+	 			//obw.style.width = '60%';
+	 			obw.removeAttribute("style");
+	 			oldProjectTabC = null;
+	 			oldProjectTabOB = null;
+	 		}
+
+
+	 	}*/
+		var oldTopButton;
+		var oldProjectTabC;
+		var oldProjectTabOB;
+		function OBwindowClick(el,content)
+		{
+			var cont = document.getElementById(content.toString());
+			var obw = el.parentNode;
+
+			if(cont!=oldProjectTabC)
+			{
+				obw.style.width='64%';
+				cont.style.height = cont.scrollHeight.toString() + "px";
+				obw.style.style.filter="saturate(100%)";
+				//cont.style.height = "100%";
+
+				if(oldProjectTabC!=null){
+					oldProjectTabC.style.height = '0px';
+					//oldProjectTabOB.style.width = '60%';
+					oldProjectTabOB.removeAttribute("style");
+					oldProjectTabOB.style.style.filter="saturate(10%)";
+				}
+
+				oldProjectTabC=cont;
+				oldProjectTabOB=obw;
+			}
+			else{
+				cont.style.height = '0px';
+				//obw.style.width = '60%';
+				obw.style.style.filter="saturate(10%)";
+				obw.removeAttribute("style");
+				oldProjectTabC = null;
+				oldProjectTabOB = null;
+			}
+		}
+
+		function OBwindowHover(element){
+			element.parentNode.style.width="64%";
+			element.parentNode.style.filter="saturate(100%)";
+		}
+		function OBwindowHoverOut(element){
+			if(element.parentNode != oldProjectTabOB){
+				element.parentNode.style.filter="saturate(10%)";
+				element.parentNode.style.width="50%";
+			}
+		}
+
+
+</script>
+
+<script src="util.js"></script>
+<script src="gl-matrix.js"></script>
+<script src="app.js"></script>
 	</body>
 </html>
