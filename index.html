@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<title>twojamama</title>
 	</head>
+<<<<<<< HEAD
 	<body onscroll="bodyScroll()" onresize="resizeCanvas();" onload="startw();InitDemo();" style="background-color:rgb(0,0,20)">
 
 
@@ -15,11 +16,26 @@
 				</canvas>
 			</div>
 									<!--////////////////////////////-->
+=======
+	<body onscroll="scrollIt()" onresize="resizeCanvas();" onload="startw();InitDemo();" style="background-color:rgb(0,0,20)">
+
+
+		<div class="screenBox" id="starsBack"><!--</////////////home//////////////-->
+
+
+			<div id="worlddiv" class="halfBox" style="left:0">
+				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
+					Your browser does not support HTML5
+				</div>
+			</div>
+		</div>									<!--////////////////////////////-->
+>>>>>>> origin/master
 
 
 <!--///////////////################################################################/////////////-->
 
 
+<<<<<<< HEAD
 		<div class="screenWindow" id="screenP"><!--</////////////screen1//////////////-->
 			<br><br><br>
 			<br><br><br>
@@ -48,6 +64,68 @@
 	    </div>
 
 	    <pad></pad>
+=======
+		<div class="screenWindow" id="screenP" onscroll="scrollAppsAction()"><!--</////////////screen1//////////////-->
+			<br><br><br>
+			<br><br><br>
+
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+	    <pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+>>>>>>> origin/master
 
 
 			<br><br><br><br><br><br><br>
@@ -59,7 +137,10 @@
 				<h1 id="logomh"  onclick="scrollItBack()">Mikołaj_Hanslik()</h1>
 				<h2 id="logomhB" onclick="scrollIt()">{goto portfolio;}</h2>
 		</div>
+<<<<<<< HEAD
 		<div class="shad" id="shadowP"></div>
+=======
+>>>>>>> origin/master
 
 
 <script>
@@ -81,6 +162,7 @@
 		 var planetscalarB=1;
 
 		 var worldupinterval;
+<<<<<<< HEAD
 		 var body_ = document.body;
 
 		 var bscroll=true;
@@ -90,13 +172,63 @@
 		 		bscroll=false;
 		 		
 		 	}
+=======
+
+		 var allobwindows = document.getElementsByClassName('ObjectWindow');
+
+		 function scrollAppsAction(){
+			 var viewtop = world_div.clientHeight ;
+			 for(var i=0; i< allobwindows.length; i++)
+			 {
+				 var toper = allobwindows[i].getBoundingClientRect().top;
+				 allobwindows[i].style.maxWidth = ((toper-viewtop/2)*-(toper-viewtop/2))/viewtop/2+viewtop/1.6;
+			 }
+
+		 }
+
+		 var indexApp = 0;
+		 function showapps(open){
+			 if(open){
+
+				 indexApp=0;
+				 portScreen.style.display = 'block';
+				 showappsLoop();
+			 }else{
+				 for(var b = 0; b< allobwindows.length; b++){
+					 allobwindows[b].style.width = '0';
+				 }
+				 setTimeout(function () {
+					 for(var b = 0; b< allobwindows.length; b++){
+						 allobwindows[b].style.display = 'noone';
+					 }
+						portScreen.style.display = 'none';
+				 }, 300)
+			 }
+		 }
+		 function showappsLoop () {
+		   setTimeout(function () {
+				 allobwindows[indexApp].style.display = 'block';
+				 allobwindows[indexApp].style.width = '60%';
+
+		      if (indexApp < allobwindows.length && portScreen.style.display == 'block'){
+						 indexApp+=1;
+		         showappsLoop();
+		      }
+		   }, 100)
+>>>>>>> origin/master
 		 }
 
 
 		 function startw(){
+<<<<<<< HEAD
 	 		logoso.style.opacity = 1;
 			resizeCanvas();
 			//targetDivs.style.opacity = 0.5;
+=======
+			 		logoso.style.opacity = 1;
+					resizeCanvas();
+					//targetDivs.style.opacity = 0.5;
+>>>>>>> origin/master
 		 }
 		 function worldResize(){
 			 world.width = world_div.clientWidth;
@@ -115,6 +247,7 @@
 	 			worldResize();
 		 }
 
+<<<<<<< HEAD
 
 		 function scrollIt(){
 			 if(!downS){
@@ -126,6 +259,17 @@
 				 starsB.style.top='-50%';
 
 				 world_div.style.width='100%';
+=======
+		 function scrollIt(){
+			 if(!downS){
+				 //portScreen.style.top = world_div.clientHeight/10;
+				 //shadP.style.top = world_div.clientHeight/10;
+				 //world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
+				 logos.style.top = 0;
+
+				 world_div.style.width='100%';
+				 world_div.style.left = '-50%';
+>>>>>>> origin/master
 				 worldupinterval=setInterval(worldUp, 10);
 				 setTimeout(stopworldUp, 1000);
 
@@ -135,31 +279,45 @@
 				 logo1B.style.pointerEvents='none';
 				 //starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
 				 downS=true;
+<<<<<<< HEAD
+=======
+				 showapps(true);
+>>>>>>> origin/master
 			 }
 
 
 		 }
 		 function scrollItBack(){
+<<<<<<< HEAD
 		 	bscroll=true;
 			 logo1B.style.opacity = 1;
 			 portScreen.style.top = world_div.clientHeight;
+=======
+			 logo1B.style.opacity = 1;
+			 //portScreen.style.top = world_div.clientHeight;
+>>>>>>> origin/master
 			 //shadP.style.top = world_div.clientHeight;
 			 //portScreenBlur.style.top = world_div.clientHeight;
 			 world_div.style.top = 0;
 			 logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
 
+<<<<<<< HEAD
 			 //body_.scrollTop = 0;
 			
 			 
 
 			 downS=false;
 			 starsB.style.top='0';
+=======
+			 downS=false;
+>>>>>>> origin/master
 
 			 logo1.style.cursor='default';
 			 logo1B.style.cursor='pointer';
 			 logo1B.style.pointerEvents='painted';
 
 			 world_div.style.width='50%';
+<<<<<<< HEAD
 
 			 worldupinterval=setInterval(worldUp, 1);
 
@@ -173,6 +331,54 @@
 			worldResize();
 		 }
 
+=======
+			 world_div.style.left = '0';
+			 worldupinterval=setInterval(worldUp, 1);
+			 setTimeout(stopworldUp, 1000);
+			 showapps(false);
+		 }
+
+		 function stopworldUp(){
+				clearInterval(worldupinterval);
+		 }
+		function worldUp(){
+				worldResize();
+		 }
+
+/*
+	 	var act = function(content,ob){
+
+	 		var cont = document.getElementById(content.toString());
+	 		var obwName = ob.toString();
+	 		var obw = document.getElementById(ob.toString());
+
+	 		if(cont!=oldProjectTabC)
+	 		{
+	 			obw.style.width='65%';
+	 			obw.style.index='100';
+	 			cont.style.height = cont.scrollHeight.toString() + "px";
+	 			//cont.style.height = "100%";
+
+	 			if(oldProjectTabC!=null){
+	 				oldProjectTabC.style.height = '0px';
+	 				//oldProjectTabOB.style.width = '60%';
+	 				oldProjectTabOB.removeAttribute("style");
+	 			}
+
+	 			oldProjectTabC=cont;
+	 			oldProjectTabOB=obw;
+	 		}
+	 		else{
+	 			cont.style.height = '0px';
+	 			//obw.style.width = '60%';
+	 			obw.removeAttribute("style");
+	 			oldProjectTabC = null;
+	 			oldProjectTabOB = null;
+	 		}
+
+
+	 	}*/
+>>>>>>> origin/master
 		var oldTopButton;
 		var oldProjectTabC;
 		var oldProjectTabOB;
@@ -220,7 +426,10 @@
 		}
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 </script>
 
 <script src="util.js"></script>
