@@ -21,22 +21,66 @@
 <!--///////////////################################################################/////////////-->
 
 
-		<div class="screenWindow" id="screenP"><!--</////////////screen1//////////////-->
+		<div class="screenWindow" id="screenP" onscroll="scrollAppsAction()"><!--</////////////screen1//////////////-->
 			<br><br><br>
 			<br><br><br>
 
-
+			<br>
 			<div class="ObjectWindow">
 				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
 				<div class="TitleWindow"></div>
 			</div>
-
-
-			<br><br><br>
-			<br><br><br>
-
-
+			<br>
 	    <pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
+			<br>
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>
+			</div>
+			<br>
+			<pad></pad>
 
 
 			<br><br><br><br><br><br><br>
@@ -71,6 +115,18 @@
 		 var planetscalarB=1;
 
 		 var worldupinterval;
+
+		 var allobwindows = document.getElementsByClassName('ObjectWindow');
+
+		 function scrollAppsAction(){
+			 for(var i=0; i< allobwindows.length; i++)
+			 {
+				 allobwindows[i].style.marginRight = allobwindows[i].offsetTop/2;
+
+			 }
+
+		 }
+
 
 		 function startw(){
 			 		logoso.style.opacity = 1;
