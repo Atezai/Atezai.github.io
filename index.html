@@ -1,87 +1,230 @@
-<!DOCTYPE html PUBLIC>
-<html xmlns="twojama" xml:lang="pl" lang="pl">
-  <head>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mikołaj Hanslik</title>
-  </head>
-  <topbar>
-    <topbarleft><topLogo>Mikołaj Hanslik</topLogo><br><p3> game dev and programming</p3></topbarleft>
-    <topbarcenter><topButtons>home projects about me</topButtons></topbarcenter>
-    <topbarright></topbarright>
-  </topbar>
-
-  <body>
-
-    <filtrTab>
-      <p2>
-        <checkbox>
-        <button class="buttonCentr">Games</button>
-        <button class="buttonCentr">Prototypes</button>
-        <button class="buttonCentr">Applications</button>
-        <button class="buttonCentr">Other</button>
-      </p2>
-    </filtrTab>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>twojamama</title>
+	</head>
+	<body onscroll="bodyScroll()" onresize="resizeCanvas();" onload="startw();InitDemo();" style="background-color:rgb(0,0,20)">
 
 
-    <OBwindow>
-      <div class="imageWindow" style="background-color:rgb(49,49,49)"><img src="images/noisebar.jpg" alt="noiseBar">
-        <div class="tytulWindow">
-          Perlin Noise Generator
-        </div>
-        <div class="typWindow">
-          Application
-        </div>
-      </div>
-      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd</div>
-      <img src="images/arrowDown.png" alt="" class="arrowimageDown">
-    </OBwindow>
+		<div class="screenBox" id="starsBack"></div><!--</////////////home//////////////-->	
 
-    <pad></pad>
+			<div id="worlddiv" class="halfBox">
+				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
+					Your browser does not support HTML5
+				</canvas>
+			</div>
+									<!--////////////////////////////-->
 
-    <OBwindow>
-      <div class="imageWindow" style="background-color:rgb(254,244,103)"><img src="images/cubyebar.jpg" alt="noiseBar">
-        <div class="tytulWindow">
-          Cubye
-        </div>
-        <div class="typWindow">
-          Game
-        </div>
-      </div>
-      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad
-      </div>
-    </OBwindow>
 
-    <pad></pad>
+<!--///////////////################################################################/////////////-->
 
-    <OBwindow>
-      <div class="imageWindow"><img src="images/galaxbar.jpg" alt="noiseBar">
-        <div class="tytulWindow">
-          Galaxy War
-        </div>
-        <div class="typWindow">
-          Game
-        </div>
-      </div>
-      <div onclick="act(event)" class="contentWindow">asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd</div>
-    </OBwindow>
 
-    <pad></pad>
+		<div class="screenWindow" id="screenP"><!--</////////////screen1//////////////-->
+			<br><br><br>
+			<br><br><br>
 
-  </body>
 
-  <script type="text/javascript" src="mainscripts.js"></script>
-  <script>
-    function act(){
-      if(event.target.style.height = '35px')
-      {
-        event.target.style.height = event.target.scrollHeight.toString() + "px";
-      }  //event.target.style.height = 'auto';
-      else{
-        event.target.style.height = '35px';
-      }
-    }
+			<div class="ObjectWindow">
+				<div class="TitlePhotoWindow"><img src="img/cubyebar.jpg" alt="noiseBar"></div>
+				<div class="TitleWindow"></div>	
+			</div>
 
-  </script>
 
+			<br><br><br>
+			<br><br><br>
+			<div class="OBwindow" id="OBpng"><div class="typWindow">Application</div>
+	      <div class="imageWindow" onmouseover="OBwindowHover(this)" onmouseout="OBwindowHoverOut(this)" onclick="OBwindowClick(this,'Cpng')" style="background-color:rgb(44,44,44)">
+					<img src="img/noisebar.jpg" alt="noiseBar">
+	        <div class="tytulWindow">Perlin Noise Generator</div>
+	      </div>
+	      <div class="contentWindow" id="Cpng">
+	        <div class="photoHolder"><iframe width="560" height="315" src="https://www.youtube.com/embed/eY52Zsg-KVI" frameborder="0" allowfullscreen></iframe></div>
+	        asdasdsadsadasdasdasdasdasdsad <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> asdasdsadasdasd <br> <br> asdasdsadasdasd <br> asdasdsadasdasd asdasdsadasdasd
+	        <div class="specialsWindow">
+	          <div class="specialsWindowButtons">Download</div>
+	        </div>
+	      </div>
+	    </div>
+
+	    <pad></pad>
+
+
+			<br><br><br><br><br><br><br>
+
+		</div>									<!--////////////////////////////-->
+
+
+			<div class="mhLogo" id="logos" >
+				<h1 id="logomh"  onclick="scrollItBack()">Mikołaj_Hanslik()</h1>
+				<h2 id="logomhB" onclick="scrollIt()">{goto portfolio;}</h2>
+		</div>
+		<div class="shad" id="shadowP"></div>
+
+
+<script>
+
+
+
+		 var world = document.getElementById('game-surface');
+		 var world_div = document.getElementById('worlddiv');
+		 var logoso = document.getElementById('logos');
+		 var portScreen = document.getElementById('screenP');
+		 var portScreenBlur = document.getElementById('screenPBlur');
+		 var logo1 = document.getElementById('logomh');
+		 var logo1B = document.getElementById('logomhB');
+		 var downS = false;
+		 var starsB = document.getElementById('starsBack');
+
+		 var targetDivs = document.getElementById("screenP").getElementsByClassName("OBwindow")[0];
+		 var planetscalar=1;
+		 var planetscalarB=1;
+
+		 var worldupinterval;
+		 var body_ = document.body;
+
+		 var bscroll=true;
+		 function bodyScroll(){
+		 	if(bscroll){
+		 		scrollIt();
+		 		bscroll=false;
+		 		
+		 	}
+		 }
+
+
+		 function startw(){
+	 		logoso.style.opacity = 1;
+			resizeCanvas();
+			//targetDivs.style.opacity = 0.5;
+		 }
+		 function worldResize(){
+			 world.width = world_div.clientWidth;
+			 world.height = world_div.clientWidth;
+			 //world.style.backgroundSize = ''+world_div.clientWidth+"px ";
+			 world.style.backgroundSize = '100% 100%';
+			 world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
+		 }
+
+		 function resizeCanvas() {
+				if(downS)
+					scrollIt();
+				else
+					logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/3;
+
+	 			worldResize();
+		 }
+
+
+		 function scrollIt(){
+			 if(!downS){
+				 portScreen.style.top = world_div.clientHeight/3;
+				 
+				 //shadP.style.top = world_div.clientHeight/10;
+				 //world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
+				 logos.style.top = 0;
+				 starsB.style.top='-50%';
+
+				 world_div.style.width='100%';
+				 worldupinterval=setInterval(worldUp, 10);
+				 setTimeout(stopworldUp, 1000);
+
+				 logo1B.style.opacity = 0;
+				 logo1.style.cursor='pointer';
+				 logo1B.style.cursor='default';
+				 logo1B.style.pointerEvents='none';
+				 //starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
+				 downS=true;
+			 }
+
+
+		 }
+		 function scrollItBack(){
+		 	bscroll=true;
+			 logo1B.style.opacity = 1;
+			 portScreen.style.top = world_div.clientHeight;
+			 //shadP.style.top = world_div.clientHeight;
+			 //portScreenBlur.style.top = world_div.clientHeight;
+			 world_div.style.top = 0;
+			 logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
+
+			 //body_.scrollTop = 0;
+			
+			 
+
+			 downS=false;
+			 starsB.style.top='0';
+
+			 logo1.style.cursor='default';
+			 logo1B.style.cursor='pointer';
+			 logo1B.style.pointerEvents='painted';
+
+			 world_div.style.width='50%';
+
+			 worldupinterval=setInterval(worldUp, 1);
+
+			 setTimeout(stopworldUp, 1000);
+		 }
+
+		 function stopworldUp(){
+			clearInterval(worldupinterval);
+		 }
+		function worldUp(){
+			worldResize();
+		 }
+
+		var oldTopButton;
+		var oldProjectTabC;
+		var oldProjectTabOB;
+		function OBwindowClick(el,content)
+		{
+			var cont = document.getElementById(content.toString());
+			var obw = el.parentNode;
+
+			if(cont!=oldProjectTabC)
+			{
+				obw.style.width='64%';
+				cont.style.height = cont.scrollHeight.toString() + "px";
+				obw.style.style.filter="saturate(100%)";
+				//cont.style.height = "100%";
+
+				if(oldProjectTabC!=null){
+					oldProjectTabC.style.height = '0px';
+					//oldProjectTabOB.style.width = '60%';
+					oldProjectTabOB.removeAttribute("style");
+					oldProjectTabOB.style.style.filter="saturate(10%)";
+				}
+
+				oldProjectTabC=cont;
+				oldProjectTabOB=obw;
+			}
+			else{
+				cont.style.height = '0px';
+				//obw.style.width = '60%';
+				obw.style.style.filter="saturate(10%)";
+				obw.removeAttribute("style");
+				oldProjectTabC = null;
+				oldProjectTabOB = null;
+			}
+		}
+
+		function OBwindowHover(element){
+			element.parentNode.style.width="64%";
+			element.parentNode.style.filter="saturate(100%)";
+		}
+		function OBwindowHoverOut(element){
+			if(element.parentNode != oldProjectTabOB){
+				element.parentNode.style.filter="saturate(10%)";
+				element.parentNode.style.width="50%";
+			}
+		}
+
+
+
+</script>
+
+<script src="util.js"></script>
+<script src="gl-matrix.js"></script>
+<script src="app.js"></script>
+	</body>
 </html>
