@@ -92,7 +92,6 @@
 				<h1 id="logomh"  onclick="scrollItBack()">Mikołaj_Hanslik()</h1>
 				<h2 id="logomhB" onclick="scrollIt()">{goto portfolio;}</h2>
 		</div>
-		<div class="shad" id="shadowP"></div>
 
 
 <script>
@@ -106,7 +105,6 @@
 		 var portScreenBlur = document.getElementById('screenPBlur');
 		 var logo1 = document.getElementById('logomh');
 		 var logo1B = document.getElementById('logomhB');
-		 var shadP = document.getElementById('shadowP');
 		 var downS = false;
 		 var starsB = document.getElementById('starsBack');
 
@@ -117,16 +115,16 @@
 		 var worldupinterval;
 
 		 var allobwindows = document.getElementsByClassName('ObjectWindow');
-/*
+
 		 function scrollAppsAction(){
-			 var viewtop = world_div.clientHeight;
+			 var viewtop = world_div.clientHeight ;
 			 for(var i=0; i< allobwindows.length; i++)
 			 {
 				 var toper = allobwindows[i].getBoundingClientRect().top;
-				 allobwindows[i].style.marginLeft = ((toper-viewtop/2)*-(toper-viewtop/2))/viewtop/2+viewtop/10;
+				 allobwindows[i].style.maxWidth = ((toper-viewtop/2)*-(toper-viewtop/2))/viewtop/2+viewtop/1.6;
 			 }
 
-		 }*/
+		 }
 
 		 var indexApp = 0;
 		 function showapps(open){
