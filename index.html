@@ -10,7 +10,7 @@
 		<div class="screenBox" id="starsBack"><!--</////////////home//////////////-->
 
 
-			<div id="worlddiv" class="halfBox" style="left:50%;">
+			<div id="worlddiv" class="halfBox">
 				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
 					Your browser does not support HTML5
 				</div>
@@ -117,16 +117,46 @@
 		 var worldupinterval;
 
 		 var allobwindows = document.getElementsByClassName('ObjectWindow');
-
+/*
 		 function scrollAppsAction(){
 			 var viewtop = world_div.clientHeight;
 			 for(var i=0; i< allobwindows.length; i++)
 			 {
 				 var toper = allobwindows[i].getBoundingClientRect().top;
-				 allobwindows[i].style.marginRight = allobwindows[i].offsetTop/2;
-				 allobwindows[i].style.marginRight = ((toper-viewtop/2)*-(toper-viewtop/2))/viewtop/2+viewtop/10;
+				 allobwindows[i].style.marginLeft = ((toper-viewtop/2)*-(toper-viewtop/2))/viewtop/2+viewtop/10;
 			 }
 
+		 }*/
+
+		 var indexApp = 0;
+		 function showapps(open){
+			 if(open){
+
+				 indexApp=0;
+				 portScreen.style.display = 'block';
+				 showappsLoop();
+			 }else{
+				 for(var b = 0; b< allobwindows.length; b++){
+					 allobwindows[b].style.width = '0';
+				 }
+				 setTimeout(function () {
+					 for(var b = 0; b< allobwindows.length; b++){
+						 allobwindows[b].style.display = 'noone';
+					 }
+						portScreen.style.display = 'none';
+				 }, 300)
+			 }
+		 }
+		 function showappsLoop () {
+		   setTimeout(function () {
+				 allobwindows[indexApp].style.display = 'block';
+				 allobwindows[indexApp].style.width = '60%';
+
+		      if (indexApp < allobwindows.length && portScreen.style.display == 'block'){
+						 indexApp+=1;
+		         showappsLoop();
+		      }
+		   }, 100)
 		 }
 
 
@@ -154,14 +184,15 @@
 
 		 function scrollIt(){
 			 if(!downS){
-				 portScreen.style.top = world_div.clientHeight/10;
-				 shadP.style.top = world_div.clientHeight/10;
+				 //portScreen.style.top = world_div.clientHeight/10;
+				 //shadP.style.top = world_div.clientHeight/10;
 				 //world_div.style.top = world_div.clientHeight/-2+world_div.clientHeight/15;
 				 logos.style.top = 0;
 
 				 world_div.style.width='100%';
-
+				 world_div.style.left = '-50%';
 				 worldupinterval=setInterval(worldUp, 10);
+				 setTimeout(stopworldUp, 1000);
 
 				 logo1B.style.opacity = 0;
 				 logo1.style.cursor='pointer';
@@ -169,15 +200,15 @@
 				 logo1B.style.pointerEvents='none';
 				 //starsB.style.boxShadow='0px 0px 1px 1.5vh rgba(220,220,220,1) inset';
 				 downS=true;
-
+				 showapps(true);
 			 }
-			 setTimeout(stopworldUp, 1000);
+
 
 		 }
 		 function scrollItBack(){
 			 logo1B.style.opacity = 1;
-			 portScreen.style.top = world_div.clientHeight;
-			 shadP.style.top = world_div.clientHeight;
+			 //portScreen.style.top = world_div.clientHeight;
+			 //shadP.style.top = world_div.clientHeight;
 			 //portScreenBlur.style.top = world_div.clientHeight;
 			 world_div.style.top = 0;
 			 logoso.style.top = world_div.clientHeight/2 - logoso.clientHeight/2.5;
@@ -189,9 +220,10 @@
 			 logo1B.style.pointerEvents='painted';
 
 			 world_div.style.width='50%';
-			 worldupinterval=setInterval(worldUp, 10);
+			 world_div.style.left = '0';
+			 worldupinterval=setInterval(worldUp, 1);
 			 setTimeout(stopworldUp, 1000);
-
+			 showapps(false);
 		 }
 
 		 function stopworldUp(){
