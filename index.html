@@ -119,10 +119,12 @@
 		 var allobwindows = document.getElementsByClassName('ObjectWindow');
 
 		 function scrollAppsAction(){
+			 var viewtop = world_div.clientHeight;
 			 for(var i=0; i< allobwindows.length; i++)
 			 {
+				 var toper = allobwindows[i].getBoundingClientRect().top;
 				 allobwindows[i].style.marginRight = allobwindows[i].offsetTop/2;
-
+				 allobwindows[i].style.marginRight = ((toper-viewtop/2)*-(toper-viewtop/2))/viewtop/2+viewtop/10;
 			 }
 
 		 }
