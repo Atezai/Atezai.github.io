@@ -18,7 +18,7 @@ canvas{
   src: url("Anonymous_Pro_B.ttf") format("truetype");
 }
 .screenBox{
-
+  top:0;
   height: 100%;
   width: 100%;
   background: url('img/stars.jpg');
@@ -39,6 +39,7 @@ canvas{
 
 .halfBox{
   top:0;
+  left:0;
   height: 100%;
   width: 50%;
   position: absolute;
@@ -75,7 +76,6 @@ canvas{
   color: rgb(239, 218, 122);
 
 }
-
 
 .ObjectWindow{
   margin: 0 auto;
