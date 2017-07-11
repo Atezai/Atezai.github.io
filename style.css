@@ -47,35 +47,53 @@ canvas{
   display: block;
   z-index: 1;
   transition: height 1s, width 1s;
+  pointer-events: none;
 }
 
 .MyLogo{
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
   padding-top: 0;
   top:50%;
   transform: translate(0,-50%);
   position: relative;
   margin: auto auto;
   z-index: 5;
-  font: 5vw Baloo, monospace; color: rgb(255,255,255);
+  font: 5vw Baloo, monospace; color: rgb(239, 218, 122);
   text-shadow: 0px 0.5vh 1px grey;
   transition: color 0.2s, background-color 0.2s;
   animation: logoAnim 3s infinite;
   animation-timing-function: linear;
+  cursor: pointer;
+  pointer-events:painted;
 }
 @keyframes logoAnim {
   0%{ }
-  90%{ text-shadow: 0px 0.5vh 1px grey;  padding-top: 0;}
-  95%{ text-shadow: 0px 0vh 0px grey;  padding-top: 0.5vh;}
+  93%{ text-shadow: 0px 0.5vh 1px grey;  padding-top: 0;}
+  94%{ text-shadow: 0px 0vh 0px grey;  padding-top: 0.5vh;}
+  99%{ text-shadow: 0px 0vh 0px grey;  padding-top: 0.5vh;}
   100%{ text-shadow: 0px 0.5vh 1px grey;  padding-top: 0;}
 }
 .MyLogo:hover{
-
-  color: rgb(239, 218, 122);
-
+  color: white;
 }
+
+.AboutMe{
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    font: 2vw Baloo, monospace; color: rgb(255,255,255);
+}
+
+.mainWindow{
+  width: 100%;
+  height:300%;
+  z-index: 10;
+  position:relative;
+  display: block;
+  top: 100%;
+  background-color: rgb(50,50,60);
+  transition: top 1s, height 1s;
+}
+
 
 .ObjectWindow{
   margin: 0 auto;

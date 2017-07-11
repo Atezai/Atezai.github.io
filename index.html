@@ -14,9 +14,19 @@
 				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
 					Your browser does not support HTML5
 				</canvas>
-				<div class="MyLogo">Mikołaj Hanslik</div>
+				<div class="MyLogo" onclick="openWebsite()">Mikołaj Hanslik</div>
 			</div>
+
+			<div id="aboutmediv" class="halfBox" style="left:50%">
+				<div class="AboutMe">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+				</div>
+			</div>
+
 										<!--////////////////////////////-->
+			<div class="mainWindow" id="mainWind">
+
+			</div>
 
 
 <!--///////////////################################################################/////////////-->
@@ -32,6 +42,10 @@
 		<script>
 			var world = document.getElementById('game-surface');
 			var world_div = document.getElementById('worlddiv');
+			var main_window = document.getElementById('mainWind');
+			var worldupinterval;
+			var canAnimateWorld=true;
+			var opened=false;
 			function startw(){
 				worldResize();
 			}
@@ -44,11 +58,36 @@
  			 world.style.backgroundSize = '100% 100%';
  			 world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
  		 }
+		 function worldTimedResize(){worldResize();}
+		 function stopTimedResize(){clearInterval(worldupinterval);canAnimateWorld=true;}
+
+		 function openWebsite(){
+			 if(canAnimateWorld){
+				 canAnimateWorld=false;
+				 if(!opened){
+					 opened=true;
+					 world_div.style.width = '100%';
+					 world_div.style.height = '35%';
+					 main_window.style.top = '35%';
+					 main_window.style.height = '300%'
+				 }else{
+					 opened=false;
+					 world_div.style.width = '50%';
+					 world_div.style.height = '100%';
+					 main_window.style.top = '100%';
+					 main_window.style.height = 0;
+					 document.body.scrollTop = 0;
+					 document.documentElement.scrollTop = 0;
+				 }
+				 worldupinterval=setInterval(worldTimedResize, 10);
+				 setTimeout(stopTimedResize, 1000);
+			 }
+		 }
 
 
 
 		</script>
-
+		<script src="jquery-3.2.1.js"></script>
 		<script src="util.js"></script>
 		<script src="gl-matrix.js"></script>
 		<script src="app.js"></script>
