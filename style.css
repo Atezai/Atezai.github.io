@@ -6,6 +6,7 @@ body{
   -ms-user-select: none;
   user-select: none;
   height: 100%;
+  overflow: hidden;
 }
 canvas{
   position: absolute;
@@ -13,22 +14,33 @@ canvas{
   background-size: auto;
   z-index:5;
 }
+h1{
+  font: 7vw Baloo, monospace; color: rgb(239, 218, 122);
+
+}
 @font-face {
   font-family: Baloo;
   src: url("Anonymous_Pro_B.ttf") format("truetype");
 }
 .screenBox{
-  top:0;
+  top:100%;
   height: 100%;
   width: 100%;
-  background: url('img/stars.jpg');
+
   position: absolute;
   text-align: center;
   z-index: 1;
-  animation: starsAnim 15s infinite;
-  animation-timing-function: linear;
-  transition: top 1s, box-shadow 1s, filter 1s;
-
+  opacity:1;
+  transition: top 1s, opacity 1s;
+}
+.iconImg{
+  height: 10vh;
+  width: 10vh;
+  background-size: auto;
+  display:inline-block;
+  margin-left: auto auto;
+  position: relative;
+  object-fit: contain;
 }
 
 @keyframes starsAnim {
@@ -60,8 +72,8 @@ canvas{
   font: 5vw Baloo, monospace; color: rgb(239, 218, 122);
   text-shadow: 0px 0.5vh 1px grey;
   transition: color 0.2s, background-color 0.2s;
-  animation: logoAnim 3s infinite;
-  animation-timing-function: linear;
+/*  animation: logoAnim 3s infinite;
+  animation-timing-function: linear;*/
   cursor: pointer;
   pointer-events:painted;
 }
@@ -118,8 +130,8 @@ canvas{
 
 }
 img {
-   position: relative;
-   left: 50%;
-   transform: translate(-50%,0);
+    width: 7vh;
+    height: 7vh;
    object-fit: contain;
+   display:inline-block;
 }

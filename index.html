@@ -7,9 +7,7 @@
 	<body onscroll="scrollIt()" onresize="viewportResize();" onload="startw();InitDemo();" style="background-color:rgb(0,0,20)">
 
 
-		<div class="screenBox" id="starsBack"></div><!--</////////////home//////////////-->
-
-
+		<div class="screenBox" id="starsBack" style="top:0px; animation:starsAnim 15s infinite;animation-timing-function:linear;background: url('img/stars.jpg'); "><!--</////////////home//////////////-->
 			<div id="worlddiv" class="halfBox">
 				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
 					Your browser does not support HTML5
@@ -18,11 +16,41 @@
 			</div>
 
 			<div id="aboutmediv" class="halfBox" style="left:50%">
+				<div class="AboutMe"><br><br>
+					<h1>Hello.</h1>
+					My name is Mikołaj. On internet known as 'Atezai'. My childhood passion has always been programming, 3d graphics, sound and how these fields combined can arouse many emotions in man.
+					<br>That's why I became a game developer.
+					<br>
+					<img src="img/icon/unrealIcon.png" alt="">
+					<img src="img/icon/unityIcon.png" alt="">
+					<img src="img/icon/blenderIcon.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="screenBox" style="background-color: yellow"><!--</////////////home//////////////-->
+			<div id="worlddiv" class="halfBox" >
+				<div class="MyLogo" onclick="openWebsite()">Mikołaj Hanslik1</div>
+			</div>
+
+			<div id="aboutmediv" class="halfBox" style="left:50%">
+				<div class="AboutMe">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="screenBox" style="background: url(img/dottlo.jpg);"><!--</////////////home//////////////-->
+			<div id="worlddiv" class="halfBox">
+				<div class="MyLogo" onclick="openWebsite()">Mikołaj 22Hanslik1</div>
+			</div>
+
+			<div id="aboutmediv" class="halfBox" style="left:50%">
 				<div class="AboutMe">
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 				</div>
 			</div>
-
+		</div>
 										<!--////////////////////////////-->
 			<div class="mainWindow" id="mainWind">
 
@@ -38,7 +66,7 @@
 			</div>-->
 
 
-
+		<!--<script src="jquery-3.2.1.js"></script>-->
 		<script>
 			var world = document.getElementById('game-surface');
 			var world_div = document.getElementById('worlddiv');
@@ -84,10 +112,57 @@
 			 }
 		 }
 
+		 var indexBoxOn=0;
+		 var canScroll=true;
+		 var allBoxs = document.getElementsByClassName('screenBox');
+		 //var scrollableElement = document.getElementById('body');
+	  document.body.addEventListener('wheel', scrollAction);
+		function scrollBoxs(i){
+			canScroll=false;
+			if(i){
 
+				allBoxs[indexBoxOn].style.zIndex = '1';
+				allBoxs[indexBoxOn].style.opacity = '0';
+				indexBoxOn+=1;
+			}else{
+				allBoxs[indexBoxOn].style.top = '100%';
+				allBoxs[indexBoxOn].style.zIndex = '1';
+				indexBoxOn-=1;
+			}
+			allBoxs[indexBoxOn].style.zIndex = '10';
+			allBoxs[indexBoxOn].style.top = 0;
+			//allBoxs[indexBoxOn].transition = 'top 1s';
+			allBoxs[indexBoxOn].style.opacity = '1';
+			//allBoxs[indexBoxOn].transition = 'top 1s, opacity 1s';
+			setTimeout(timedCanScroll, 1000);
+		}
+
+		function scrollAction(event)
+		{
+			 if(canScroll){
+				 var delta;
+				 if (event.wheelDelta){
+					 delta = event.wheelDelta;
+				 }else{
+					 delta = -1 * event.deltaY;
+				 }
+
+				 if (delta < 0){
+					 if(indexBoxOn<allBoxs.length-1){
+							scrollBoxs(true);
+					 }
+				 }else if (delta > 0){
+					 if(indexBoxOn>0){
+						 scrollBoxs(false);
+					 }
+				 }
+			 }
+		 }
+		 function timedCanScroll(){
+			 canScroll=true;
+		 }
 
 		</script>
-		<script src="jquery-3.2.1.js"></script>
 		<script src="util.js"></script>
 		<script src="gl-matrix.js"></script>
 		<script src="app.js"></script>
