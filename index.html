@@ -2,23 +2,23 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<link rel="stylesheet" href="style.css" type="text/css">
-		<title>twojamama</title>
+		<title>Mikołaj Hanslik- portfolio</title>
 	</head>
 	<body onscroll="scrollIt()" onresize="viewportResize();" onload="startw();InitDemo();" style="background-color:rgb(0,0,20)">
 
-
+		<!--</////////////1//////////////-->
 		<div class="screenBox" id="starsBack" style="top:0px; animation:starsAnim 15s infinite;animation-timing-function:linear;background: url('img/stars.jpg'); "><!--</////////////home//////////////-->
 			<div id="worlddiv" class="halfBox">
 				<canvas id="game-surface" style="background:url('img/atmosphere.png');">
 					Your browser does not support HTML5
 				</canvas>
-				<div class="MyLogo" onclick="openWebsite()">Mikołaj Hanslik</div>
+				<!--<div class="MyLogo" onclick="openWebsite()">Mikołaj Hanslik</div>-->
 			</div>
 
 			<div id="aboutmediv" class="halfBox" style="left:50%">
-				<div class="AboutMe"><br><br>
+				<div class="AboutMe" id="abME">
 					<h1>Hello.</h1>
-					My name is Mikołaj. On internet known as 'Atezai'. My childhood passion has always been programming, 3d graphics, sound and how these fields combined can arouse many emotions in man.
+					My name is <p>Mikołaj Hanslik</p>. On internet known as 'Atezai'. Since childhood my passion is programming, 3d graphics, sound and how these fields combined can arouse many emotions in man.
 					<br>That's why I became a game developer.
 					<br>
 					<img src="img/icon/unrealIcon.png" alt="">
@@ -27,19 +27,30 @@
 				</div>
 			</div>
 		</div>
+		<!--</////////////2//////////////-->
+		<div class="screenBox" id="badcall" style="background-color: rgb(90,90,100)">
+			<div class="bcPics" style="background:url(img/badcallScr/screen1.jpg);"></div>
+			<div class="bcPics" style="background:url(img/badcallScr/screen2.jpg);"></div>
+			<div class="bcPics" style="background:url(img/badcallScr/screen3.jpg);"></div>
 
-		<div class="screenBox" style="background-color: yellow"><!--</////////////home//////////////-->
+
 			<div id="worlddiv" class="halfBox" >
-				<div class="MyLogo" onclick="openWebsite()">Mikołaj Hanslik1</div>
+				<div class="MyLogo" onclick="openWebsite()">Download</div>
 			</div>
 
-			<div id="aboutmediv" class="halfBox" style="left:50%">
-				<div class="AboutMe">
-
+			<div class="halfBox" style="left:50%">
+				<div class="AboutApp" >
+					<h1>Bad Call</h1>
+					<p>Play</p> as a detective and solve the mystery of the disappearance of the daughter.<br>
+					This <p>PC Game</p> is an university project.
+					<br>
+					<img src="img/icon/unityIcon.png" alt="">
 				</div>
 			</div>
+
 		</div>
 
+		<!--</////////////3//////////////-->
 		<div class="screenBox" style="background: url(img/dottlo.jpg);"><!--</////////////home//////////////-->
 			<div id="worlddiv" class="halfBox">
 				<div class="MyLogo" onclick="openWebsite()">Mikołaj 22Hanslik1</div>
@@ -51,10 +62,14 @@
 				</div>
 			</div>
 		</div>
-										<!--////////////////////////////-->
-			<div class="mainWindow" id="mainWind">
+		<!--////////////////////////////-->
+		<div class="pageDiv">
+			<div class="pageIcon" style="background-color:white;"></div>
+			<div class="pageIcon"></div>
+			<div class="pageIcon"></div>
+		</div>
 
-			</div>
+
 
 
 <!--///////////////################################################################/////////////-->
@@ -74,7 +89,13 @@
 			var worldupinterval;
 			var canAnimateWorld=true;
 			var opened=false;
+
+			var bc_Pics=document.getElementsByClassName('bcPics');
 			function startw(){
+				document.getElementById('abME').style.opacity = '1';
+				document.getElementById('abME').style.top = '50%';
+				//changePic(document.getElementsByClassName('bcPics'),0);
+				setTimeout(function(){changePic(bc_Pics,0);}, 4000);
 				worldResize();
 			}
 			function viewportResize(){
@@ -86,36 +107,11 @@
  			 world.style.backgroundSize = '100% 100%';
  			 world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
  		 }
-		 function worldTimedResize(){worldResize();}
-		 function stopTimedResize(){clearInterval(worldupinterval);canAnimateWorld=true;}
 
-		 function openWebsite(){
-			 if(canAnimateWorld){
-				 canAnimateWorld=false;
-				 if(!opened){
-					 opened=true;
-					 world_div.style.width = '100%';
-					 world_div.style.height = '35%';
-					 main_window.style.top = '35%';
-					 main_window.style.height = '300%'
-				 }else{
-					 opened=false;
-					 world_div.style.width = '50%';
-					 world_div.style.height = '100%';
-					 main_window.style.top = '100%';
-					 main_window.style.height = 0;
-					 document.body.scrollTop = 0;
-					 document.documentElement.scrollTop = 0;
-				 }
-				 worldupinterval=setInterval(worldTimedResize, 10);
-				 setTimeout(stopTimedResize, 1000);
-			 }
-		 }
 
 		 var indexBoxOn=0;
 		 var canScroll=true;
 		 var allBoxs = document.getElementsByClassName('screenBox');
-		 //var scrollableElement = document.getElementById('body');
 	  document.body.addEventListener('wheel', scrollAction);
 		function scrollBoxs(i){
 			canScroll=false;
@@ -156,12 +152,33 @@
 						 scrollBoxs(false);
 					 }
 				 }
+				 setLights();
 			 }
 		 }
 		 function timedCanScroll(){
 			 canScroll=true;
 		 }
+		var allLights = document.getElementsByClassName('pageIcon');
+		function setLights(){
+			 for(var i=0; i<allLights.length; i++){
+				 allLights[i].style.backgroundColor = 'rgba(10,10,10,0.7)';
+			 }
+			 allLights[indexBoxOn].style.backgroundColor = 'white';
+		}
 
+
+		function changePic(pics, indexPic)
+		{
+				for(var i=0; i<pics.length; i++){
+						pics[i].style.opacity=0;
+				}
+				pics[indexPic].style.opacity=1;
+				if(indexPic<pics.length-1)
+					indexPic+=1;
+				else
+					indexPic=0;
+				setTimeout(function() {changePic(pics,indexPic);}, 4000);
+		}
 		</script>
 		<script src="util.js"></script>
 		<script src="gl-matrix.js"></script>
