@@ -14,10 +14,9 @@
 				</canvas>
 				<!--<div class="MyLogo" onclick="openWebsite()">Mikołaj Hanslik</div>-->
 			</div>
-
 			<div id="aboutmediv" class="halfBox" style="left:50%">
 				<div class="AboutMe" id="abME">
-					<h1>Hello.</h1>
+					<h1>Hello.</h1><br>
 					My name is <p>Mikołaj Hanslik</p>. On internet known as 'Atezai'. Since childhood my passion is programming, 3d graphics, sound and how these fields combined can arouse many emotions in man.
 					<br>That's why I became a game developer.
 					<br>
@@ -33,35 +32,36 @@
 			<div class="bcPics" style="background:url(img/badcallScr/screen2.jpg);"></div>
 			<div class="bcPics" style="background:url(img/badcallScr/screen3.jpg);"></div>
 
-
-			<div id="worlddiv" class="halfBox" >
-				<div class="MyLogo" onclick="openWebsite()">Download</div>
-			</div>
-
+			<div id="worlddiv" class="halfBox" ></div>
 			<div class="halfBox" style="left:50%">
 				<div class="AboutApp" >
-					<h1>Bad Call</h1>
+					<h1>Bad Call</h1><br>
 					<p>Play</p> as a detective and solve the mystery of the disappearance of the daughter.<br>
 					This <p>PC Game</p> is an university project.
 					<br>
 					<img src="img/icon/unityIcon.png" alt="">
 				</div>
 			</div>
-
+			<div class="buttonS" onclick="openInNewTab('https://drive.google.com/file/d/0B5r_jUWnOkUTUVp5NFRPdU04OU0/view?usp=sharing')">Download</div>
 		</div>
 
 		<!--</////////////3//////////////-->
-		<div class="screenBox" style="background: url(img/dottlo.jpg);"><!--</////////////home//////////////-->
-			<div id="worlddiv" class="halfBox">
-				<div class="MyLogo" onclick="openWebsite()">Mikołaj 22Hanslik1</div>
-			</div>
+		<div class="screenBox" style="background-color: rgb(164,199,203);"><!--</////////////home//////////////-->
+			<img src="img/cubyebar.jpg" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:50%; width:auto;">
+			<div id="worlddiv" class="halfBox" ></div>
 
-			<div id="aboutmediv" class="halfBox" style="left:50%">
-				<div class="AboutMe">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+			<div class="halfBox" style="left:50%">
+				<div class="AboutApp" >
+					<h1>Cubye</h1><br>
+					<p>Android game</p> to train your memory.<br>
+					Try to remember the pattern and find it on randomly generated cube.
+					<br>
+					<img src="img/icon/unityIcon.png" alt="">
 				</div>
 			</div>
+			<div class="buttonS" onclick="openInNewTab('https://play.google.com/store/apps/details?id=com.InvisibleBox.Cubye')">Google Play</div>
 		</div>
+
 		<!--////////////////////////////-->
 		<div class="pageDiv">
 			<div class="pageIcon" style="background-color:white;"></div>
@@ -83,6 +83,12 @@
 
 		<!--<script src="jquery-3.2.1.js"></script>-->
 		<script>
+
+			function openInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+
 			var world = document.getElementById('game-surface');
 			var world_div = document.getElementById('worlddiv');
 			var main_window = document.getElementById('mainWind');
