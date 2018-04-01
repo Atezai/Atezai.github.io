@@ -6,22 +6,18 @@
 	</head>
 	<body onscroll="scrollIt()" onresize="viewportResize();" onload="worldResize();InitDemo();" style="background-color:rgb(190,190,193);">
 
-  <div class="TopBar">
-    <button class="TopBarLogo">Mikołaj Hanslik</button>
+    <div class="TopBar">
+      <button class="TopBarLogo">Mikołaj Hanslik</button>
 
-    <button class="TopBarButton" name="button">Projekty</button>
-    <button class="TopBarButton" name="button">Różne</button>
-    <button class="TopBarButton" name="button">O mnie</button>
-    <button class="TopBarButton" name="button">Kontakt</button>
+      <button class="TopBarButton" id="buttonProjekty" onclick="TopbarButtonClick(this);">Projekty</button>
+      <button class="TopBarButton" id="buttonRozne" onclick="TopbarButtonClick(this);">Różne</button>
+      <button class="TopBarButton" id="buttonOmnie" onclick="TopbarButtonClick(this);">O mnie</button>
+      <button class="TopBarButton" id="buttonKontakt" onclick="TopbarButtonClick(this);">Kontakt</button>
+    </div>
 
-
-
-
-  </div>
-
-  <div class="screenBox" id="starsBack" style="top:0px; height:60%; animation:starsAnim 15s infinite;animation-timing-function:linear; background: url('img/stars.jpg');">
+  <div class="screenBox" id="starsBack" style="top:0px; height:50%; animation:starsAnim 15s infinite;animation-timing-function:linear; background: url('img/stars.jpg');">
     <div id="worldDiv" style="height:100%;width:50%;position:relative;"><canvas id="worldMesh" style="background:url('img/atmosphere.png');">Your browser does not support HTML5</canvas></div>
-    <iframe  width="560" height="315"  style="left:75%; top:30%; transform:translate(-50%,-50%);" src="https://www.youtube.com/embed/jbVXBHL4DQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe  width="560" height="315"  style="left:75%; top:25%; transform:translate(-50%,-50%);" src="https://www.youtube.com/embed/jbVXBHL4DQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
   <div class="screenBox">
 
@@ -29,6 +25,15 @@
   <script>
   			var world = document.getElementById('worldMesh');
         var world_div = document.getElementById('worldDiv');
+        var activeButton;
+
+        function TopbarButtonClick(el){
+          if (activeButton!= null) {activeButton.className = "TopBarButton";}
+          //el.classList.add('TopBarButtonActive');
+          el.className = "TopBarButtonActive";
+          activeButton = el;
+        }
+
         function worldResize(){
          world.width = world_div.clientWidth;
          world.height = world_div.clientWidth;
