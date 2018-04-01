@@ -16,14 +16,14 @@
     </div>
 
   <div class="screenBox" id="starsBack" style="top:0px; height:50%; animation:starsAnim 15s infinite;animation-timing-function:linear; background: url('img/stars.jpg');">
-    <div id="worldDiv" style="height:100%;width:50%;position:relative;"><canvas id="worldMesh" style="background:url('img/atmosphere.png');">Your browser does not support HTML5</canvas></div>
+    <div id="worldDiv" style="height:100%;width:50%;position:relative;"><canvas id="worldCanvas" style="background:url('img/atmosphere.png');">Your browser does not support HTML5</canvas></div>
     <iframe  width="560" height="315"  style="left:75%; top:25%; transform:translate(-50%,-50%);" src="https://www.youtube.com/embed/jbVXBHL4DQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
   <div class="screenBox">
 
   </div>
   <script>
-  			var world = document.getElementById('worldMesh');
+  			var world = document.getElementById('worldCanvas');
         var world_div = document.getElementById('worldDiv');
         var activeButton;
 
