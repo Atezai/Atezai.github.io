@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<title>Mikołaj Hanslik- portfolio</title>
 	</head>
-	<body onscroll="Scrolling()" onresize="ViewportResize();" onload="InitDemo();WorldResize();" style="background-color:rgb(190,190,193);">
+	<body onscroll="Scrolling()" onresize="ViewportResize();" onload="InitDemo();WorldResize();" style="background-color:rgb(200,200,200);">
 
     <div class="TopBar">
       <button class="TopBarLogo">Mikołaj Hanslik</button>
@@ -19,9 +19,32 @@
     <div id="worldDiv" style="height:100%;width:50%;position:relative;"><canvas id="worldCanvas" style="background:url('img/atmosphere.png');">Your browser does not support HTML5</canvas></div>
     <iframe  width="560" height="315"  style="left:75%; top:25%; transform:translate(-50%,-50%);" src="https://www.youtube.com/embed/jbVXBHL4DQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
-  <div class="screenBox">
 
-  </div>
+	<div class="contentBox">
+
+		<div class="contentTitle">Projekty</div>
+
+		<br><br>
+
+		<div class="projectBox">
+			<projectTitle>Mail-Man</projectTitle>
+			<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px grey;">
+
+		</div>
+
+		<div class="projectBox">
+			<projectTitle>BadCall</projectTitle>
+			<img src="img/badcallScr/screen2.jpg" style="box-shadow: 0 0 30px grey;">
+
+		</div>
+
+		<div class="projectBox">
+			<div class="projectImg"></div>
+		</div>
+	</div>
+
+
+
   <script>
   			var world = document.getElementById('worldCanvas');
         var world_div = document.getElementById('worldDiv');
