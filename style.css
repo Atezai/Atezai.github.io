@@ -5,9 +5,11 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+   animation:starsAnim 15s infinite;animation-timing-function:linear; background: url('img/stars.jpg');
 }
 iframe{
- position: absolute;
+ //position: absolute;
+ position: relative;
 }
 img{
   margin: auto auto;
@@ -15,6 +17,10 @@ img{
 }
 button:focus{
   outline:none;
+}
+p{
+    font: 5vh arial, sans-serif;
+    display: inline;
 }
 .TopBar{
   position: fixed;
@@ -24,6 +30,7 @@ button:focus{
   bottom: 95%;
   background-color: rgba(240, 240, 240, 1);
     z-index: 2;
+    box-shadow: 0 0 15px black;
 }
 .TopBarButton{
   left:60vw;
@@ -37,7 +44,7 @@ button:focus{
   transition: border 0.1s;
 }
 .TopBarButton:hover{
-    border-bottom: solid 5px rgb(80,80,80);;
+    border-bottom: solid 0.2vw rgb(80,80,80);;
 }
 .TopBarButtonActive{
     left:60vw;
@@ -75,43 +82,52 @@ button:focus{
   opacity:1;
   transition: top 1s, opacity 1s;
   overflow: hidden;
-  border-bottom: solid 8px rgb(210,210,210);
+  //border-bottom: solid 8px rgb(210,210,210);!!!!!
+
 }
-
+.wholeBox{
+  margin: 0 auto;
+  width: 90%;
+  //background-color:rgba(230,230,230,0.5);
+}
 .contentBox{
-  margin: 25 auto;
-  width: 80%;
+  margin: 0 auto;
+  width: 90%;
   text-align: center;
-
+  margin-bottom: 150px;
   //background-color: rgba(255,255,255,0.1);
-  //box-shadow: 0 0 50px grey;
+  //box-shadow: 0 0 50px lightgrey;
+  background-color:rgb(230,230,230);
+    border: solid 5px lightgray;
 }
 
 .contentTitle{
   margin: 0 auto;
   width: 100%;
-  height: 6.5vh;
+  height: 1.5vh;
   text-align: center;
-  //background-color: rgba(255,255,255,0.1);
-  //background-color: rgb(5,5,20);
+  //background-color: rgba(255,255,255,0.2);
   color: rgb(240,240,240);
-  text-shadow: 2px 2px black ;
+  //color:rgb(220,220,220);
+  text-shadow: 2px 2px grey;
   font: 8vh CocoRegular, monospace;
   //border-bottom: solid 15px rgb(220,220,220);
-  border-bottom: solid 2px rgba(0,0,0,0.1);
-  //transform: translate(0,-5vh);
+  //border-bottom: solid 45px darkgrey;
+  transform: translate(0,-7vh);
+  //box-shadow: 0 1px 5px grey;
 }
 
 .projectBox{
-  margin: 25 3%;
-  height: 400px;
-  width: 40%;
+  margin: 30 1%;
+  //height: 400px;
+  width: 30%;
+  min-width: 300px;
   text-align: center;
   display:inline-block;
 }
 
 .projectImg{
-  height: 200px;
+  //height: 200px;
   width: 100%;
   text-align: center;
   //overflow: hidden;
@@ -121,6 +137,8 @@ button:focus{
 }
 projectTitle{
   font: 5vh CocoLight, monospace;
+  color: rgb(60,60,60);
+
 }
 
 @keyframes starsAnim {
