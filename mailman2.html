@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>Mikołaj Hanslik- portfolio</title>
+	</head>
+	<body onscroll="Scrolling()" onresize="ViewportResize();" onload="WorldResize();" style="background-color:rgb(200,200,200);">
+
+    <div class="TopBar">
+      <button class="TopBarLogo">Mikołaj Hanslik</button>
+
+      <button class="TopBarButton" id="buttonProjekty" onclick="TopbarButtonClick(this);">Projekty</button>
+      <button class="TopBarButton" id="buttonRozne" onclick="TopbarButtonClick(this);">Różne</button>
+      <button class="TopBarButton" id="buttonOmnie" onclick="TopbarButtonClick(this);">O mnie</button>
+      <button class="TopBarButton" id="buttonKontakt" onclick="TopbarButtonClick(this);">Kontakt</button>
+    </div>
+
+  <div class="screenBox" id="starsBack" style="height:20%;">
+    <div id="worldDiv" style="margin:-8% auto; height:100%;width:100%;position:relative;">
+			<canvas id="worldCanvas" style="background:url('img/atmosphere.png');">
+				Your browser does not support HTML5!
+			</canvas>
+		</div>
+  </div>
+
+	<div class="wholeBox">
+		<div class="contentBox" style="height:60%; margin-bottom:0; box-shadow:0 0 50px rgb(50,50,255);">
+			<div class="contentTitle">Mail-Man</div>
+      <br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+
+	</div>
+
+  <script>
+  			var world = document.getElementById('worldCanvas');
+        var world_div = document.getElementById('worldDiv');
+
+        function TopbarButtonClick(el){
+          if (activeButton!= null) {activeButton.className = "TopBarButton";}
+          //el.classList.add('TopBarButtonActive');
+          el.className = "TopBarButtonActive";
+          activeButton = el;
+
+					ScrollTo(el)
+        }
+        function WorldResize(){
+         world.width = world_div.clientWidth;
+         world.height = world_div.clientWidth;
+         world.style.backgroundSize = '100% 100%';
+         world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
+        }
+				function ViewportResize(){
+					WorldResize();
+				}
+  </script>
+  <script src="util.js"></script>
+  <script src="gl-matrix.js"></script>
+  <script src="app.js"></script>
+	</body>
+</html>
