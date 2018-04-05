@@ -172,6 +172,10 @@ projectBox:hover{
   from { background-position: 0% 0%; }
   to { background-position: -1920px 0%; }
 }
+@keyframes starsHeightAnim {
+  from { height: 0;}
+  to { height: 45%;}
+}
 @font-face {
   font-family: Baloo;
   src: url("Anonymous_Pro_B.ttf") format("truetype");
