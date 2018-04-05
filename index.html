@@ -62,7 +62,6 @@
 
   <script>
   			var world = document.getElementById('worldCanvas');
-				var starsDiv = document.getElementById('worldCanvas');
 
         var activeButton;
 
@@ -83,7 +82,7 @@
 					document.body.scrollTop = button_Rozne.scrollTop-window.innerHeight/2;
 				}
 				function DemoLoaded(){
-					starsDiv.style.height = "45%";
+					document.getElementById('starsDiv').style.height = "45%";
 					console.log('Loaded');
 				}
         function WorldResize(){
