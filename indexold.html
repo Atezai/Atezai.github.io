@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>Mikołaj Hanslik- portfolio</title>
+	</head>
+	<body onscroll="Scrolling()" onresize="ViewportResize();" onload="InitDemo();WorldResize();" style="background-color:rgb(200,200,200);">
+
+    <div class="TopBar">
+      <button class="TopBarLogo">Mikołaj Hanslik</button>
+
+      <button class="TopBarButton" id="buttonProjekty" onclick="TopbarButtonClick(this);">Projekty</button>
+      <button class="TopBarButton" id="buttonRozne" onclick="TopbarButtonClick(this);">Różne</button>
+      <button class="TopBarButton" id="buttonOmnie" onclick="TopbarButtonClick(this);">O mnie</button>
+      <button class="TopBarButton" id="buttonKontakt" onclick="TopbarButtonClick(this);">Kontakt</button>
+    </div>
+
+  <div class="screenBox" id="starsBack" style="height:60%; margin-top:-10%;">
+    <div id="worldDiv" style="margin:0 auto; height:100%;width:80%;position:relative;">
+			<canvas id="worldCanvas" style="background:url('img/atmosphere.png');">
+				Your browser does not support HTML5!
+			</canvas>
+		</div>
+  </div>
+
+	<div class="wholeBox">
+		<div class="contentBox">
+			<div class="contentTitle">Projekty</div>
+
+			<div class="projectBox">
+				<projectTitle>Mail-Man</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>BadCall</projectTitle>
+				<img src="img/badcallScr/screen2.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Cubye</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>King's Path</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Thrust-Bot</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Bunny</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Bubble Worlds</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+		</div>
+
+		<div class="contentBox">
+
+			<div class="contentTitle">Różne</div>
+
+			<div class="projectBox">
+				<projectTitle>Noise Texture Generator</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Terrain Generator</projectTitle>
+				<img src="img/badcallScr/screen2.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Climbing System</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle><p>2</p>D Wave Maker</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle>Advanced Water Shader</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+			<div class="projectBox">
+				<projectTitle><p>3</p>D Platformer Character Motor</projectTitle>
+				<img src="img/mailmanLogo.jpg" style="box-shadow: 0 0 30px darkgrey;">
+			</div>
+
+		</div>
+
+		<div class="contentBox">
+			<div class="contentTitle">O mnie</div>
+				turlam dropsy
+		</div>
+
+		<div class="contentBox">
+			<div class="contentTitle">Kontakt</div>
+				997
+		</div>
+
+	</div>
+
+  <script>
+  			var world = document.getElementById('worldCanvas');
+        var world_div = document.getElementById('worldDiv');
+        var activeButton;
+
+				var button_Projekty = document.getElementById('buttonProjekty');
+				var button_Rozne = document.getElementById('buttonRozne');
+				var button_Omnie = document.getElementById('buttonOmnie');
+				var button_Kontakt = document.getElementById('buttonKontakt');
+
+        function TopbarButtonClick(el){
+          if (activeButton!= null) {activeButton.className = "TopBarButton";}
+          //el.classList.add('TopBarButtonActive');
+          el.className = "TopBarButtonActive";
+          activeButton = el;
+
+					ScrollTo(el)
+        }
+				function ScrollTo(el){
+					document.body.scrollTop = button_Rozne.scrollTop-window.innerHeight/2;
+				}
+
+        function WorldResize(){
+         world.width = world_div.clientWidth;
+         world.height = world_div.clientWidth;
+         world.style.backgroundSize = '100% 100%';
+         world.style.top = ""+world_div.clientHeight/2-world_div.clientWidth/2;
+        }
+				function Scrolling(){
+
+				}
+				function ViewportResize(){
+					WorldResize();
+				}
+  </script>
+  <script src="util.js"></script>
+  <script src="gl-matrix.js"></script>
+  <script src="app.js"></script>
+	</body>
+</html>

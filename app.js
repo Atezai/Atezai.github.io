@@ -36,6 +36,7 @@ var InitDemo = function () {
 
 var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshModel) {
 	console.log('This is working');
+	DemoLoaded();
 
 	var canvas = document.getElementById('worldCanvas');
 	gl = canvas.getContext('webgl');
