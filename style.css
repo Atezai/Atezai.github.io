@@ -129,6 +129,7 @@ p1{
   animation-timing-function:linear;
   background: url('img/stars.jpg');
   box-shadow: 0 3px 40px black;
+  transition: height 1.5s;
 }
 .worldMesh{
   background:url('img/atmosphere.png');
