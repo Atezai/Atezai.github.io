@@ -10,38 +10,36 @@
 			<button class="TopBarLogo" onclick="OpenInSameTab('index.html')">Mikołaj Hanslik</button>
 		</div>
 
-
 	<div class="aboutButtonsDiv">
-		<div class="aboutButtons" onclick="OpenInNewTab('https://atezai.itch.io/mail-man')">Download</div>
+		<div class="aboutButtons" onclick="OpenInNewTab('https://drive.google.com/file/d/0B5r_jUWnOkUTUVp5NFRPdU04OU0/view?usp=sharing')">Download</div>
 	</div>
 
 	<div class="halfBox">
 		<div class="imgAbout">
-							<img src="img/mailmanscene.jpg">
+							<img src="img/badcallscene.jpg">
 		</div>
 	</div>
 
 
   <div class="halfBox" style="left:50%">
     <div class="about">
-      <h1>Mail-Man</h1><br>
-      Arcadowy FPS polegający na poruszaniu się po utopijnym mieście i roznoszeniu paczek pocztowych. Do dyspozycji gracz dostaje dwie sprężynowe linki, aby niczym spiderman latać pomiędzy budynkami.
+      <h1>Bad Call</h1><br>
+      Gra zagadkowa z pierwszej osoby. Wciel się w postać detektywa, który ma przed sobą najtrudniejszą w karierze sprawę do rozwiązania. Córka zostaje porwana przez pewną grupę, z którą nasza postać miała już w przeszłości do czynienia.
+
       <br><br>
-      Gra zrobiona w 48 godzin.
-      <br><br>
-      <img src="img/icon/unrealIcon.png" style="width: 7vh; height: 7vh;object-fit: contain;display:inline-block;">
+      <img src="img/icon/unityIcon.png" style="width: 7vh; height: 7vh;object-fit: contain;display:inline-block;">
       <img src="img/icon/blenderIcon.png" style="width: 7vh; height: 7vh;object-fit: contain;display:inline-block;">
     </div>
   </div>
 
 	<script>
-		function OpenInSameTab(url) {
-			window.location.href=''+url;
-		}
-		function OpenInNewTab(url) {
-			var win = window.open(url, '_blank');
-			win.focus();
-		}
+	function OpenInSameTab(url) {
+		window.location.href=''+url;
+	}
+	function OpenInNewTab(url) {
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
 	</script>
   <script src="util.js"></script>
   <script src="gl-matrix.js"></script>

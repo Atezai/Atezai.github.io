@@ -25,31 +25,42 @@
 
 		<div class="contentTitle">PROJEKTY</div>
 
-		<projectBox>
+		<projectBox onclick="OpenInSameTab('mailman.html')">
 			Mail-Man
 			<img class="imgIcon" src="img/icon/unrealIcon.png">
 			<img src="img/mailmanLogo.jpg">
 		</projectBox>
 
-		<projectBox>
+		<projectBox onclick="OpenInSameTab('badcall.html')">
 			BadCall
 			<img class="imgIcon" src="img/icon/unityIcon.png">
-			<img src="img/badcallScr/screen3.jpg">
+			<img src="img/badcalllogo.jpg">
 		</projectBox>
 
-		<projectBox>
+		<projectBox onclick="OpenInSameTab('cubye.html')">
 			Cubye
 			<img class="imgIcon" src="img/icon/unityIcon.png">
-			<img src="img/badcallScr/screen3.jpg">
+			<img src="img/cubyelogo.jpg">
 		</projectBox>
 
+		<projectBox onclick="OpenInSameTab('thrustbot.html')">
+			ThrustBot
+			<img class="imgIcon" src="img/icon/unityIcon.png">
+			<img src="img/thrustbotscene.jpg">
+		</projectBox>
+
+		<projectBox onclick="OpenInSameTab('binny.html')">
+			Binny
+			<img class="imgIcon" src="img/icon/unityIcon.png">
+			<img src="img/binnylogo.jpg">
+		</projectBox>
 
 		<div class="contentTitle">RÓŻNE</div>
-		<projectBox>
-			<projectTitle>Mail-Man</projectTitle>
-			<img src="img/mailmanLogo.jpg" style"box-shadow: 0 0 20px black">
-		</projectBox>
 
+		<projectBox onclick="OpenInSameTab('noisegen.html')">
+			<projectTitle>Noise Generator</projectTitle>
+			<img src="img/noisegenlogo.jpg">
+		</projectBox>
 
 
 		<div class="contentTitle">O MNIE</div>
@@ -70,6 +81,7 @@
 				var button_Omnie = document.getElementById('buttonOmnie');
 				var button_Kontakt = document.getElementById('buttonKontakt');
 
+				WorldResize();
         function TopbarButtonClick(el){
           if (activeButton!= null) {activeButton.className = "TopBarButton";}
           //el.classList.add('TopBarButtonActive');
@@ -82,7 +94,7 @@
 					document.body.scrollTop = button_Rozne.scrollTop-window.innerHeight/2;
 				}
 				function DemoLoaded(){
-					document.getElementById('starsDiv').style.animation = "starsHeightAnim 2s normal forwards";
+
 					console.log('Loaded');
 				}
         function WorldResize(){
@@ -95,6 +107,10 @@
 				}
 				function ViewportResize(){
 					WorldResize();
+				}
+
+				function OpenInSameTab(url) {
+					window.location.href=''+url;
 				}
   </script>
   <script src="util.js"></script>
