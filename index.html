@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" href="./atezai_files/style.css" type="text/css">
+    <link rel="stylesheet" href="./atezai_files/stars/starsStyle.css" type="text/css">
+		<title>Mikołaj Hanslik- portfolio</title>
+	</head>
+
+	<script src="./atezai_files/earth/util.js"></script>
+	<script src="./atezai_files/earth/gl-matrix.js"></script>
+	<script src="./atezai_files/earth/app.js"></script>
+
+	<body id="bodyBackground" onscroll="Scrolling();" onresize="ViewportResize();" onload="InitDemo();WorldResize();">
+		<div id="stars1" class="stars" style="background-position: 0 0;opacity:1"></div>
+		<div id="stars2" class="stars" style="background-position: 50vw 0;opacity:0.8"></div>
+		<div id="stars3" class="stars" style="background-position: 25vw 0;opacity:0.6"></div>
+		<div id="stars4" class="stars" style="background-position: 70vw 0;opacity:0.4"></div>
+
+		<div class="logoContainer">
+      <logo>Mikołaj Hanslik</logo><br>
+      <logo2>Virtual Experience Creator | Game Developer | Designer | Programmer</logo2>
+    </div>
+
+	  <div class="earthContainer">
+				<canvas id="worldCanvas" class="earthMesh">	Your browser does not support HTML5!</canvas>
+	  </div>
+
+		<div class="whiteBar">
+			<div class="whiteBarContainer">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida vulputate fermentum. Ut a lorem at tortor maximus auctor. Phasellus non tellus a ex bibendum congue. Nullam rutrum molestie augue ac rutrum. Aenean iaculis eget erat et interdum. Etiam sit amet risus sit amet erat congue fermentum. Pellentesque volutpat egestas mauris. Sed non sem tristique, dignissim lacus et, tincidunt nunc. Mauris vel tincidunt tortor.
+
+				Ut sed suscipit urna. Morbi imperdiet ut ex at lobortis. Aenean in elit et odio varius semper ut in lacus. Integer gravida tellus mi. Nam ornare mattis condimentum. Ut nec tristique nisi. Proin eu porttitor lorem, et interdum nisl. Nulla sollicitudin justo sit amet accumsan ultrices. Vestibulum gravida leo at cursus ultricies. Quisque at neque hendrerit, mollis enim vel, fermentum elit. In commodo sapien non orci cursus, eget ultricies tortor hendrerit. Sed egestas libero molestie ante feugiat tincidunt. Nunc sed sapien mattis, euismod velit non, elementum nunc. Fusce cursus est in eros hendrerit laoreet. Praesent facilisis efficitur dui, sed rutrum sapien tincidunt eget.
+
+				In aliquet dolor tortor, eu rhoncus metus fermentum sed. Pellentesque quam odio, volutpat sit amet erat ac, rhoncus vehicula leo. Pellentesque vestibulum tempor ante. Nunc vehicula sodales turpis, ac lacinia massa varius non. Mauris ut turpis mattis, dictum nibh eget, sollicitudin mi. Aliquam eleifend feugiat mauris. Praesent sed hendrerit mi, id commodo magna. Nunc sed arcu elit. Vestibulum finibus leo ullamcorper iaculis rutrum. Duis viverra nisl id urna euismod, ac pellentesque ligula volutpat. Nullam orci eros, condimentum vel iaculis nec, interdum id augue. Donec ut lorem nunc. Ut eget venenatis tellus, eu finibus sapien. Donec aliquam a orci ut ultrices. Donec maximus, massa et suscipit porta, mauris mauris lacinia risus, nec commodo metus urna ullamcorper metus. Integer a leo consectetur, volutpat libero non, varius ligula.
+				</p>
+			</div>
+		</div>
+
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<script>
+
+			var world = document.getElementById('worldCanvas');
+			var paralax1 = document.getElementById('stars1');
+			var paralax2 = document.getElementById('stars2');
+			var paralax3 = document.getElementById('stars3');
+			var paralax4 = document.getElementById('stars4');
+
+			function lerp (start, end, amt){
+			  return (1-amt)*start+amt*end
+			}
+
+			function WorldResize(){
+				world.width = window.innerWidth;
+				world.height = window.innerWidth;
+				//world.style.top = ""+(-world.height/4);
+			}
+
+			function ViewportResize(){
+				WorldResize();
+			}
+
+			function Scrolling(){
+				paralax1.style.backgroundPosition = "0 " + -window.scrollY/1.5 + "px";
+				paralax2.style.backgroundPosition = "50vw " + -window.scrollY/2 + "px";
+				paralax3.style.backgroundPosition = "25vw " + -window.scrollY/3 + "px";
+				paralax4.style.backgroundPosition = "70vw " + -window.scrollY/4 + "px";
+			}
+		</script>
+	</body>
+</html>

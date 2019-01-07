@@ -1,0 +1,94 @@
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  color: white;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+.stars{
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  background-image: url(stars/stars.png);
+  background-position: 0 0;
+  background-repeat: repeat;
+  transition: 0s linear;
+  transition-property: background-position;
+}
+
+p{
+  color: black;
+  font: 20px CocoRegular, monospace;
+}
+
+.logoContainer{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+logo{
+  color: rgba(250, 250, 250, 1);
+  font: 5vw  CocoHeavy, monospace;
+  padding-left: 8vw;
+  text-shadow: 0px 1px 0px grey, 0px 2px 0px grey, 0px 3px 0px grey, 0px 4px 0px grey;
+}
+logo2{
+  color: rgba(200, 200, 200, 1);
+  font: 2vw CocoRegular, monospace;
+  padding-left: 16vw;
+  text-shadow: 0px 0px 10px black;
+}
+
+.whiteBar {
+  min-height: 50%;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 1);
+}
+.whiteBarContainer{
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.earthContainer{
+  width: 100%;
+  height: 100%;
+  left: 10px;
+  overflow: hidden;
+  animation-timing-function:linear;
+  background: url('img/stars.jpg');
+}
+.earthMesh{
+  background:url('earth/atmosphere.png');
+  background-size: 100% 100%;
+  color: white;
+  left: 0;
+  top: 5%;
+  position: relative;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: Baloo;
+  src: url("Anonymous_Pro_B.ttf") format("truetype");
+}
+@font-face {
+  font-family: CocoLight;
+  src: url("Coco-Gothic-Light-trial.ttf") format("truetype");
+}
+@font-face {
+  font-family: CocoRegular;
+  src: url("Coco-Gothic-Regular-trial.ttf") format("truetype");
+}
+@font-face {
+  font-family: CocoHeavy;
+  src: url("Coco-Gothic-Heavy-trial.ttf") format("truetype");
+}
