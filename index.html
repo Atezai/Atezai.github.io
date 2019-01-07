@@ -10,7 +10,7 @@
 	<script src="./atezai_files/earth/gl-matrix.js"></script>
 	<script src="./atezai_files/earth/app.js"></script>
 
-	<body id="bodyBackground" onscroll="Scrolling();" onresize="ViewportResize();" onload="InitDemo();WorldResize();">
+	<body id="bodyBackground" onscroll="Scrolling();" onresize="ViewportResize();" onload="ViewportResize();InitDemo();">
 		<div id="stars1" class="stars" style="background-position: 0 0;opacity:1"></div>
 		<div id="stars2" class="stars" style="background-position: 50vw 0;opacity:0.8"></div>
 		<div id="stars3" class="stars" style="background-position: 25vw 0;opacity:0.6"></div>
@@ -40,6 +40,8 @@
 	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 		<script>
 
 			var world = document.getElementById('worldCanvas');
@@ -48,6 +50,8 @@
 			var paralax3 = document.getElementById('stars3');
 			var paralax4 = document.getElementById('stars4');
 
+			WorldResize();
+
 			function lerp (start, end, amt){
 			  return (1-amt)*start+amt*end
 			}
@@ -55,7 +59,6 @@
 			function WorldResize(){
 				world.width = window.innerWidth;
 				world.height = window.innerWidth;
-				//world.style.top = ""+(-world.height/4);
 			}
 
 			function ViewportResize(){
