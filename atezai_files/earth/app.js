@@ -37,7 +37,7 @@ var InitDemo = function () {
 var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshModel) {
 	console.log('Running Earth Demo');
 
-	var canvas = document.getElementById('worldCanvas');
+	var canvas = document.getElementById('WorldCanvas');
 	gl = canvas.getContext('webgl');
 
 	if (!gl) {
