@@ -1,4 +1,5 @@
 var gl;
+var activeRender = true;
 
 var InitDemo = function () {
 
@@ -195,7 +196,8 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 
 		gl.drawElements(gl.TRIANGLES, meshIndices.length, gl.UNSIGNED_SHORT, 0);
 
-		requestAnimationFrame(loop);
+		if(activeRender)
+			requestAnimationFrame(loop);
 	};
 	requestAnimationFrame(loop);
 };
