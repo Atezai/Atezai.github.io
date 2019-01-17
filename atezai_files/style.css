@@ -1,5 +1,5 @@
 html{
-  height: 101%;
+  height: 100%;
   width: 100%;
 }
 body{
@@ -142,7 +142,7 @@ button{
   height: 240px;
   vertical-align: middle;
   overflow: hidden;
-  transition: height 1s;
+  transition: h
 }
 
 .earthMesh{
