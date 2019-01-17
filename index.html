@@ -17,7 +17,7 @@
 		<div id="stars3" class="stars" style="background-position: 25vw 0; opacity:0.9"></div>
 		<div id="stars4" class="stars" style="background-position: 40vw 0; opacity:0.8"></div>
 
-		<div class="earthContainer">
+		<div id="EarthContainter" class="earthContainer">
 			<div class="logoContainer">
 				<logo>Mikołaj Hanslik</logo>
 				<br>
@@ -29,7 +29,7 @@
 		</div>
 
 		<ul id="MainMenuButtons"class="menu">
-			<li><button class="menuButton">Showreel</button></li>
+			<li><button onclick="UnrollShowreel()" class="menuButton">Showreel</button></li>
 			<li><button class="menuButton">About Me</button></li>
 			<li><button class="menuButton">Projects</button></li>
 			<li><button class="menuButton">Shaders</button></li>
@@ -57,7 +57,9 @@
 
 	<script>
 
+	var showreel = false;
 	var world = document.getElementById('WorldCanvas');
+	var earthContainer = document.getElementById('EarthContainter');
 	var mainmenu = document.getElementById('MainMenuButtons');
 	var paralax1 = document.getElementById('stars1');
 	var paralax2 = document.getElementById('stars2');
@@ -75,6 +77,15 @@
 
 
 		WorldResize();
+	}
+
+	function UnrollShowreel(){
+			showreel = !showreel;
+			if(showreel){
+				earthContainer.style.height = window.innerHeight;
+			}else {
+				earthContainer.style.height = "240px";
+			}
 	}
 
 	function WorldResize(){
