@@ -11,8 +11,8 @@ body{
 }
 
 p{
-  color: black;
-  font: 20px CocoRegular, monospace;
+  font: 25px CocoHeavy, monospace;
+  margin-top: 0;
 }
 
 .stars{
@@ -30,89 +30,105 @@ p{
 
 .logoContainer{
   position: absolute;
-  top: 7vw;
+  top: 80px;
   left: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   z-index: 2;
 }
 
 logo{
   color: rgba(250, 250, 250, 1);
-  font: 5vw  CocoHeavy, monospace;
+  font: 50px  CocoHeavy, monospace;
+  padding-top: 15px;
+  padding: 0;
   padding-left: 8vw;
   text-shadow: 0px 1px 0px grey, 0px 2px 0px grey, 0px 3px 0px grey, 0px 4px 0px grey;
 }
 
 logo2{
   color: rgba(200, 200, 200, 1);
-  font: 2vw CocoRegular, monospace;
+  font: 20px CocoRegular, monospace;
+  padding-top: 15px;
   padding-left: 16vw;
   text-shadow: 0px 0px 10px black;
 }
 
-.menuButtonsContainer{
-  position: absolute;
+.menu{
+  position : absolute;
   list-style: none;
-  background-color: rgba(255,255,255, 0.3);
-
+  background-image: linear-gradient(to top, rgba(255,255,255,0.333), rgba(0,0,0,0));
   text-align:center;
   padding: 0;
   margin: 0;
-  top: 100%;
+  top: 240px;
+  height: 40px;
   width: 100%;
-  transform: translate(0,-100%);
-  z-index: 5;
+  z-index: 65;
+  transform: translate(0, -100%);
 }
 
-.menuButtonsContainer li{
+.menu li{
   display:inline;
 }
-
-.buttonMainMenu {
-  color: White;
-  background-color: transparent;
-  border: none;
-  font-size: 3vw;
-  text-align: center;
-  text-decoration: none;
+button{
   outline:none;
   cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.menuButton {
+  color: White;
+  background-color: transparent;
+  font-size: 30px;
   display: inline-block;
   position: relative;
-  margin-left: 2%;
-  margin-right: 2%;
-  min-width: 20%;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 150px;
   text-shadow: 0 0 5px black;
   z-index: 10;
   transition: background-color, text-shadow 0.1s;
 }
 
-.buttonMainMenu:hover {
+.menuButton:hover {
   text-shadow: 0 2px 5px black;
   background-color: rgba(255,255,255,0.2);
 }
 
-.buttonMainMenu:active {
+.menuButton:active {
   background-color: rgba(255,255,255,0.5);
+}
+
+.gradient{
+
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  height: 200px;
+  z-index: 15;
 }
 
 .emptyBar {
   position: relative;
-  min-height: 70%;
+  min-height: 100px;
   width: 100%;
   z-index: 15;
 }
 
 .whiteBar {
   position: relative;
-  min-height: 50%;
+  min-height: 100px;
   width: 100%;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: rgba(235, 235, 235, 1);
+  color: black;
+  font: 20px CocoRegular, monospace;
+  text-shadow: 0px 1px 0px darkgrey;
   z-index: 15;
+  box-shadow: inset 0px 150px 150px -150px rgba(250, 250, 250, 1), inset 0px -150px 150px -150px rgba(250, 250, 250, 1);
 }
+
 
 .whiteBarContainer{
   padding-left: 20%;
@@ -123,7 +139,7 @@ logo2{
 
 .earthContainer{
   width: 100%;
-  height: 100%;
+  height: 240px;
   vertical-align: middle;
   overflow: hidden;
 }
@@ -132,6 +148,7 @@ logo2{
   background:url('earth/atmosphere.png');
   background-size: 100% 100%;
   position: relative;
+  top: 20px;
   left: -10px;/* minus scrollbar*/
   z-index: 1;
 }
