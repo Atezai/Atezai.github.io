@@ -40,10 +40,10 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 	console.log('Running Earth Demo');
 
 	var canvas = document.getElementById('WorldCanvas');
-	gl = canvas.getContext('webgl');
-
 	canvas.height = window.innerWidth;
 	canvas.width = window.innerWidth;
+	
+	gl = canvas.getContext('webgl');
 
 	if (!gl) {
 		console.log('WebGL not supported, falling back on experimental-webgl');

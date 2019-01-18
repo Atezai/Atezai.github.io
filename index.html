@@ -10,7 +10,7 @@
 	<script src="./atezai_files/earth/gl-matrix.js"></script>
 	<script src="./atezai_files/earth/app.js"></script>
 
-	<body id="bodyBackground" onload="ParalaxEffect();InitDemo();" onscroll="ParalaxEffect();">
+	<body id="bodyBackground" onload="ParalaxEffect();InitDemo();EarthResize();" onscroll="ParalaxEffect();" onresize="EarthResize();">
 
 		<div id="stars1" class="stars" style="opacity:1"></div>
 		<div id="stars2" class="stars" style="opacity:0.95"></div>
@@ -35,9 +35,6 @@
 			<li><button class="menuButton">Shaders</button></li>
 			<li><button class="menuButton">Contact</button></li>
 		</ul>
-
-		<!<div class="gradient"></div>
-
 
 		<div class="whiteBar">
 			<div class="whiteBarContainer">
@@ -79,12 +76,16 @@
 	}
 
 	function UnhideEarth(){
-			earth.style.top = "0px";
 			earth.style.opacity = 1;
 	}
 	function HideEarth(){
-			earth.style.top = "0px";
 			earth.style.opacity = 0;
+	}
+
+	function EarthResize(){
+			earth.style.top = - window.innerWidth/12;
+			earth.height = window.innerWidth;
+			earth.width = window.innerWidth;
 	}
 
 	function ParalaxEffect(){
