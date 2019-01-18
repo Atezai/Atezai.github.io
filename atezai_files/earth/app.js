@@ -25,6 +25,7 @@ var InitDemo = function () {
 									console.error(imgErr);
 								} else {
 									RunDemo(vsText, fsText, img, modelObj);
+									UnhideEarth();
 								}
 							});
 						}
@@ -40,6 +41,9 @@ var RunDemo = function (vertexShaderText, fragmentShaderText, meshImage, meshMod
 
 	var canvas = document.getElementById('WorldCanvas');
 	gl = canvas.getContext('webgl');
+
+	canvas.height = window.innerWidth;
+	canvas.width = window.innerWidth;
 
 	if (!gl) {
 		console.log('WebGL not supported, falling back on experimental-webgl');
