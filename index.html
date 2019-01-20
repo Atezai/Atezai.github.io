@@ -3,97 +3,113 @@
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./atezai_files/style.css" type="text/css">
-		<title>Mikołaj Hanslik - portfolio</title>
+		<link rel="stylesheet" href="./atezai_files/paralaxStars/paralaxStyle.css" type="text/css">
+		<title>MH portfolio</title>
 	</head>
 
 	<script src="./atezai_files/earth/util.js"></script>
 	<script src="./atezai_files/earth/gl-matrix.js"></script>
 	<script src="./atezai_files/earth/app.js"></script>
 
-	<body id="bodyBackground" onload="ParalaxEffect();InitDemo();EarthResize();" onscroll="ParalaxEffect();" onresize="EarthResize();">
+	<body id="bodyBackground" onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
 
-		<div id="stars1" class="stars" style="opacity:1"></div>
-		<div id="stars2" class="stars" style="opacity:0.95"></div>
-		<div id="stars3" class="stars" style="opacity:0.9"></div>
-		<div id="stars4" class="stars" style="opacity:0.8"></div>
+		<div class="paralaxStars"></div>
+		<div class="paralaxStars"></div>
+		<div class="paralaxStars"></div>
+		<div class="paralaxStars"></div>
+		<script src="./atezai_files/paralaxStars/paralax.js"></script>
 
 		<div id="EarthContainter" class="earthContainer">
 			<div class="logoContainer">
 				<logo>Mikołaj Hanslik</logo>
 				<br>
-				<logo2>Virtual Experience Creator | Game Developer | Designer | Programmer</logo2>
+				<logoParagraph>Virtual Experience Creator | Game Developer | Designer | Programmer</<logoParagraph>
 				<br>
 			</div>
-
+			<iframe id="ShowreelVideo" class="showreelVideo" width="560" height="315" src="https://www.youtube.com/embed/_ZKIfCJZvZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<canvas id="WorldCanvas" class="earthMesh">HTML5 not supported!</canvas>
-
 		</div>
-		<ul id="MainMenuButtons"class="menu">
-			<li><button onclick="UnrollShowreel()" class="menuButton">Showreel</button></li>
-			<li><button onclick="HideEarth();" class="menuButton">About Me</button></li>
-			<li><button onclick="UnhideEarth();" class="menuButton">Projects</button></li>
-			<li><button class="menuButton">Shaders</button></li>
-			<li><button class="menuButton">Contact</button></li>
+
+		<ul id="MainMenu"class="menu">
+			<li><button id="Showreel_Button" onclick="UnrollShowreel()">Showreel</button></li>
+			<li><button id="AboutMe_Button" onclick="MainMenuButtonAction(this);">About Me</button></li>
+			<li><button id="Projects_Button"  onclick="UnhideEarth();">Projects</button></li>
+			<li><button id="Contact_Button">Contact</button></li>
 		</ul>
 
+		<div id="AboutMeDiv" class="whiteBar">
+			<div class="content">
+				<h1>O mnie</h1>
+				<p>
+					Jestem 22 letnim  deweloperem gier i wirtualnych wizualizacji. Od zawsze byłem blisko związany z tworzeniem. Wiecznie coś majsterkowałem i projektowałem, jak na przykład gitarę elektryczną o własnym kształcie namalowanym w gimpie, czy też wymyślając i rysując bronie do gry mmo, która miała być moim spełnieniem pożądań destrukcji. Już w dzieciństwie grając w gry byłem zainteresowany wzbudzaniem emocji u człowieka przy użyciu grafiki i logiki. Byłem zafascynowany działaniem wirtualnych światów oraz głębią jaką można im nadać.
+					<br><br>
+					Chcąc być twórcą już w wieku 12 lat próbowałem swoich sił w wielu silnikach gier i programach graficznych. Czułem się jak Bóg dając użytkownikom doświadczenia, na które nie mogą sobie pozwolić w świecie realnym. Dostrzegałem ogromny potencjał interaktywnych programów, mogących łączyć naukę z zabawą, w przeciwieństwie do filmu czy książki, gdzie użytkownik jest tylko biernym odbiorcą. Na tym jednak możliwości się nie kończą.
+					<br><br>
+					Wiedziałem, że nauczenie się programowania będzie koniecznością i zarazem kwestią czasu. Posiadając podstawową wiedzę programistyczną już w wieku 15 lat napisałem swój pierwszy program, a w wieku 16 swoją pierwszą grę używając silnika Unity. Z każdym krokiem moje możliwości i chęć zdobywania wiedzy się zwiększały, dlatego też zdecydowałem się na studia informatyczne o specjalizacji Game Design. Pozwoliły mi one skupić się na swoich pasjach i rozwijaniu umiejętności.
+					<br><br>
+					Stworzyłem wiele prototypów gier, symulacji i parę programów, jednak na tym moja chęć zdobywania wiedzy w dziedzinie tworzenia gier się nie skończyła. Zacząłem również wnikać w to jak gry działają na człowieka. Co w nim wzbudza i jak wzbudzać. Jak graficznie można z nim nawiązać kontakt i wzbudzić jego zainteresowanie, jednocześnie dostarczając informacji. Nauczyłem się pisać własne shadery('glsl'), początkowo używając do tego programu Blender i silnika Unreal.
+					Moje gry nie mogły tylko działać, ale musiały też wyglądać idealnie i być zaplanowaną całością.
+					<br><br>
+					Dzięki szerokiej wiedzy w dziedzinie gier, wieloletniemu doświadczeniu w graniu, zainteresowaniu psychologą ludzką i pracy z ludźmi, potrafię projektować grę zwracając uwagę na wiele aspektów. Projektowałem moje gry tak, by miały wnętrze, podobały się użytkownikowi, angażowały i zaciekawiały gracza, jednocześnie by były możliwe do zrealizowania ze względu na zasobność.
+				</p>
+			</div>
+		</div>
 
-		<div class="whiteBar">
-			<div class="whiteBarContainer">
+		<div id="Projects" class="emptyBar" style="display:none">
+			<div class="content">
+				<h1>O mnie</h1>
+
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida vulputate fermentum. Ut a lorem at tortor maximus auctor. Phasellus non tellus a ex bibendum congue. Nullam rutrum molestie augue ac rutrum. Aenean iaculis eget erat et interdum. Etiam sit amet risus sit amet erat congue fermentum. Pellentesque volutpat egestas mauris. Sed non sem tristique, dignissim lacus et, tincidunt nunc. Mauris vel tincidunt tortor.
+
+				Ut sed suscipit urna. Morbi imperdiet ut ex at lobortis. Aenean in elit et odio varius semper ut in lacus. Integer gravida tellus mi. Nam ornare mattis condimentum. Ut nec tristique nisi. Proin eu porttitor lorem, et interdum nisl. Nulla sollicitudin justo sit amet accumsan ultrices. Vestibulum gravida leo at cursus ultricies. Quisque at neque hendrerit, mollis enim vel, fermentum elit. In commodo sapien non orci cursus, eget ultricies tortor hendrerit. Sed egestas libero molestie ante feugiat tincidunt. Nunc sed sapien mattis, euismod velit non, elementum nunc. Fusce cursus est in eros hendrerit laoreet. Praesent facilisis efficitur dui, sed rutrum sapien tincidunt eget.
+
+				In aliquet dolor tortor, eu rhoncus metus fermentum sed. Pellentesque quam odio, volutpat sit amet erat ac, rhoncus vehicula leo. Pellentesque vestibulum tempor ante. Nunc vehicula sodales turpis, ac lacinia massa varius non. Mauris ut turpis mattis, dictum nibh eget, sollicitudin mi. Aliquam eleifend feugiat mauris. Praesent sed hendrerit mi, id commodo magna. Nunc sed arcu elit. Vestibulum finibus leo ullamcorper iaculis rutrum. Duis viverra nisl id urna euismod, ac pellentesque ligula volutpat. Nullam orci eros, condimentum vel iaculis nec, interdum id augue. Donec ut lorem nunc. Ut eget venenatis tellus, eu finibus sapien. Donec aliquam a orci ut ultrices. Donec maximus, massa et suscipit porta, mauris mauris lacinia risus, nec commodo metus urna ullamcorper metus. Integer a leo consectetur, volutpat libero non, varius ligula.
+			</div>
+			<div class="emptyBar"></div>
+			<div class="content">
 				<p>O mnie</p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida vulputate fermentum. Ut a lorem at tortor maximus auctor. Phasellus non tellus a ex bibendum congue. Nullam rutrum molestie augue ac rutrum. Aenean iaculis eget erat et interdum. Etiam sit amet risus sit amet erat congue fermentum. Pellentesque volutpat egestas mauris. Sed non sem tristique, dignissim lacus et, tincidunt nunc. Mauris vel tincidunt tortor.
 
 				Ut sed suscipit urna. Morbi imperdiet ut ex at lobortis. Aenean in elit et odio varius semper ut in lacus. Integer gravida tellus mi. Nam ornare mattis condimentum. Ut nec tristique nisi. Proin eu porttitor lorem, et interdum nisl. Nulla sollicitudin justo sit amet accumsan ultrices. Vestibulum gravida leo at cursus ultricies. Quisque at neque hendrerit, mollis enim vel, fermentum elit. In commodo sapien non orci cursus, eget ultricies tortor hendrerit. Sed egestas libero molestie ante feugiat tincidunt. Nunc sed sapien mattis, euismod velit non, elementum nunc. Fusce cursus est in eros hendrerit laoreet. Praesent facilisis efficitur dui, sed rutrum sapien tincidunt eget.
 
 				In aliquet dolor tortor, eu rhoncus metus fermentum sed. Pellentesque quam odio, volutpat sit amet erat ac, rhoncus vehicula leo. Pellentesque vestibulum tempor ante. Nunc vehicula sodales turpis, ac lacinia massa varius non. Mauris ut turpis mattis, dictum nibh eget, sollicitudin mi. Aliquam eleifend feugiat mauris. Praesent sed hendrerit mi, id commodo magna. Nunc sed arcu elit. Vestibulum finibus leo ullamcorper iaculis rutrum. Duis viverra nisl id urna euismod, ac pellentesque ligula volutpat. Nullam orci eros, condimentum vel iaculis nec, interdum id augue. Donec ut lorem nunc. Ut eget venenatis tellus, eu finibus sapien. Donec aliquam a orci ut ultrices. Donec maximus, massa et suscipit porta, mauris mauris lacinia risus, nec commodo metus urna ullamcorper metus. Integer a leo consectetur, volutpat libero non, varius ligula.
-
 			</div>
 		</div>
 
 		<div class="emptyBar"></div>
 
-	</body>
 
-	<script>
+		<script>
 
-	var showreelOpened = false;
+		var showreelOpened = false;
 
-	var earth = document.getElementById('WorldCanvas');
-	var earthContainer = document.getElementById('EarthContainter');
+		var earth = document.getElementById('WorldCanvas');
+		var earthContainer = document.getElementById('EarthContainter');
+		var video = document.getElementById('ShowreelVideo');
 
-	var mainmenu = document.getElementById('MainMenuButtons');
+		var mainmenu = document.getElementById('MainMenu');
 
-	var paralax1 = document.getElementById('stars1');
-	var paralax2 = document.getElementById('stars2');
-	var paralax3 = document.getElementById('stars3');
-	var paralax4 = document.getElementById('stars4');
-
-	function UnrollShowreel(){
+		function UnrollShowreel(){
 			showreelOpened = !showreelOpened;
 			if(showreelOpened){
-				earthContainer.style.height = window.innerHeight;
+				earthContainer.style.height = "100%";
 			}else {
 				earthContainer.style.height = "240px";
 			}
-	}
-
-	function UnhideEarth(){
+		}
+		function UnhideEarth(){
 			earth.style.opacity = 1;
-	}
-	function HideEarth(){
+		}
+		function HideEarth(){
 			earth.style.opacity = 0;
-	}
+		}
 
-	function EarthResize(){
-			earth.style.top = - window.innerWidth/12;
+		function ViewportResize(){
+			//earth.style.top = - window.innerWidth/12;
+			earth.style.top = -window.innerHeight/12;
 			earth.height = window.innerWidth;
 			earth.width = window.innerWidth;
-	}
-
-	function ParalaxEffect(){
-		paralax1.style.backgroundPosition = "0 " + -window.scrollY/1.5 + "px";
-		paralax2.style.backgroundPosition = "50vw " + -window.scrollY/2 + "px";
-		paralax3.style.backgroundPosition = "25vw " + -window.scrollY/3 + "px";
-		paralax4.style.backgroundPosition = "70vw " + -window.scrollY/4 + "px";
-	}
-	</script>
+		}
+		</script>
+	</body>
 </html>

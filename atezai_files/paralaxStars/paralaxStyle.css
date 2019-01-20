@@ -1,0 +1,12 @@
+.paralaxStars{
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  background-image: url(stars.png);
+  background-position: 0 0;
+  background-repeat: repeat;
+  transition: 0s linear;
+  transition-property: background-position;
+  z-index: 0;
+}

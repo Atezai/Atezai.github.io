@@ -3,34 +3,27 @@ html{
   width: 100%;
 }
 body{
-  height: 100%;
   color: white;
+  width:100%;
   background-color: rgba(4, 4, 10, 1);
   padding: 0;
   margin: 0;
 }
 
-ti{
-  color: black;
-  font: 25px CocoRegular, monospace;
-}
-
-p{
+h1{
   font: 25px CocoHeavy, monospace;
   margin-top: 0;
 }
 
-.stars{
+p{
+  font: 16px "Trebuchet Ms", monospace;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.subPage{
   width: 100%;
-  height: 100%;
-  bottom: 0;
-  position: fixed;
-  background-image: url(stars/stars.png);
-  background-position: 0 0;
-  background-repeat: repeat;
-  transition: 0s linear;
-  transition-property: background-position;
-  z-index: 0;
+  z-index: 30;
 }
 
 .logoContainer{
@@ -41,50 +34,56 @@ p{
   width: 100%;
   height: auto;
   overflow: hidden;
+  z-index: 3;
+}
+
+.showreelVideo{
+  position: absolute;
+  margin-top: 0;
   z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 logo{
   color: rgba(250, 250, 250, 1);
   font: 50px  CocoHeavy, monospace;
-  padding-top: 15px;
+  padding-top: 10%;
   padding: 0;
-  padding-left: 8vw;
+  padding-left: 15%;
   text-shadow: 0px 1px 0px grey, 0px 2px 0px grey, 0px 3px 0px grey, 0px 4px 0px grey;
 }
 
-logo2{
+logoParagraph{
   color: rgba(200, 200, 200, 1);
   font: 20px CocoRegular, monospace;
-  padding-top: 15px;
-  padding-left: 16vw;
+  width: 100%;
+  height: 10px;
+  padding-left: 20%;
   text-shadow: 0px 0px 10px black;
 }
 
 .menu{
   position : relative;
   list-style: none;
-  background-image: linear-gradient(to top, rgba(255,255,255,0.5), rgba(0,0,0,0));
+  background-image: linear-gradient(to top, rgba(255, 240, 90,0.4), rgba(0,0,0,0));
   text-align:center;
   margin: 0;
-  margin-top: -40px;
   padding: 0;
-  height: 40px;
+  margin-top: -50px;
+  height: 50px;
   width: 100%;
   z-index: 65;
 }
-
 .menu li{
   display:inline;
 }
-button{
+.menu button{
   outline:none;
   cursor: pointer;
   text-decoration: none;
   border: none;
-}
-
-.menuButton {
   color: White;
   background-color: transparent;
   font-size: 30px;
@@ -93,46 +92,49 @@ button{
   margin-left: 15px;
   margin-right: 15px;
   min-width: 150px;
+  height: 100%;
   text-shadow: 0 0 5px black;
   z-index: 10;
   transition: color, text-shadow 0.1s;
 }
 
-.menuButton:hover {
+.menu button:hover {
   text-shadow: 0 2px 5px black;
-  background-color: rgba(255,255,255,0.2);
+  color: rgb(200,200,200);
 }
 
-.menuButton:active {
-  background-color: rgba(255,255,255,0.5);
+.menu button:active {
+  color: rgb(255, 230, 90);
 }
 
 .emptyBar {
   position: relative;
   min-height: 100px;
   width: 100%;
-  z-index: 15;
   color: white;
+  z-index: 15;
 }
-
 .whiteBar {
   position: relative;
   min-height: 100px;
   width: 100%;
-  background-color: rgba(225, 225, 230, 1);
   color: black;
-  font: 20px CocoRegular, monospace;
-  text-shadow: 0px 1px 0px white;
   z-index: 15;
+  background-color: rgba(230, 230, 230, 1);
   box-shadow: inset 0px 150px 150px -150px rgba(250, 250, 250, 1), inset 0px -150px 150px -150px rgba(250, 250, 250, 1);
+  text-shadow: 0px 1px 0px white;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 0px 0px 5px 1px white;
 }
-
-
-.whiteBarContainer{
+.content{
+  width: 100%;
   padding-left: 20%;
   padding-right: 20%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(230, 230, 230, 1);
+  box-sizing: border-box;
 }
 
 .earthContainer{
@@ -150,23 +152,22 @@ button{
   opacity: 0;
   left: -10px;/* minus scrollbar*/
   z-index: 1;
-  transition: top, opacity 1s;
-  top: -150px;
+  transition: margin-top, opacity 1s;
 }
 
 @font-face {
   font-family: Baloo;
-  src: url("Anonymous_Pro_B.ttf") format("truetype");
+  src: url("fonts/Anonymous_Pro_B.ttf") format("truetype");
 }
 @font-face {
   font-family: CocoLight;
-  src: url("Coco-Gothic-Light-trial.ttf") format("truetype");
+  src: url("fonts/Coco-Gothic-Light-trial.ttf") format("truetype");
 }
 @font-face {
   font-family: CocoRegular;
-  src: url("Coco-Gothic-Regular-trial.ttf") format("truetype");
+  src: url("fonts/Coco-Gothic-Regular-trial.ttf") format("truetype");
 }
 @font-face {
   font-family: CocoHeavy;
-  src: url("Coco-Gothic-Heavy-trial.ttf") format("truetype");
+  src: url("fonts/Coco-Gothic-Heavy-trial.ttf") format("truetype");
 }
