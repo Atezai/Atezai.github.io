@@ -19,25 +19,27 @@
 		<div class="paralaxStars"></div>
 		<script src="./atezai_files/paralaxStars/paralax.js"></script>
 
-		<div id="EarthContainter" class="earthContainer">
-			<div class="logoContainer">
+		<div id="Showreel_Bar" class="showreel">
+			<div style= "position:absolute; top:80px; z-index:3;">
 				<logo>Mikołaj Hanslik</logo>
 				<br>
 				<logoParagraph>Virtual Experience Creator | Game Developer | Designer | Programmer</<logoParagraph>
 				<br>
 			</div>
-			<iframe id="ShowreelVideo" class="showreelVideo" width="560" height="315" src="https://www.youtube.com/embed/_ZKIfCJZvZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<canvas id="WorldCanvas" class="earthMesh">HTML5 not supported!</canvas>
+			<div style="position:relative;">
+				<iframe id="ShowreelVideo" width="560" height="315" src="https://www.youtube.com/embed/_ZKIfCJZvZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<canvas id="WorldCanvas" class="earthMesh">HTML5 not supported!</canvas>
+			</div>
 		</div>
 
-		<ul id="MainMenu"class="menu">
+		<ul id="MainMenu_Bar"class="menu">
 			<li><button id="Showreel_Button" onclick="UnrollShowreel()">Showreel</button></li>
 			<li><button id="AboutMe_Button" onclick="MainMenuButtonAction(this);">About Me</button></li>
 			<li><button id="Projects_Button"  onclick="UnhideEarth();">Projects</button></li>
 			<li><button id="Contact_Button">Contact</button></li>
 		</ul>
 
-		<div id="AboutMeDiv" class="whiteBar">
+		<div id="AboutMe_Bar" class="whiteBar">
 			<div class="content">
 				<h1>O mnie</h1>
 				<p>
@@ -55,36 +57,13 @@
 			</div>
 		</div>
 
-		<div id="Projects" class="emptyBar" style="display:none">
-			<div class="content">
-				<h1>O mnie</h1>
-
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida vulputate fermentum. Ut a lorem at tortor maximus auctor. Phasellus non tellus a ex bibendum congue. Nullam rutrum molestie augue ac rutrum. Aenean iaculis eget erat et interdum. Etiam sit amet risus sit amet erat congue fermentum. Pellentesque volutpat egestas mauris. Sed non sem tristique, dignissim lacus et, tincidunt nunc. Mauris vel tincidunt tortor.
-
-				Ut sed suscipit urna. Morbi imperdiet ut ex at lobortis. Aenean in elit et odio varius semper ut in lacus. Integer gravida tellus mi. Nam ornare mattis condimentum. Ut nec tristique nisi. Proin eu porttitor lorem, et interdum nisl. Nulla sollicitudin justo sit amet accumsan ultrices. Vestibulum gravida leo at cursus ultricies. Quisque at neque hendrerit, mollis enim vel, fermentum elit. In commodo sapien non orci cursus, eget ultricies tortor hendrerit. Sed egestas libero molestie ante feugiat tincidunt. Nunc sed sapien mattis, euismod velit non, elementum nunc. Fusce cursus est in eros hendrerit laoreet. Praesent facilisis efficitur dui, sed rutrum sapien tincidunt eget.
-
-				In aliquet dolor tortor, eu rhoncus metus fermentum sed. Pellentesque quam odio, volutpat sit amet erat ac, rhoncus vehicula leo. Pellentesque vestibulum tempor ante. Nunc vehicula sodales turpis, ac lacinia massa varius non. Mauris ut turpis mattis, dictum nibh eget, sollicitudin mi. Aliquam eleifend feugiat mauris. Praesent sed hendrerit mi, id commodo magna. Nunc sed arcu elit. Vestibulum finibus leo ullamcorper iaculis rutrum. Duis viverra nisl id urna euismod, ac pellentesque ligula volutpat. Nullam orci eros, condimentum vel iaculis nec, interdum id augue. Donec ut lorem nunc. Ut eget venenatis tellus, eu finibus sapien. Donec aliquam a orci ut ultrices. Donec maximus, massa et suscipit porta, mauris mauris lacinia risus, nec commodo metus urna ullamcorper metus. Integer a leo consectetur, volutpat libero non, varius ligula.
-			</div>
-			<div class="emptyBar"></div>
-			<div class="content">
-				<p>O mnie</p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida vulputate fermentum. Ut a lorem at tortor maximus auctor. Phasellus non tellus a ex bibendum congue. Nullam rutrum molestie augue ac rutrum. Aenean iaculis eget erat et interdum. Etiam sit amet risus sit amet erat congue fermentum. Pellentesque volutpat egestas mauris. Sed non sem tristique, dignissim lacus et, tincidunt nunc. Mauris vel tincidunt tortor.
-
-				Ut sed suscipit urna. Morbi imperdiet ut ex at lobortis. Aenean in elit et odio varius semper ut in lacus. Integer gravida tellus mi. Nam ornare mattis condimentum. Ut nec tristique nisi. Proin eu porttitor lorem, et interdum nisl. Nulla sollicitudin justo sit amet accumsan ultrices. Vestibulum gravida leo at cursus ultricies. Quisque at neque hendrerit, mollis enim vel, fermentum elit. In commodo sapien non orci cursus, eget ultricies tortor hendrerit. Sed egestas libero molestie ante feugiat tincidunt. Nunc sed sapien mattis, euismod velit non, elementum nunc. Fusce cursus est in eros hendrerit laoreet. Praesent facilisis efficitur dui, sed rutrum sapien tincidunt eget.
-
-				In aliquet dolor tortor, eu rhoncus metus fermentum sed. Pellentesque quam odio, volutpat sit amet erat ac, rhoncus vehicula leo. Pellentesque vestibulum tempor ante. Nunc vehicula sodales turpis, ac lacinia massa varius non. Mauris ut turpis mattis, dictum nibh eget, sollicitudin mi. Aliquam eleifend feugiat mauris. Praesent sed hendrerit mi, id commodo magna. Nunc sed arcu elit. Vestibulum finibus leo ullamcorper iaculis rutrum. Duis viverra nisl id urna euismod, ac pellentesque ligula volutpat. Nullam orci eros, condimentum vel iaculis nec, interdum id augue. Donec ut lorem nunc. Ut eget venenatis tellus, eu finibus sapien. Donec aliquam a orci ut ultrices. Donec maximus, massa et suscipit porta, mauris mauris lacinia risus, nec commodo metus urna ullamcorper metus. Integer a leo consectetur, volutpat libero non, varius ligula.
-			</div>
-		</div>
-
 		<div class="emptyBar"></div>
 
-
 		<script>
-
 		var showreelOpened = false;
 
 		var earth = document.getElementById('WorldCanvas');
-		var earthContainer = document.getElementById('EarthContainter');
+		var showreel_Bar = document.getElementById('Showreel_Bar');
 		var video = document.getElementById('ShowreelVideo');
 
 		var mainmenu = document.getElementById('MainMenu');
@@ -92,9 +71,9 @@
 		function UnrollShowreel(){
 			showreelOpened = !showreelOpened;
 			if(showreelOpened){
-				earthContainer.style.height = "100%";
+				showreel_Bar.style.height = "100%";
 			}else {
-				earthContainer.style.height = "240px";
+				showreel_Bar.style.height = "240px";
 			}
 		}
 		function UnhideEarth(){
