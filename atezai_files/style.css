@@ -4,6 +4,7 @@ html{
 body{
   color: white;
   width:100%;
+  min-height: 101%;
   background-color: rgba(4, 4, 10, 1);
   padding: 0;
   margin: 0;
@@ -54,20 +55,23 @@ logo2{
 
 .subPages{
   width: 100%;
+  height: auto;
   position:absolute;
-  overflow: hidden;
   z-index: 30;
 }
 
 .page{
   height: 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
 .emptyBar {
   position: relative;
   display: block;
   width: 100%;
-  height: 0;
+  height: auto;
   color: white;
   z-index: 15;
 }
@@ -107,22 +111,22 @@ logo2{
   display:inline;
 }
 .menu button{
+  position: relative;
+  display: inline-block;
   outline:none;
+  height: 100%;
   cursor: pointer;
   text-decoration: none;
   border: none;
   color: White;
-  background-color: transparent;
-  font-size: 30px;
-  display: inline-block;
-  position: relative;
   margin-left: 15px;
   margin-right: 15px;
   min-width: 150px;
-  height: 100%;
+  font: 30px CocoHeavy, monospace;
   text-shadow: 0 0 3px black;
-  z-index: 10;
+  background-color: transparent;
   transition: color, text-shadow 0.1s;
+  z-index: 10;
 }
 
 .menu button:hover {
@@ -141,6 +145,18 @@ logo2{
   height: 0;
   color: white;
   z-index: 15;
+}
+.emptyBar .content{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  text-shadow: 0px 1px 0px grey;
+  box-sizing: border-box;
+}
+.emptyBar .content b{
+  color: rgba(255,255,255,0.8);
+  font-size: 10px;
 }
 .whiteBar {
   position: relative;
