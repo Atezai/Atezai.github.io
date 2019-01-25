@@ -241,6 +241,9 @@ p{
   .menu button{
     font-size: 18px;
   }
+  .showreel iframe{
+      top: 400px;
+  }
 }
 @media screen and (max-width: 650px) {
   .menu button{
@@ -256,8 +259,7 @@ p{
     font-size: 20px;
   }
   .showreel iframe{
-      top: 60vh;
-      height: 300px;
+      top: 480px;
   }
   .showreel{
     height: 320px;
@@ -287,6 +289,8 @@ p{
   }
   .menu button{
     font-size: 18px;
+    width: 300px;
+    border-bottom: 1px solid white;
   }
   .whiteBar {
     box-shadow: none;
