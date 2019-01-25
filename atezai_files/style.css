@@ -166,9 +166,8 @@ p{
   border-bottom: 1px solid white;
   border-top: 1px solid white;
   background-color: white;
-  background-color: rgba(240, 240, 240);
+  background-color: rgb(220, 220, 220);
   box-shadow: inset 200px 0px 250px -100px rgba(180, 180, 180, 0.5), inset -200px 0px 200px -100px rgba(180, 180, 180, 0.5);
-
 }
 .whiteBar .content{
   width: 100%;
@@ -288,6 +287,9 @@ p{
   }
   .menu button{
     font-size: 18px;
+  }
+  .whiteBar {
+    box-shadow: none;
   }
 }
 
