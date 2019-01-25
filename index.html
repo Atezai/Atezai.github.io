@@ -21,9 +21,8 @@
 
 		<div id="Showreel_Bar" class="showreel">
 			<div class="logoContainer">
-				<logo1>Mikołaj Hanslik</logo1>
-				<br>
-				<logo2>Virtual Experience Creator | Game Developer | Designer | Programmer</logo2>
+				<div class="logo1">Mikołaj Hanslik</div>
+				<div class="logo2">Virtual Experience Creator | Game Developer | Designer | Programmer</div>
 				<br>
 			</div>
 			<div style="position:relative;">
@@ -60,6 +59,12 @@
 							<br><br>
 							Projektuję i tworzę każdą grę tak, by miała wnętrze, podobała się użytkownikowi, angażowała i zaciekawiała gracza, jednocześnie by była możliwa do zrealizowania ze względu na budżet.
 						</p>
+						<br>
+						<img class="icons" src="./atezai_files/icons/cplusplusIcon.png" alt="c++"></img>
+						<img class="icons" src="./atezai_files/icons/csharpIcon.png" alt="c#"></img>
+						<img class="icons" src="./atezai_files/icons/unityIcon.png" alt="unity"></img>
+						<img class="icons" src="./atezai_files/icons/unrealIcon.png" alt="unreal"></img>
+						<img class="icons" src="./atezai_files/icons/blenderIcon.png" alt="blender"></img>
 					</div>
 				</div>
 			</div>
@@ -67,7 +72,12 @@
 			<div id="Projects" class="page">
 				<div class="whiteBar">
 					<div class="content">
-						<h1>Prototypy</h1>
+						<h1>One-Way Highway</h1>
+						<h1>Cubye</h1>
+						<h1>Mail-Man</h1>
+						<h1>Binnit</h1>
+						<h1>Bad-Call</h1>
+						<h1>Point Of View</h1>
 					</div>
 				</div>
 			</div>
@@ -76,11 +86,15 @@
 				<div class="whiteBar">
 					<div class="content">
 						<h1>Szum</h1>
-						<p>
-							Generator zagiętej jezdni
-							<br>
-							Generator terenu
-						</p>
+						<h1>Ruch</h1>
+						<h1>Kamery</h1>
+						<h1>Szukanie Krawędzi</h1>
+						<h1>Krzywa Béziera</h1>
+						<h1>Generowanie obiektów trójwymiarowych</h1>
+						<h1>Fale</h1>
+						<h1>Prosty ocean</h1>
+						<h1>Realistyczny ocean</h1>
+						<h1>System wyposarzenia</h1>
 					</div>
 				</div>
 			</div>
@@ -139,16 +153,19 @@
 
 		var lastopenedpage = document.getElementById('About');
 		lastopenedpage.style.height = "100%";
+		lastopenedpage.style.display = "block";
 
 		function mainMenuButtonAction(button, pageId){
 			var page = document.getElementById(pageId);
 
 			if(lastopenedpage != page){
 				lastopenedpage.style.height = 0;
+				lastopenedpage.style.display = "none";
 				lastopenedpage = page;
 			}
 
 			page.style.height = "auto";
+			page.style.display = "block";
 
 			if(showreelOpened){
 				toggleShowreel();
