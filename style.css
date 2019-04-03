@@ -10,15 +10,56 @@ body{
   margin: 0;
 }
 
+.earth-mesh-display{
+  background:url('earth/atmosphere.png');
+  background-size: 100% 100%;
+  position: absolute;
+  opacity: 0;
+  left: -10px;/* minus scrollbar*/
+  z-index: 1;
+  transition: margin-top, opacity 1s;
+}
+
+header{
+  width: 100%;
+  height: 250px;
+  background: rgba(255,255,255,0.1);
+  display: block;
+}
+
+header h1{
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 250px;
+  font-size: 75px;
+  text-shadow: 0px 0px 3px black, 0px 3px 5px black;
+  
+}
+header h2{
+  text-align: center;
+  margin: 0;
+}
+
+footer{
+  width: 100%;
+  min-height: 200px;
+  background-color: black;
+  display: block;
+}
+
+
 h1{
   font: 30px CocoHeavy, monospace;
-
+}
+h2{
+  font: 20px "Trebuchet Ms", monospace;
+  text-align: center;
 }
 
 p{
   font: 16px "Trebuchet Ms", monospace;
   padding-left: 30px;
-  text-indent: 20px;
+  text-indent: 0px;
 }
 .logo1{
   color: rgba(250, 250, 250, 1);
@@ -103,6 +144,7 @@ p{
   height: 50px;
   width: 100%;
   z-index: 65;
+  border-bottom: solid 2px white;
 }
 .menu:hover{
   background-image: linear-gradient(to top, rgba(255, 240, 90,0.4), rgba(0,0,0,0));
@@ -146,6 +188,7 @@ p{
   color: white;
   z-index: 15;
 }
+
 .emptyBar .content{
   width: 100%;
   padding-top: 50px;
@@ -154,10 +197,12 @@ p{
   text-shadow: 0px 1px 0px grey;
   box-sizing: border-box;
 }
+
 .emptyBar .content b{
   color: rgba(255,255,255,0.8);
   font-size: 10px;
 }
+
 .whiteBar {
   position: relative;
   height: auto;
@@ -169,6 +214,7 @@ p{
   background-color: rgb(220, 220, 220);
   box-shadow: inset 200px 0px 250px -100px rgba(180, 180, 180, 0.5), inset -200px 0px 200px -100px rgba(180, 180, 180, 0.5);
 }
+
 .whiteBar .content{
   width: 100%;
   padding-left: 20%;

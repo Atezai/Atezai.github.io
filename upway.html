@@ -2,7 +2,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="./atezai_files/style.css" type="text/css">
 		<link rel="stylesheet" href="./atezai_files/paralaxStars/paralaxStyle.css" type="text/css">
 		<title>MH portfolio</title>
 	</head>
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 
-		<ul id="MainMenu" class="menu">
+		<ul id="MainMenu"class="menu">
 			<li><button id="Showreel_Button" onclick="toggleShowreel()">Showreel</button></li>
 			<li><button id="AboutMe_Button" onclick="mainMenuButtonAction(this, 'About');">O mnie</button></li>
 			<li><button id="Projects_Button"  onclick="mainMenuButtonAction(this, 'Projects');">Projekty</button></li>
@@ -40,7 +40,6 @@
 		</ul>
 
 		<div id="SubPages" class="subPages">
-
 			<div id="About" class="page">
 				<div class="whiteBar">
 					<div class="content">
@@ -70,65 +69,27 @@
 				</div>
 			</div>
 
-			<div id="Projects" class="page">
-				<div class="emptyBar" style="height: 300px;">
+			<div class="whiteBar">
+				<div class="content">
+					<h1>One-Way Highway</h1>
+				</div>
+				<div class="content" style="background-color: rgb(245,245,245);">
 
-				</div>
-				<div class="whiteBar">
-						<h1>One-Way Highway</h1>
-						<p>aaaa</p>
-						<h1>Cubye</h1>
-						<h1>Mail-Man</h1>
-						<h1>Binnit</h1>
-						<h1>Bad-Call</h1>
-						<h1>Point Of View</h1>
-				</div>
-				<div class="emptyBar" style="height: 300px;">
+					<p>
+						<b>Upway</b> jest grą, polegającą na wymijaniu przeszkód różnymi pojazdami, jadąc po losowo generowanej drodze. Za zdobywanie kamieni milowych, trudność poziomu zwiększa się, a gracz otrzymuje ulepszenie do wyboru z trzech zdobytych na trasie.
+					</p>
 
-				</div>
-				<div class="whiteBar">
-					<div class="content">
-						<h1>One-Way Highway</h1>
-						<h1>Cubye</h1>
-						<h1>Mail-Man</h1>
-						<h1>Binnit</h1>
-						<h1>Bad-Call</h1>
-						<h1>Point Of View</h1>
-					</div>
-				</div>
-				<div class="emptyBar" style="height: 300px;">
-
+					<p>
+						<b>Ziemia</b> jest płaszczyzną poruszającą się za pojazdem gracza. Płaszczyzna dzięki shaderowi generuje obraz trawy i placków ziemi.
+						Posiadając pozycję pixela w przestrzeni, jesteśmy w stanie wygenerować dwuwymiarowy szum Perlina, który jest wartościami od zera do jeden i wygląda mniej więcej tak:
+					</p>
+					<img src="./atezai_files/noise.jpg" alt="Szum Perlina">
+					<p>
+						Szum ten można manipulować i łączyć z innymi, co pozwala mi w dowolny sposób wskazywać na jakich obszarach i w jakich ilościach ma wyświetlać się trawa oraz gdzie ziemia.
+						
+					</p>
 				</div>
 			</div>
-
-			<div id="Tutorials" class="page">
-				<div class="whiteBar">
-					<div class="content">
-						<h1>Szum</h1>
-						<h1>Ruch</h1>
-						<h1>Kamery</h1>
-						<h1>Szukanie Krawędzi</h1>
-						<h1>Krzywa Béziera</h1>
-						<h1>Generowanie obiektów trójwymiarowych</h1>
-						<h1>Fale</h1>
-						<h1>Prosty ocean</h1>
-						<h1>Realistyczny ocean</h1>
-						<h1>System wyposarzenia</h1>
-					</div>
-				</div>
-			</div>
-
-			<div id="Contact" class="page">
-				<div class="whiteBar">
-					<div class="content">
-						<h1>Kontakt</h1>
-						<p>
-							mikolaj.hanslik@gmail.com
-						</p>
-					</div>
-				</div>
-			</div>
-			<br>
 
 			<div class="emptyBar">
 				<div class="content">
@@ -137,44 +98,9 @@
 					Copyright © 2019 Mikołaj Hanslik. All Rights Reserved.
 				</div>
 			</div>
+
 		</div>
-		<script>
-		var showreelOpened = false;
-
-		var earth = document.getElementById('WorldCanvas');
-		var showreel_Bar = document.getElementById('Showreel_Bar');
-		var video = document.getElementById('ShowreelVideo');
-		var mainmenu = document.getElementById('MainMenu');
-
-		function toggleShowreel(){
-			showreelOpened = !showreelOpened;
-			if(showreelOpened){
-				showreel_Bar.style.height = "100%";
-			}else {
-				showreel_Bar.style.height = "240px";
-			}
-		}
-
-		function UnhideEarth(){
-			earth.style.opacity = 1;
-		}
-
-		function HideEarth(){
-			earth.style.opacity = 0;
-		}
-
-		function ViewportResize(){
-			//earth.style.top = - window.innerWidth/12;
-			var size = window.innerWidth + window.innerHeight / 4;
-			earth.style.top = -size/4;
-			earth.style.left = -size/3 -10;
-			earth.height = size;
-			earth.width = size;
-		}
-
-		var lastopenedpage = document.getElementById('About');
-		lastopenedpage.style.height = "100%";
-		lastopenedpage.style.display = "block";
+		<script type="text/javascript">
 
 		function mainMenuButtonAction(button, pageId){
 			var page = document.getElementById(pageId);
@@ -187,17 +113,8 @@
 
 			page.style.height = "auto";
 			page.style.display = "block";
-
-			if(showreelOpened){
-				toggleShowreel();
-			}
 		}
-
-		function resizeIFrameToFitContent( iFrame ) {
-		    //iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-		    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-		}
-
 		</script>
+
 	</body>
 </html>

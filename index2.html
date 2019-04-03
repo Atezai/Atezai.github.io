@@ -10,26 +10,20 @@
 	<script src="./atezai_files/earth/util.js"></script>
 	<script src="./atezai_files/earth/gl-matrix.js"></script>
 	<script src="./atezai_files/earth/app.js"></script>
+    <script src="./atezai_files/paralaxStars/paralax.js"></script>
 
-	<body id="bodyBackground" onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
+	<body onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
 
 		<div class="paralaxStars"></div>
 		<div class="paralaxStars"></div>
 		<div class="paralaxStars"></div>
-		<div class="paralaxStars"></div>
-		<script src="./atezai_files/paralaxStars/paralax.js"></script>
-
-		<div id="Showreel_Bar" class="showreel">
-			<div class="logoContainer">
-				<div class="logo1">Mikołaj Hanslik</div>
-				<div class="logo2">Virtual Experience Creator | Game Developer | Designer | Programmer</div>
-				<br>
-			</div>
-			<div style="position:relative;">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/a1pAomBlYfo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<canvas id="WorldCanvas" class="earthMesh">HTML5 not supported!</canvas>
-			</div>
-		</div>
+        <div class="paralaxStars"></div>
+        
+        <header>
+            <canvas id="WorldCanvas" class="earth-mesh-display">HTML5 not supported!</canvas>
+			<h1>Mikołaj Hanslik</h1>
+			<h2>Virtual Experience Creator | Game Developer | Designer | Programmer</h2>
+        </header>
 
 		<ul id="MainMenu" class="menu">
 			<li><button id="Showreel_Button" onclick="toggleShowreel()">Showreel</button></li>
@@ -39,7 +33,7 @@
 			<li><button id="Contact_Button"  onclick="mainMenuButtonAction(this, 'Contact');">Kontakt</button></li>
 		</ul>
 
-		<div id="SubPages" class="subPages">
+		<!--<div id="SubPages" class="subPages">
 
 			<div id="About" class="page">
 				<div class="whiteBar">
@@ -130,14 +124,14 @@
 			</div>
 			<br>
 
-			<div class="emptyBar">
-				<div class="content">
-					<b>Website designed and created by Mikołaj Hanslik.</b>
-					<br>
-					Copyright © 2019 Mikołaj Hanslik. All Rights Reserved.
-				</div>
-			</div>
-		</div>
+		</div>-->
+
+		<footer>
+			<b>Website designed and created by Mikołaj Hanslik.</b>
+			<br>
+			Copyright © 2019 Mikołaj Hanslik. All Rights Reserved.		
+		</footer>
+
 		<script>
 		var showreelOpened = false;
 
