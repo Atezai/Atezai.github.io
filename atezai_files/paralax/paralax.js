@@ -1,4 +1,4 @@
-var paralaxObjects = document.getElementsByClassName("paralaxStars");
+var paralaxObjects = document.getElementsByClassName("paralax");
 
 InitializeParalaxEffect();
 

@@ -3,141 +3,66 @@
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="style.css" type="text/css">
-		<link rel="stylesheet" href="./atezai_files/paralaxStars/paralaxStyle.css" type="text/css">
+		<link rel="stylesheet" href="./atezai_files/paralax/paralax_style.css" type="text/css">
 		<title>MH portfolio</title>
 	</head>
 
 	<script src="./atezai_files/earth/util.js"></script>
 	<script src="./atezai_files/earth/gl-matrix.js"></script>
 	<script src="./atezai_files/earth/app.js"></script>
+    <script src="./atezai_files/paralax/paralax.js"></script>
 
-	<body id="bodyBackground" onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
+	<body onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
 
-		<div class="paralaxStars"></div>
-		<div class="paralaxStars"></div>
-		<div class="paralaxStars"></div>
-		<div class="paralaxStars"></div>
-		<script src="./atezai_files/paralaxStars/paralax.js"></script>
+		<div class="paralax"></div>
+		<div class="paralax"></div>
+		<div class="paralax"></div>
+        <div class="paralax"></div>
+        
+        <header>
+            <canvas id="WorldCanvas" class="earth-mesh-display">HTML5 not supported!</canvas>
+			<h1>Mikołaj Hanslik</h1>
+			<h2>Designer | Programmer | Virtual Experience Creator</h2>
+        </header>		
 
-		<div id="Showreel_Bar" class="showreel">
-			<div class="logoContainer">
-				<div class="logo1">Mikołaj Hanslik</div>
-				<div class="logo2">Virtual Experience Creator | Game Developer | Designer | Programmer</div>
-				<br>
-			</div>
-			<div style="position:relative;">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/a1pAomBlYfo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<canvas id="WorldCanvas" class="earthMesh">HTML5 not supported!</canvas>
-			</div>
-		</div>
-
+		<!--
 		<ul id="MainMenu" class="menu">
 			<li><button id="Showreel_Button" onclick="toggleShowreel()">Showreel</button></li>
 			<li><button id="AboutMe_Button" onclick="mainMenuButtonAction(this, 'About');">O mnie</button></li>
 			<li><button id="Projects_Button"  onclick="mainMenuButtonAction(this, 'Projects');">Projekty</button></li>
-
 			<li><button id="Contact_Button"  onclick="mainMenuButtonAction(this, 'Contact');">Kontakt</button></li>
 		</ul>
-
-		<div id="SubPages" class="subPages">
-
-			<div id="About" class="page">
-				<div class="whiteBar">
-					<div class="content">
-						<h1>O mnie</h1>
-						<p>
-							Jestem 22 letnim twórcą gier i wirtualnych wizualizacji. Od zawsze byłem blisko związany z tworzeniem. Przykładowo w wieku 10 lat wymyślałem i rysowałem bronie do gry mmo, która miała być moim spełnieniem pożądań destrukcji. Już w dzieciństwie grając w gry byłem zainteresowany wzbudzaniem emocji u człowieka przy użyciu grafiki i logiki. Byłem zafascynowany działaniem wirtualnych "światów" oraz głębią jaką można im nadać.
-							<br><br>
-							Chcąc zostać twórcą gier już w wieku 12 lat próbowałem swoich sił w wielu programach do tworzenia gier i programach graficznych. Od tamtego momentu granie nigdy nie było już takie same. Zacząłem się interesować jeszcze bardziej tym jak to działa. Próbowałem często psuć grę, żeby zobaczyć jak ona działa. Pomimo tej zmiany wciąż potrafię jak dziecko wciągnąć się w dobrą grę.
-							<br><br>
-							Wiedziałem, że nauczenie się programowania będzie koniecznością i zarazem kwestią czasu. Posiadając podstawową wiedzę programistyczną już w wieku 15 lat napisałem swój pierwszy program, a w wieku 16 swoją pierwszą grę używając silnika Unity.  Z każdym krokiem moje możliwości i chęć zdobywania wiedzy się zwiększały, dlatego też zdecydowałem się na studia informatyczne o specjalizacji Game Design. Pozwoliły mi one skupić się na swoich pasjach i rozwijaniu umiejętności.
-							<br><br>
-							Stworzyłem wiele prototypów gier, symulacji i parę programów, jednak na tym moja chęć zdobywania wiedzy w dziedzinie tworzenia gier się nie skończyła. Zacząłem również wnikać w to jak gry działają na człowieka. Co w nim wzbudza i jak wzbudzać. Jak graficznie można z nim nawiązać kontakt i poruszyć jego zainteresowanie, jednocześnie przekazując informacje.
-							Dostrzegałem ogromny potencjał interaktywnych programów, mogących łączyć naukę z zabawą, w przeciwieństwie do filmu czy książki, gdzie użytkownik jest tylko biernym odbiorcą. Na tym jednak możliwości się nie kończą.
-							<br><br>
-							Nauczyłem się pisać własne shadery('glsl'), początkowo używając do tego programu Blender i silnika Unreal.
-							Moje gry nie mogły tylko działać, ale musiały też wyglądać idealnie i być zaplanowaną całością.
-							<br><br>
-							Projektuję i tworzę każdą grę tak, by miała wnętrze, podobała się użytkownikowi, angażowała i zaciekawiała gracza, jednocześnie by była możliwa do zrealizowania ze względu na budżet.
-						</p>
-						<br>
-						<img class="icons" src="./atezai_files/icons/cplusplusIcon.png" alt="c++"></img>
-						<img class="icons" src="./atezai_files/icons/csharpIcon.png" alt="c#"></img>
-						<img class="icons" src="./atezai_files/icons/unityIcon.png" alt="unity"></img>
-						<img class="icons" src="./atezai_files/icons/unrealIcon.png" alt="unreal"></img>
-						<img class="icons" src="./atezai_files/icons/blenderIcon.png" alt="blender"></img>
-					</div>
-				</div>
+		-->
+		
+		<main>
+			<div class="wide-content-box">
+				<p>
+					Jestem 22 letnim twórcą gier i wirtualnych wizualizacji. Od zawsze byłem blisko związany z tworzeniem. Przykładowo w wieku 10 lat wymyślałem i rysowałem bronie do gry mmo, która miała być moim spełnieniem pożądań destrukcji. Już w dzieciństwie grając w gry byłem zainteresowany wzbudzaniem emocji u człowieka przy użyciu grafiki i logiki. Byłem zafascynowany działaniem wirtualnych "światów" oraz głębią jaką można im nadać.
+					<br><br>
+					Chcąc zostać twórcą gier już w wieku 12 lat próbowałem swoich sił w wielu programach do tworzenia gier i programach graficznych. Od tamtego momentu granie nigdy nie było już takie same. Zacząłem się interesować jeszcze bardziej tym jak to działa. Próbowałem często psuć grę, żeby zobaczyć jak ona działa. Pomimo tej zmiany wciąż potrafię jak dziecko wciągnąć się w dobrą grę.
+					<br><br>
+					Wiedziałem, że nauczenie się programowania będzie koniecznością i zarazem kwestią czasu. Posiadając podstawową wiedzę programistyczną już w wieku 15 lat napisałem swój pierwszy program, a w wieku 16 swoją pierwszą grę używając silnika Unity.  Z każdym krokiem moje możliwości i chęć zdobywania wiedzy się zwiększały, dlatego też zdecydowałem się na studia informatyczne o specjalizacji Game Design. Pozwoliły mi one skupić się na swoich pasjach i rozwijaniu umiejętności.
+					<br><br>
+					Stworzyłem wiele prototypów gier, symulacji i parę programów, jednak na tym moja chęć zdobywania wiedzy w dziedzinie tworzenia gier się nie skończyła. Zacząłem również wnikać w to jak gry działają na człowieka. Co w nim wzbudza i jak wzbudzać. Jak graficznie można z nim nawiązać kontakt i poruszyć jego zainteresowanie, jednocześnie przekazując informacje.
+					Dostrzegałem ogromny potencjał interaktywnych programów, mogących łączyć naukę z zabawą, w przeciwieństwie do filmu czy książki, gdzie użytkownik jest tylko biernym odbiorcą. Na tym jednak możliwości się nie kończą.
+					<br><br>
+					Nauczyłem się pisać własne shadery('glsl'), początkowo używając do tego programu Blender i silnika Unreal.
+					Moje gry nie mogły tylko działać, ale musiały też wyglądać idealnie i być zaplanowaną całością.
+					<br><br>
+					Projektuję i tworzę każdą grę tak, by miała wnętrze, podobała się użytkownikowi, angażowała i zaciekawiała gracza, jednocześnie by była możliwa do zrealizowania ze względu na budżet.
+				</p>
 			</div>
-
-			<div id="Projects" class="page">
-				<div class="emptyBar" style="height: 300px;">
-
-				</div>
-				<div class="whiteBar">
-						<h1>One-Way Highway</h1>
-						<p>aaaa</p>
-						<h1>Cubye</h1>
-						<h1>Mail-Man</h1>
-						<h1>Binnit</h1>
-						<h1>Bad-Call</h1>
-						<h1>Point Of View</h1>
-				</div>
-				<div class="emptyBar" style="height: 300px;">
-
-				</div>
-				<div class="whiteBar">
-					<div class="content">
-						<h1>One-Way Highway</h1>
-						<h1>Cubye</h1>
-						<h1>Mail-Man</h1>
-						<h1>Binnit</h1>
-						<h1>Bad-Call</h1>
-						<h1>Point Of View</h1>
-					</div>
-				</div>
-				<div class="emptyBar" style="height: 300px;">
-
-				</div>
+			<div class="wide-content-box">
+				bbb
 			</div>
+		</main>
 
-			<div id="Tutorials" class="page">
-				<div class="whiteBar">
-					<div class="content">
-						<h1>Szum</h1>
-						<h1>Ruch</h1>
-						<h1>Kamery</h1>
-						<h1>Szukanie Krawędzi</h1>
-						<h1>Krzywa Béziera</h1>
-						<h1>Generowanie obiektów trójwymiarowych</h1>
-						<h1>Fale</h1>
-						<h1>Prosty ocean</h1>
-						<h1>Realistyczny ocean</h1>
-						<h1>System wyposarzenia</h1>
-					</div>
-				</div>
-			</div>
-
-			<div id="Contact" class="page">
-				<div class="whiteBar">
-					<div class="content">
-						<h1>Kontakt</h1>
-						<p>
-							mikolaj.hanslik@gmail.com
-						</p>
-					</div>
-				</div>
-			</div>
+		<footer>
+			<b>Website designed and created by Mikołaj Hanslik.</b>
 			<br>
+			Copyright © 2019 Mikołaj Hanslik. All Rights Reserved.		
+		</footer>
 
-			<div class="emptyBar">
-				<div class="content">
-					<b>Website designed and created by Mikołaj Hanslik.</b>
-					<br>
-					Copyright © 2019 Mikołaj Hanslik. All Rights Reserved.
-				</div>
-			</div>
-		</div>
 		<script>
 		var showreelOpened = false;
 
@@ -145,15 +70,6 @@
 		var showreel_Bar = document.getElementById('Showreel_Bar');
 		var video = document.getElementById('ShowreelVideo');
 		var mainmenu = document.getElementById('MainMenu');
-
-		function toggleShowreel(){
-			showreelOpened = !showreelOpened;
-			if(showreelOpened){
-				showreel_Bar.style.height = "100%";
-			}else {
-				showreel_Bar.style.height = "240px";
-			}
-		}
 
 		function UnhideEarth(){
 			earth.style.opacity = 1;
