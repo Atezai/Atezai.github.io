@@ -55,6 +55,7 @@ main{
   width: 100%;  
   position: relative;
   z-index: 2;
+  text-align: center;
 }
 
 .title{
@@ -103,25 +104,29 @@ main{
   border-bottom: solid 1px white;
 }
 
-.project-gallery{
 
-}
 
 .project-info{
-
   width: 400px;
   min-height: 200px;
-  background:  rgb(17, 18, 26);
+  background:  rgb(33, 35, 44);
   box-shadow: 0 0 15px 5px black;
   overflow: hidden;
 }
 
+.project-box-wrapper{
+  height: auto;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
 .project-box{
   display: inline-block;
+  text-align: left;
   margin: 50px;
   margin-bottom: 50px;
   width: 400px;
-  transition: height 1s;
 }
 
 .project-banner{
@@ -162,12 +167,14 @@ main{
 }
 
 footer{
+  position: relative;
   width: 100%;
   min-height: 200px;
   display: block;
   text-align: center;
   padding-top: 50px;
   font-size: 18px;
+  bottom:0;
 }
 
 footer b{
