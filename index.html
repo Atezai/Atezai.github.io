@@ -196,7 +196,7 @@
 		function HideEarth(){
 			earth.style.opacity = 0;
 		}
-
+		
 		function ViewportResize(){
 			//earth.style.top = - window.innerWidth/12;
 			var size = window.innerWidth + window.innerHeight / 4;
@@ -208,7 +208,8 @@
 			earth.height = size;
 			earth.width = size;
 		}
-
+		ViewportResize();
+		
 		var lastopenedpage = document.getElementById('About');
 		lastopenedpage.style.height = "100%";
 		lastopenedpage.style.display = "block";
