@@ -1,4 +1,5 @@
 <html>
+
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,21 +20,18 @@
 		<div class="paralax"></div>
 		<div class="paralax"></div>
 		
-		<canvas id="WorldCanvas" class="earth-mesh-display">HTML5 not supported!</canvas>
-		
         <header>
+			<canvas id="WorldCanvas" class="earth-mesh-display">HTML5 not supported!</canvas>
 			<h1>Mikołaj Hanslik</h1>
 			<h2>Designer | Programmer | Virtual Experience Creator</h2>
+			<nav>
+				<ul>
+					<li><a href="index.html">O mnie</a></li>
+					<li><a href="index.html">Projekty</a></li>
+					<li><a href="index.html">Kontakt</a></li>
+				</ul>
+			</nav>
         </header>		
-
-		<!--
-		<ul id="MainMenu" class="menu">
-			<li><button id="Showreel_Button" onclick="toggleShowreel()">Showreel</button></li>
-			<li><button id="AboutMe_Button" onclick="mainMenuButtonAction(this, 'About');">O mnie</button></li>
-			<li><button id="Projects_Button"  onclick="mainMenuButtonAction(this, 'Projects');">Projekty</button></li>
-			<li><button id="Contact_Button"  onclick="mainMenuButtonAction(this, 'Contact');">Kontakt</button></li>
-		</ul>
-		-->
 		
 		<main>
 			<div class="box" style="margin-top: 0px;">
@@ -47,7 +45,6 @@
 			
 			<div class="title"> Prototypy gier</div>
 
-		
 			<div class="project-box">
 				<div class="project-info">
 					<div class="project-banner">
@@ -69,7 +66,7 @@
 					</div>
 					<p>asdasdasdasd</p>
 				</div>
-				<button class="project-box-button"> Play</button>
+				<button class="project-box-button">Play</button>
 			</div>
 
 			<div class="project-box">
@@ -180,62 +177,5 @@
 			<br>
 			Copyright © 2019 Mikołaj Hanslik. All Rights Reserved.		
 		</footer>
-
-		<script>
-		var showreelOpened = false;
-
-		var earth = document.getElementById('WorldCanvas');
-		var showreel_Bar = document.getElementById('Showreel_Bar');
-		var video = document.getElementById('ShowreelVideo');
-		var mainmenu = document.getElementById('MainMenu');
-
-		function UnhideEarth(){
-			earth.style.opacity = 1;
-		}
-
-		function HideEarth(){
-			earth.style.opacity = 0;
-		}
-		
-		function ViewportResize(){
-			//earth.style.top = - window.innerWidth/12;
-			var size = window.innerWidth + window.innerHeight / 4;
-			size = 200;
-			earth.style.top = -size/4;
-			earth.style.left = -size/3 -10;
-			earth.style.top = 10;
-			earth.style.left = 30;
-			earth.height = size;
-			earth.width = size;
-		}
-		ViewportResize();
-
-		var lastopenedpage = document.getElementById('About');
-		lastopenedpage.style.height = "100%";
-		lastopenedpage.style.display = "block";
-
-		function mainMenuButtonAction(button, pageId){
-			var page = document.getElementById(pageId);
-
-			if(lastopenedpage != page){
-				lastopenedpage.style.height = 0;
-				lastopenedpage.style.display = "none";
-				lastopenedpage = page;
-			}
-
-			page.style.height = "auto";
-			page.style.display = "block";
-
-			if(showreelOpened){
-				toggleShowreel();
-			}
-		}
-
-		function resizeIFrameToFitContent( iFrame ) {
-		    //iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-		    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-		}
-
-		</script>
 	</body>
 </html>
