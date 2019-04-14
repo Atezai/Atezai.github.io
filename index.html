@@ -13,7 +13,7 @@
 	<script src="./atezai_files/earth/app.js"></script>
 	<script src="./atezai_files/paralax/paralax.js"></script>
 	
-	<body onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
+	<body onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();HideNav();">
 
 		<div class="paralax"></div>
 		<div class="paralax"></div>
@@ -32,7 +32,8 @@
 				<li><a href="projects.html">Projekty</a></li>
 				<li><a href="contact.html">Kontakt</a></li>
 			</ul>
-			<button id="Navigation_Button" class="nav-button" onclick="NavButtonAction()"></button>
+			<button id="Navigation_Open" class="nav-button" onclick="ShowNav()">MENU</button>
+			<button id="Navigation_Close" class="nav-close-button" onclick="HideNav()"></button>
 			<script src="./atezai_files/navigation_logic.js"></script>
 		</nav>
 		
@@ -64,11 +65,24 @@
 			}
 
 			function ViewportResize(){
-				var size = 200;
-				planet_canvas.style.top = 10;
-				planet_canvas.style.left = 30;
-				planet_canvas.height = size;
-				planet_canvas.width = size;
+				
+				if(window.innerWidth > 767){
+					var size = 200;
+					planet_canvas.height = size;
+					planet_canvas.width = size;
+					
+					planet_canvas.style.top = 10;
+					planet_canvas.style.left = 30;
+				}else{
+					var size = Math.min(window.innerWidth, window.innerHeight);
+					planet_canvas.height = size;
+					planet_canvas.width = size;
+					
+					planet_canvas.style.top = window.innerHeight - size/2;
+					planet_canvas.style.left = window.innerWidth - size/2;
+				}
+				
+				
 			}
 
 			ViewportResize();
