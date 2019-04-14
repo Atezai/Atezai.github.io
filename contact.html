@@ -12,7 +12,7 @@
 	<script src="./atezai_files/earth/gl-matrix.js"></script>
 	<script src="./atezai_files/earth/app.js"></script>
 	<script src="./atezai_files/paralax/paralax.js"></script>
-	
+
 	<body onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
 
 		<div class="paralax"></div>
@@ -24,24 +24,25 @@
 			<canvas id="WorldCanvas" class="earth-mesh-display">HTML5 not supported!</canvas>
 			<h1>Mikołaj Hanslik</h1>
 			<h2>Designer | Programmer | Virtual Experience Creator</h2>
-		</header>		
+        </header>		
 		
 		<nav id="Navigation">
-			<ul >
-				<li><a href="index.html" class = "a-active">O mnie</a></li>
+			<ul>
+				<li><a href="index.html">O mnie</a></li>
 				<li><a href="projects.html">Projekty</a></li>
-				<li><a href="contact.html">Kontakt</a></li>
+				<li><a href="contact.html" class = "a-active">Kontakt</a></li>
 			</ul>
-			<button id="Navigation_Button" class="nav-button" onclick="NavButtonAction()"></button>
-			<script src="./atezai_files/navigation_logic.js"></script>
 		</nav>
-		
+		<button id="Navigation_Button" class="nav-button" onclick="NavButtonAction()"></button>
+		<script src="./atezai_files/navigation_logic.js"></script>
+
 		<main>
 			<div class="box" style="margin-top: 0px;">
 				<p>
 					<h1>OPIS</h1>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					<img src="atezai_files/images/icons/blenderIcon.png" class="icon">
+					
 				</p>
 			</div>
 		</main>

@@ -1,26 +1,6 @@
 var gl;
 var activeRender = true;
 
-var planet_canvas = document.getElementById('WorldCanvas');
-
-function UnhideEarth(){
-	planet_canvas.style.opacity = 1;
-}
-
-function HideEarth(){
-	planet_canvas.style.opacity = 0;
-}
-
-function ViewportResize(){
-	var size = 200;
-	planet_canvas.style.top = 10;
-	planet_canvas.style.left = 30;
-	planet_canvas.height = size;
-	planet_canvas.width = size;
-}
-
-ViewportResize();
-
 var InitDemo = function () {
 
 
