@@ -229,7 +229,7 @@ main{
 }
 
 .project-info{
-  width: 400px;
+  width: 100%;
   min-height: 200px;
   background:  rgb(33, 35, 44);
   box-shadow: 0 0 15px 5px black;
@@ -389,11 +389,12 @@ p{
     padding-left: 25px;
     padding-right: 25px;
   }
+}
 
+@media screen and (max-width: 402px) {
   .project-box{
-    width: 350px;
+    width: 100%;
   }
-
 }
 
 @font-face {
