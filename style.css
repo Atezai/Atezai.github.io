@@ -189,7 +189,7 @@ main{
   margin: auto;
   text-align: center;
   margin-top:150px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 18, 29), rgba(0, 0, 0, 0));
 }
 
@@ -373,12 +373,25 @@ p{
     padding-right: 50px;
   }
 
+  .title{
+    font-size: 25px;
+  }
+
+  .project-box{
+    margin: auto; 
+    margin-bottom: 70;
+  }
+
 }
 
 @media screen and (max-width: 479px) {
   .box{
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .project-box{
+    width: 350px;
   }
 
 }
