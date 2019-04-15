@@ -2,6 +2,7 @@ var planet_canvas = document.getElementById('WorldCanvas');
 
 function UnhideEarth(){
     planet_canvas.style.opacity = 1;
+    ViewportResize();
 }
 
 function HideEarth(){
