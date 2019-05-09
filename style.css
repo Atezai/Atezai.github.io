@@ -216,16 +216,25 @@ main{
   box-sizing: border-box;
   margin: auto;
   width: 70%;
-  min-height: 200px;
   padding: 50px;
   padding-left: 200px;
   padding-right: 200px;
-  text-align: center;
+  text-align: left;
   color: white;
   background: rgba(16, 18, 29, 0.9);
   border-radius: 5px;
   border-top: solid 1px white;
   border-bottom: solid 1px white;
+  display: flex;
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  margin: auto;
+ 
 }
 
 .project-info{
@@ -266,13 +275,13 @@ main{
 }
 
 .project-box h1{
-  position: relative;
+  position: absolute;
   font: 40px "Trebuchet Ms", monospace;
   padding-left: 10px;
-  margin-top: -150px;
+  margin-top: -180px;
   color:  white;
   font-weight: bold;
-  text-shadow: 0 3px  rgb(17, 18, 26);
+  text-shadow: 0 3px  rgb(17, 18, 26), 0 -1px  rgb(17, 18, 26), 1px 0px  rgb(17, 18, 26), -1px 0px  rgb(17, 18, 26);
 }
 .project-box p{
   padding-left: 20px; padding-right: 20px;
@@ -282,12 +291,19 @@ main{
   width: 100%;
   height: 40px;
   border-top: 2px solid rgb(255, 255, 255);  border-bottom: 2px solid rgb(190, 190, 190); border-left:none; border-right: none;
-  background: transparent;
   color: rgb(255, 255, 255);
   margin-top:10px;
   background: rgba(255,255,255,0.2);
   font: 22px "Trebuchet Ms", monospace;
   font-weight: bold;
+}
+.project-box-button:hover{
+  border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
+  background: rgba(247, 168, 0, 0.2);
+}
+.project-box-button:active{
+  border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
+  background: rgba(247, 168, 0, 0.3);
 }
 
 footer{
@@ -365,7 +381,7 @@ p{
   }
 
   header h1{
-    margin-top: 100;
+    margin-top: 70;
   }
 
   .box{
@@ -375,12 +391,21 @@ p{
 
   .title{
     font-size: 25px;
+    margin-top: 100px;
   }
 
   .project-box{
     margin: auto; 
-    margin-bottom: 70;
+    margin-bottom: 120;
   }
+  
+  footer{
+    font-size: 14px;
+  }
+  footer b{
+    font-size: 10px;
+  }
+
 
 }
 
@@ -389,12 +414,23 @@ p{
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  .title{
+    margin-top: 70px;
+  }
+  .project-banner{
+    height: 40vw;
+  }
+  .project-banner h1{
+    margin-top: -49vw;
+  }
 }
 
 @media screen and (max-width: 402px) {
   .project-box{
     width: 100%;
   }
+
 }
 
 @font-face {
