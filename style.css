@@ -277,6 +277,7 @@ main{
 .project-box h1{
   position: absolute;
   font: 40px "Trebuchet Ms", monospace;
+  max-width: 400px;
   padding-left: 10px;
   margin-top: -180px;
   color:  white;
