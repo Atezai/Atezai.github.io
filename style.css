@@ -226,7 +226,7 @@ main{
   border-top: solid 1px white;
   border-bottom: solid 1px white;
   display: flex;
-  
+
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -400,7 +400,7 @@ p{
   }
   
   footer{
-    font-size: 14px;
+    font-size: 12px;
   }
   footer b{
     font-size: 10px;
