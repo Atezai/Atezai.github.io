@@ -1,18 +1,17 @@
 <html>
 
 	<head>
+		<title>MH portfolio</title>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="atezai_files/images/icons/favicon_MH.png">
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<link rel="stylesheet" href="./atezai_files/paralax/paralax_style.css" type="text/css">
-		<title>MH portfolio</title>
 		<script src="./atezai_files/earth/util.js"></script>
 		<script src="./atezai_files/earth/gl-matrix.js"></script>
 		<script src="./atezai_files/earth/app.js"></script>
 		<script src="./atezai_files/paralax/paralax.js"></script>
 	</head>
-
-
 
 	<body onload="ParalaxEffect();InitDemo();ViewportResize();" onscroll="ParalaxEffect();" onresize="ViewportResize();">
 
@@ -23,7 +22,7 @@
 		
         <header>
 			<canvas id="WorldCanvas" class="earth-mesh-display">HTML5 not supported!</canvas>
-			<script src="./atezai_files/earth_resizer.js"></script>
+			<script src="./atezai_files/scripts/earth_resizer.js"></script>
 			<h1>Mikołaj Hanslik</h1>
 			<h2>Designer | Programmer | Virtual Experience Creator</h2>
 		</header>		
@@ -36,7 +35,7 @@
 			</ul>
 			<button id="Navigation_Open" class="nav-button" onclick="ShowNav()">MENU</button>
 			<button id="Navigation_Close" class="nav-close-button" onclick="HideNav()"></button>
-			<script src="./atezai_files/navigation_logic.js"></script>
+			<script src="./atezai_files/scripts/navigation_logic.js"></script>
 		</nav>
 		
 		<main>			
@@ -55,22 +54,23 @@
 						<h1>Upway</h1>
 					</div>
 					<p>Gra zręcznościowa na urządzenia mobilne. Wsiądź za stery jednego z wielu pojazdów i pobij rekordy nieskończenie losowo generowanej drogi, na której spotkasz sporo niespodzianek i przeszkód.</p>
+					<br><br><br><br><br><br><br><br><br><br><br><br>
 				</div>
-				<button class="project-box-button">WIP</button>
 			</div>
 
 			<!--CUBYE-->
 			<div class="project-box">
-					<div class="project-info">
-						<div class="project-banner">
-							<img src="atezai_files/images/CubyeBanner.png" class="project-banner"/>
-							<img src="atezai_files/images/icons/unityIcon.png" alt="" class="project-box-icon">
-							<h1>Cubye</h1>
-						</div>
-						<p>Aplikacja na urządzenia mobilne. Służy do trenowania pamięci poprzez grę w odnajdywanie losowo wygenerowanego symbolu na boku sześciana.</p>
+				<div class="project-info">
+					<div class="project-banner">
+						<img src="atezai_files/images/CubyeBanner.png" class="project-banner"/>
+						<img src="atezai_files/images/icons/unityIcon.png" alt="" class="project-box-icon">
+						<h1>Cubye</h1>
 					</div>
-					<button class="project-box-button" onclick="window.open('https://drive.google.com/file/d/0B3zQx8bnsLzRZ0dyZGF1bTNOMFE/view?usp=sharing');">Download .APK</button>
+					<p>Aplikacja na urządzenia mobilne. Służy do trenowania pamięci poprzez grę w odnajdywanie losowo wygenerowanego symbolu na boku sześcianu.</p>
 				</div>
+				<button class="project-box-button" onclick="window.open('https://drive.google.com/file/d/0B3zQx8bnsLzRZ0dyZGF1bTNOMFE/view?usp=sharing');">Pobierz .APK</button>
+			</div>
+		
 
 			<!--MAILMAN-->
 			<div class="project-box">
@@ -82,7 +82,7 @@
 					</div>
 					<p>Aquacity potrzebuje bohatera! Nikt nie nadąża z roznoszeniem paczek. Wciel się w postać listonosza i używając swoich zdolności spidermana dostarcz paczki. Uważaj, żeby nie zginąć w tym niebezpiecznym mieście nad wodą.</p>
 				</div>
-				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1NUIiRUHVdXUavuZ3gruT8KeqNdcpUbqc?usp=sharing')">Download .EXE</button>
+				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1NUIiRUHVdXUavuZ3gruT8KeqNdcpUbqc?usp=sharing')">Pobierz .EXE</button>
 			</div>
 
 			<!--BADCALL-->
@@ -95,7 +95,7 @@
 					</div>
 					<p>Córka słynnego detektywa zostaje porwana. Sprawa z przed lat powraca do życia głównego bohatera. Pomóż rozwiązać tę zagadkę i uratować córkę.</p>
 				</div>
-				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1qqa38xWnx_-1TWgKOK7bVt2XsB5VROn1?usp=sharing');">Download .EXE</button>
+				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1qqa38xWnx_-1TWgKOK7bVt2XsB5VROn1?usp=sharing');">Pobierz .EXE</button>
 			</div>
 
 			<!--FRINLET-->
@@ -115,12 +115,26 @@
 				<div class="project-info">
 					<div class="project-banner">
 						<img src="atezai_files/images/ThrustBotBanner.png" class="project-banner"/>
+						<img src="atezai_files/images/icons/unityIcon.png" alt="" class="project-box-icon">
 						<h1>GloBot</h1>
 					</div>
 					<p>Prototyp mobilnej gry zręcznościowej, polegającej na sterowaniu latającym w próżni dronie i wydostaniu się z pomieszczeń uzbrojonego po zęby statku kosmicznego.</p>
 				</div>
 				<button class="project-box-button" onclick="window.open('./atezai_files/GloBot/index.html');">Play</button>
 			</div>
+
+			<!--GALAXY WAR-->
+			<div class="project-box">
+					<div class="project-info">
+						<div class="project-banner">
+							<img src="atezai_files/images/GalaxyWarBanner.png" class="project-banner"/>
+							<img src="atezai_files/images/icons/cplusplusIcon.png" alt="" class="project-box-icon">
+							<h1>Galaxy War</h1>
+						</div>
+						<p>Konsolowa gra z nieskończenie generowanym kosmosem, losowymi misjami i turową walką statków.</p>
+					</div>
+					<button class="project-box-button" onclick="window.open('https://drive.google.com/file/d/1jVrgS5mOj6msqZdDKOGZUGjmRa-q8TDE/view?usp=sharing');">Pobierz .EXE</button>
+				</div>
 
 			<!--BINNY-->
 			<div class="project-box">
@@ -132,7 +146,7 @@
 					</div>
 					<p>Teaser przygody ciekawskiego królika, który podąża za świetlikiem wprost do odchłani ukrytej w zaczarowanym lesie.</p>
 				</div>
-				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1_whoaj6cyRejsSNspDTI_szvQvqxnN2_?usp=sharing');">Download .EXE</button>
+				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1_whoaj6cyRejsSNspDTI_szvQvqxnN2_?usp=sharing');">Pobierz .EXE</button>
 			</div>
 		
 			<!--AUTOMATIC ROAD-->
@@ -166,12 +180,12 @@
 				<div class="project-info">
 					<div class="project-banner">
 						<img src="atezai_files/images/NoiseEditorBanner.png" class="project-banner"/>
-						<img src="atezai_files/images/icons/unityIcon.png" alt="" class="project-box-icon">
+						<img src="atezai_files/images/icons/csharpIcon.png" alt="" class="project-box-icon">
 						<h1>Perlin Noise Editor</h1>
 					</div>
 					<p>Aplikacja pozwalająca wygenerować i edytować warstwy dwuwymiarowego szumu. Stwórz własną i wyjątkową teksturę w prosty sposób.</p>
 				</div>
-				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1iED6s5W5pzHvd_W3k_I4natXvAXiLww7?usp=sharing');">Download .EXE</button>
+				<button class="project-box-button" onclick="window.open('https://drive.google.com/drive/folders/1iED6s5W5pzHvd_W3k_I4natXvAXiLww7?usp=sharing');">Pobierz .EXE</button>
 			</div>
 
 		</main>
