@@ -244,6 +244,13 @@ main{
   box-shadow: 0 0 15px 5px black;
   overflow: hidden;
 }
+.project-extra-info{
+  width: 100%;
+  height: auto;
+  background: rgb(10, 10, 15);
+  box-shadow: 0 0px 15px 5px rgb(10, 10, 15);
+  overflow: hidden;
+}
 
 .project-box-wrapper{
   height: auto;
@@ -303,6 +310,25 @@ main{
   background: rgba(247, 168, 0, 0.2);
 }
 .project-box-button:active{
+  border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
+  background: rgba(247, 168, 0, 0.3);
+}
+
+.project-box-expand-button{
+  width: 100%;
+  height: 40px;
+  border-top: 2px solid rgb(147, 231, 91);  border-bottom: 2px solid rgb(147, 231, 91); border-left:none; border-right: none;
+  color: rgb(255, 255, 255);
+  margin-top:10px;
+  background: rgba(205, 250, 169, 0.2);
+  font: 22px "Trebuchet Ms", monospace;
+  font-weight: bold;
+}
+.project-box-expand-button:hover{
+  border-top: 2px solid rgb(232, 247, 96);  border-bottom: 2px solid rgb(247, 177, 96);
+  background: rgba(202, 247, 0, 0.2);
+}
+.project-box-expand-button:active{
   border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
   background: rgba(247, 168, 0, 0.3);
 }
