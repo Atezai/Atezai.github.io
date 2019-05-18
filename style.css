@@ -188,8 +188,6 @@ main{
   width: 70%;
   margin: auto;
   text-align: center;
-  margin-top:150px;
-  margin-bottom: 20px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 18, 29), rgba(0, 0, 0, 0));
 }
 
@@ -244,12 +242,17 @@ main{
   box-shadow: 0 0 15px 5px black;
   overflow: hidden;
 }
-.project-extra-info{
+.project-info b{
+  text-shadow: 0 5px 2px 2px black;
+  font-size: 18px;
+}
+.project-info-extra{
   width: 100%;
-  height: auto;
+  height: 0px;
   background: rgb(10, 10, 15);
-  box-shadow: 0 0px 15px 5px rgb(10, 10, 15);
+  box-shadow: 0 0px 25px 10px rgb(10, 10, 15);
   overflow: hidden;
+  translate: height 1s;
 }
 
 .project-box-wrapper{
@@ -260,7 +263,7 @@ main{
 }
 
 .project-box{
-  display: inline-block;
+  display: inline-table;
   text-align: left;
   margin: 50px;
   margin-bottom: 50px;
@@ -295,7 +298,7 @@ main{
   padding-left: 20px; padding-right: 20px;
 }
 
-.project-box-button{
+.project-button{
   width: 100%;
   height: 40px;
   border-top: 2px solid rgb(255, 255, 255);  border-bottom: 2px solid rgb(190, 190, 190); border-left:none; border-right: none;
@@ -305,32 +308,33 @@ main{
   font: 22px "Trebuchet Ms", monospace;
   font-weight: bold;
 }
-.project-box-button:hover{
+.project-button:hover{
   border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
   background: rgba(247, 168, 0, 0.2);
 }
-.project-box-button:active{
+.project-button:active{
   border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
   background: rgba(247, 168, 0, 0.3);
 }
 
-.project-box-expand-button{
+.project-info-extra-button{
   width: 100%;
   height: 40px;
-  border-top: 2px solid rgb(147, 231, 91);  border-bottom: 2px solid rgb(147, 231, 91); border-left:none; border-right: none;
   color: rgb(255, 255, 255);
-  margin-top:10px;
-  background: rgba(205, 250, 169, 0.2);
+  margin-top:0px;
   font: 22px "Trebuchet Ms", monospace;
+  border-top: 2px solid rgb(165, 165, 165);  border-bottom: 2px solid rgb(70, 70, 70); border-left:none; border-right: none;
+  background: rgba(255, 255, 255, 0);
   font-weight: bold;
+  box-shadow: 0 -5px 5px -5px #333;
 }
-.project-box-expand-button:hover{
-  border-top: 2px solid rgb(232, 247, 96);  border-bottom: 2px solid rgb(247, 177, 96);
-  background: rgba(202, 247, 0, 0.2);
-}
-.project-box-expand-button:active{
+.project-info-extra-button:hover{
   border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
-  background: rgba(247, 168, 0, 0.3);
+  background: rgba(247, 168, 0, 0.5);
+}
+.project-info-extra-button:active{
+  border-top: 2px solid rgb(247, 177, 96);  border-bottom: 2px solid rgb(247, 177, 96);
+  background: rgba(247, 168, 0, 0.7);
 }
 
 footer{
@@ -338,7 +342,7 @@ footer{
   width: 100%;
   display: block;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 250px;
   padding-bottom: 20px;
   font-size: 18px;
   bottom:0;
@@ -385,6 +389,9 @@ p{
   header h2{
     font-size: 15px;
   }
+  .title{
+    width: 100%;
+  }
 
   .nav-button{
     top: 50;
@@ -417,8 +424,9 @@ p{
   }
 
   .title{
-    font-size: 25px;
+    font-size: 40px;
     margin-top: 100px;
+    margin-bottom: 150px;
   }
 
   .project-box{
@@ -442,9 +450,7 @@ p{
     padding-right: 25px;
   }
 
-  .title{
-    margin-top: 70px;
-  }
+
   .project-banner{
     height: 40vw;
   }
